@@ -6,23 +6,74 @@
     <title>About me</title>
     <style type="text/css">
         body {
-            background-image: url(http://voyager2718.github.io/personnal/resources/background.jpg);
-            width:100px;
-            height:100px;
-            background-repeat:no-repeat;
+            background-image: url(http://voyager2718.github.io/personal/resources/background.jpg);
+            width: 100px;
+            height: 100px;
+            background-repeat: no-repeat;
         }
+
+        p::selection {
+            background: rgba(128, 128, 128,0.5);
+        }
+
+        p::-moz-selection {
+            background: rgba(128, 128, 128,0.5);
+            font-family: Helvetica;
+        }
+
+        .menu_sel {
+            text-decoration:none;
+            position: absolute;
+            color: rgba(255, 255, 255,0.5);
+            font-size: 30px;
+            font-weight: bold;
+            top: 55%;
+            animation: menu_sel 1s linear alternate infinite;
+            -webkit-animation: menu_sel 1s linear alternate infinite;
+        }
+
+        @keyframes menu_sel {
+            from {
+                color: rgba(255, 255, 255,0.8);
+            }
+
+            to {
+                color: rgba(255, 255, 255,0.5);
+            }
+        }
+
+        @-webkit-keyframes menu_sel {
+            from {
+                color: rgba(255, 255, 255,0.8);
+            }
+
+            to {
+                color: rgba(255, 255, 255,0.5);
+            }
+        }
+
         .title {
-            font-family:Helvetica ;
-            font-weight:100;
-            font-size:100px;
-            color:white;
-            position:absolute;
-            left:25%;
-            top:10%;
+            font-family: Helvetica;
+            font-weight: 100;
+            font-size: 100px;
+            color: white;
+            position: absolute;
+            left: 25%;
+            top: 10%;
         }
     </style>
 </head>
 <body>
+    <a href="https://www.facebook.com/profile.php?id=100004215067890&ref=tn_tnmn">
+        <img style="height: 25px; margin-left: 5px;" title="Facebook" src="resources/facebook.png" /></a>
+    <a href="http://weibo.com/536449338">
+        <img style="height: 25px; margin-left: 5px;" title="Weibo" src="resources/weibo.png" /></a>
     <p class="title">Voyager2718</p>
+    <p style="position:absolute;left: 33%;top:55%;float:left;width:150px;">
+        <a class="menu_sel" href="https://github.com/Voyager2718">My GitHub</a>
+    </p>
+    <p style="position:absolute;left: 48%;top:55%;float:left;width:250px;">
+        <a class="menu_sel" href="https://github.com/Voyager2718">Personal page</a>
+    </p>
 </body>
 </html>
