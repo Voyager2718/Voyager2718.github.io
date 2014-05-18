@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>LongMarch5</title>
+    <style type="text/css">
+        a:visited {
+            color:white;
+            text-decoration:none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .link:visited {
+            color: white;
+        }
+
+        .head {
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            height: 30px;
+            background-color: black;
+        }
+
+        .buttonB {
+            background-color: orange;
+            display: inline-block;
+            padding: 5px 10px 6px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: rgba(128, 128, 128, 0.5) 3px 3px 3px;
+            position: relative;
+            cursor: pointer;
+            margin-left: auto;
+            width: 97px;
+            height: 60px;
+            font-size: 20px;
+            font-family: 'Microsoft YaHei',Tahoma;
+        }
+
+            .buttonB:hover {
+                -webkit-filter: brightness(1.25);
+                filter: brightness(1.5);
+                font-weight: bold;
+            }
+
+        p {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    </style>
+    <script>
+        function gotop() {
+            window.location.href = "#top";
+        }
+        function schn() {
+            document.getElementById("main").textContent = "长征五号是中国研制的新一代重型运载火箭系列，与欧洲阿丽亚娜5基本同级。其设计思想以通用化、系列化、组合化为重点。\
+可搭载两种专门为其设计的火箭发动机，分别为推力为120吨的YF-100液氧煤油发动机和推力为50吨的YF-77氢氧发动机。长征五号系列实行模块化设计，由直径为5米、3.35米和2.25米的三种模\
+块构成。其中5米模块包含两个50吨级的YF-77发动机，3.35米模块则包含两个120吨级的YF-100发动机。模块化设计的好处是可以根据需要把不同模块组装成不同推力的火箭，以执行不同的任务\
+。例如系列中最为强大的型号，以两个5米模块为主推进器，另配有4个3.35米模块为助推器。在长征五号运载火箭和位于海南岛的海南文昌航天发射基地问世后，中国将具备25吨的近地轨道运\
+载能力和12吨的地球同步转移轨道运载能力，可发射20吨级长期有人照料的空间站、大型空间望远镜、返回式月球探测器、深空探测器、超重型应用卫星等。120吨级的YF-100发动机已于2012年7\
+月29日测试成功[1]。但当前研发遭遇一些困难，进度已经数次推迟。新近的消息是2015年上半年首飞，2017年将用于完成嫦娥五号月球样品采样返回任务；长征五号B运载火箭计划于其后\
+首飞，2018年将用于发射天宫三号试验核心舱，2020年至2022年间将用于发射天宫号空间站的天和号核心舱、问天号实验舱和巡天号实验舱。";
+            document.getElementById("head-name").textContent = "火箭";
+            document.cookie = "lang=" + "tchn";
+        }
+        function fra() {
+            document.getElementById("main").textContent = "Les lanceurs Longue Marche 5 (LM-5, CZ-5, ou Changzheng 5) constituent une nouvelle famille de fusées chinoises\
+en cours de développement. La série doit comporter 6 versions permettant de couvrir les différentes missions habitées ou non avec des capacités d'emport pouvant aller jusq\
+u'à 25 tonnes en orbite basse et 14 tonnes en orbite de transfert géostationnaire1,2. Le premier lancement est prévu pour 2014 depuis le port spatial de Wenchang en cours \
+de construction dans l'île de Hainan dans le sud-ouest de la Chine.";
+            document.getElementById("head-name").textContent = "Fusées";
+            document.cookie = "lang=" + "fra";
+        }
+
+        function eng() {
+            document.getElementById("main").textContent = "Long March 5 (LM-5, CZ-5, or Changzheng 5) is a Chinese next-generation heavy lift launch system that is currently\
+under development by China Academy of Launch Vehicle Technology (CALT). Currently, six CZ-5 vehicle configurations are planned for different missions, with a maximum payload\
+capacity of 25,000 kg to LEO and 14,000 kg to GTO.The Long March 5 is planned to roughly match the capabilities of American EELV sized vehicles such as the Delta IV, \
+Atlas V, and Falcon 9. First flight of the CZ-5 rocket will be no earlier than 2015 from Wenchang Satellite Launch Center on Hainan island.";
+            document.getElementById("head-name").textContent = "Rockets";
+            document.cookie = "lang=" + "eng";
+        }
+    </script>
+</head>
+<body style="background-image: url(resources/bgLongMarch.jpg); background-size: cover; background-repeat: no-repeat; background-color: rgb(209, 236, 255);">
+    <a id="top" style="top: 0; position: absolute;"></a>
+    <div class="head" style="z-index: 98; opacity: 0.3;"></div>
+    <div style="position: fixed; right: 200px; top: 300px;">
+        <input class="buttonB" type="button" onclick="gotop()" value="     ▲" />
+    </div>
+    <a href="Home.html">
+        <img src="resources/CASC.png" style="height: 50px; width: 50px; z-index: 99; left: 10%; top: 0; position: fixed;" /></a>
+   <a href="Fusees.html" id="page1" class="link" style="text-decoration: none;"><p id="head-name" style="font-size: 150px; font-weight: bold; margin-left: 10%; margin-top: 5%; color: white; text-shadow: rgb(0,0,0) 5px 5px 5px">Fusées</p></a>
+    <p style="position: absolute; margin-left: 21%; top: 33%; color: rgb(245, 245, 245); font-family: SimHei; text-shadow: black 2px 2px 2px; line-height: 0px;"><a href="Home.html">Accueil</a>-><a href="Fusees.html">fusées</a></p>
+    <div style="width: 800px; background-color: white; margin-left: 20%; top: 40%; position: absolute; box-shadow: rgb(128,128,128) 0px 0px 10px; border-radius: 7px;">
+        <p style="color: rgb(230,0,0); text-align: center; font-weight: bold; font-size: 20px;">Long March 5</p>
+        <p id="main" style="line-height: 30px;">
+            Les lanceurs Longue Marche 5 (LM-5, CZ-5, ou Changzheng 5) constituent une nouvelle famille de fusées chinoises
+en cours de développement. La série doit comporter 6 versions permettant de couvrir les différentes missions habitées ou non avec des capacités d'emport pouvant aller jusq
+u'à 25 tonnes en orbite basse et 14 tonnes en orbite de transfert géostationnaire1,2. Le premier lancement est prévu pour 2014 depuis le port spatial de Wenchang en cours 
+de construction dans l'île de Hainan dans le sud-ouest de la Chine.
+        </p>
+        <hr style="width: 740px;" />
+        <p style="margin-left: 30px; color: blue; font-weight: bold;">Liens connexes</p>
+        <ul style="margin-left: 30px;">
+            <li><a href="LongMarch3C.html" style="color:black;">Long March 3C</a></li>
+            <li><a href="LongMarch2F.html" style="color:black;">Long March 2F</a></li>
+        </ul>
+        <table style="margin: 0 auto;">
+            <tr>
+                <td>
+                    <input class="buttonB" style="background-image: -webkit-linear-gradient(top,#FF3300,#FFFF00); background-image: -moz-linear-gradient(top,#FF3300,#FFFF00);" type="button" value="中文" onclick="schn()" />
+                </td>
+                <td>
+                    <input class="buttonB" style="margin-left: 10px; background-image: -webkit-linear-gradient(top,#00FF00,#00FF66); background-image: -moz-linear-gradient(top,#00FF00,#00FF66);" type="button" value="English" onclick="eng()" />
+                </td>
+                <td>
+                    <input class="buttonB" style="margin-left: 10px; background-image: -webkit-linear-gradient(top,#0000FF,#0099FF); background-image: -moz-linear-gradient(top,#0000FF,#0099FF);" type="button" value="français" onclick="fra()" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

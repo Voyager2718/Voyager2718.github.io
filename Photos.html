@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Photos</title>
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        var nopic = 1;
+        function left() {
+            if (nopic < 0)
+                nopic = 4;
+            showpic(nopic);
+            nopic--;
+        }
+        function right() {
+            if (nopic > 4)
+                nopic = 0;
+            showpic(nopic);
+            nopic++;
+        }
+        function showpic(nopic) {
+            switch (nopic) {
+                case 0: document.getElementById("pic").src = "resources/1.jpg"; break;
+                case 1: document.getElementById("pic").src = "resources/2.jpg"; break;
+                case 2: document.getElementById("pic").src = "resources/3.jpg"; break;
+                case 3: document.getElementById("pic").src = "resources/4.jpg"; break;
+                case 4: document.getElementById("pic").src = "resources/5.jpg"; break;
+            }
+        }
+    </script>
+    <style type="text/css">
+        .head {
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            height: 30px;
+            background-color: black;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="Main.css">
+</head>
+<body style="background-color: rgb(25, 35, 114);">
+    <div class="head" style="z-index: 98; opacity: 0.3;"></div>
+    <a href="Home.html">
+        <br /><br />
+        <img src="resources/CASC.png" style="height: 50px; width: 50px; z-index: 99; left: 10%; top: 0; position: fixed;" /></a>
+    <input type="button" class="buttonB" onclick="left()" value="←" style="margin-left: 18%; margin-top: 20%; position: absolute;box-shadow:none;" />
+    <input type="button" class="buttonB" onclick="right()" value="→" style="margin-left: 77%; margin-top: 20%; position: absolute;box-shadow:none;" />
+    <img id="pic" src="resources/1.jpg" style="height: 500px; width: 700px; position: absolute; margin-left: 24%; margin-top: 0%;border-radius:20px;box-shadow:0px 0px 10px rgba(128, 128, 128,0.5)" />
+</body>
+</html>
