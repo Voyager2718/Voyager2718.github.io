@@ -11,7 +11,7 @@ ul, li {
     width: 950px;
     height: 51px;
     margin: 0 auto;
-    background: url(resources/top.jpg) repeat-x;
+    background: url(http://voyager2718.github.io/Resources/top.jpg) repeat-x;
 }
 
     .menu ul {
@@ -42,7 +42,7 @@ ul, li {
 
                 .menu ul li a:hover {
                     text-decoration: underline;
-                    background: url(resources/Top-Hover.jpg) repeat-x;
+                    background: url(http://voyager2718.github.io/Resources/Top-Hover.jpg) repeat-x;
                 }
 
 .part {
