@@ -18,18 +18,18 @@
 
         p::-moz-selection {
             background: rgba(128, 128, 128,0.5);
-            font-family: Helvetica;
         }
 
         .menu_sel {
-            text-decoration:none;
+            font-family: Helvetica;
+            text-decoration: none;
             position: absolute;
             color: rgba(255, 255, 255,0.5);
             font-size: 30px;
-            font-weight: bold;
             top: 55%;
-            animation: menu_sel 1s linear alternate infinite;
-            -webkit-animation: menu_sel 1s linear alternate infinite;
+            animation: menu_sel 0.5s linear alternate infinite;
+            -webkit-animation: menu_sel 0.5s linear alternate infinite;
+            -moz-animation: menu_sel 0.5s linear alternate infinite;
         }
 
         @keyframes menu_sel {
@@ -43,6 +43,16 @@
         }
 
         @-webkit-keyframes menu_sel {
+            from {
+                color: rgba(255, 255, 255,0.8);
+            }
+
+            to {
+                color: rgba(255, 255, 255,0.5);
+            }
+        }
+
+        @-moz-keyframes menu_sel {
             from {
                 color: rgba(255, 255, 255,0.8);
             }
@@ -69,10 +79,10 @@
     <a href="http://weibo.com/536449338">
         <img style="height: 25px; margin-left: 5px;" title="Weibo" src="resources/weibo.png" /></a>
     <p class="title">Voyager2718</p>
-    <p style="position:absolute;left: 33%;top:55%;float:left;width:150px;">
+    <p style="position: absolute; left: 33%; top: 55%; float: left; width: 150px;">
         <a class="menu_sel" href="https://github.com/Voyager2718">My GitHub</a>
     </p>
-    <p style="position:absolute;left: 48%;top:55%;float:left;width:250px;">
+    <p style="position: absolute; left: 48%; top: 55%; float: left; width: 250px;">
         <a class="menu_sel" href="https://github.com/Voyager2718">Personal page</a>
     </p>
 </body>
