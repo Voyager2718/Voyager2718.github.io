@@ -10,13 +10,17 @@
             background-image: url(resources/background.jpg);
             background-repeat: repeat;
             background-size: 100%;
+            user-select:none;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
         }
 
-        p::selection {
+        ::selection {
             background: rgba(128, 128, 128,0.5);
         }
 
-        p::-moz-selection {
+        ::-moz-selection {
             background: rgba(128, 128, 128,0.5);
         }
 
@@ -79,7 +83,7 @@
     <a href="http://weibo.com/536449338">
         <img style="height: 25px; margin-left: 5px;" title="Weibo" src="resources/weibo.png" /></a>
     <p class="title">Voyager2718</p>
-    <span style="text-align: center; margin-left:36%;">
+    <span style="text-align: center; margin-left: 36%;">
         <a class="menu_sel" href="https://github.com/Voyager2718">My GitHub</a>
     </span>
     <span style="margin-left: 60px;">
