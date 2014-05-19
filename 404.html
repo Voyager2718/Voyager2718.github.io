@@ -12,10 +12,27 @@
             line-height: 100%;
             font-size: 30px;
         }
-        a {
-            text-decoration:none;
-            color:white;
+
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
+
+        ::selection {
+            background: rgba(128, 128, 128,0.5);
+        }
+
+        ::-moz-selection {
+            background: rgba(128, 128, 128,0.5);
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
             a:visited {
                 color: white;
             }
