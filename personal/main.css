@@ -1,0 +1,44 @@
+body {
+    background-repeat: repeat;
+    background-color: white;
+    background-size: 100%;
+    font-family: 'Microsoft YaHei',SimHei;
+    text-shadow: rgba(128, 128, 128,0.5) 0px 0px 10px;
+}
+
+::selection {
+    background: rgba(128, 128, 128,0.5);
+}
+
+::-moz-selection {
+    background: rgba(128, 128, 128,0.5);
+}
+
+.main {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.menu {
+    background-color: rgba(128, 128, 128,0.5);
+    box-shadow: rgba(128, 128, 128,0.5) 0px 0px 50px;
+    border-radius: 50px;
+    width: 75%;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    margin-top: 12.2%;
+}
+
+.box {
+    width: 25%;
+}
+
+    .box:hover {
+        background-color: rgb(255, 216, 0);
+        border-radius: 50px;
+    }
