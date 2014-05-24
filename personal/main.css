@@ -28,6 +28,7 @@ body {
     text-align: center;
     font-weight: bold;
     user-select: none;
+    -ms-user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     position: absolute;
@@ -38,15 +39,21 @@ body {
 
 .box {
     width: 20%;
+    border-radius: 50px;
 }
 
     .box:hover {
         background-color: rgb(255, 216, 0);
-        border-radius: 50px;
     }
 
+.box_selected {
+    width: 20%;
+    border-radius: 50px;
+    background-color:rgb(0, 255, 193);
+}
+
 a {
-    text-decoration:none;
+    text-decoration: none;
     color: white;
     display: block;
     width: 100%;
