@@ -3,7 +3,7 @@ body {
     background-color: white;
     background-size: 100%;
     font-family: 'Microsoft YaHei',SimHei;
-    text-shadow: rgba(128, 128, 128,0.5) 0px 0px 10px;
+    text-shadow: rgba(128, 128, 128,0.8) 0px 0px 15px;
 }
 
 ::selection {
@@ -25,13 +25,14 @@ body {
     border-radius: 50px;
     width: 75%;
     height: 50px;
-    margin: 0 auto;
     text-align: center;
     font-weight: bold;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-    margin-top: 12.2%;
+    position: absolute;
+    top: 265px;
+    left: 0 auto;
 }
 
 .box {
@@ -45,4 +46,15 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 315px;
+}
+
+ul {
+    color: black;
 }
