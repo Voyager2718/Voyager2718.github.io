@@ -58,9 +58,9 @@
     <div id="photos"></div>
     <div class="content">
         <div class="main" style="background-color: wheat; width: 70%; box-shadow: rgba(128, 128, 128,0.5) 0px 0px 10px;">
-            <div style="margin-left: 20px; margin-right: 20px;">
+            <div style="margin: 0 auto;">
                 <br />
-                <table>
+                <table style="margin: 0 auto;">
                     <tr>
                         <td class="imgboxwidth">
                             <div id="out1" class="outerimgbox">
@@ -76,6 +76,28 @@
                         <td class="imgboxwidth">
                             <div id="out2" class="outerimgbox">
                                 <div id="in2" class="innerimgbox">
+                                    <div class="innerimgboxtext">
+                                        <p class="imgdescription">
+                                            暂无照片
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="imgboxwidth">
+                            <div id="out3" class="outerimgbox">
+                                <div id="in3" class="innerimgbox">
+                                    <div class="innerimgboxtext">
+                                        <p class="imgdescription">
+                                            暂无照片
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="imgboxwidth">
+                            <div id="out4" class="outerimgbox">
+                                <div id="in4" class="innerimgbox">
                                     <div class="innerimgboxtext">
                                         <p class="imgdescription">
                                             暂无照片
@@ -102,6 +124,18 @@
         };
         document.getElementById("out2").onmouseleave = function () {
             document.getElementById("in2").style.top = "25px";
+        };
+        document.getElementById("out3").onmouseover = function () {
+            document.getElementById("in3").style.top = "0px";
+        };
+        document.getElementById("out3").onmouseleave = function () {
+            document.getElementById("in3").style.top = "25px";
+        };
+        document.getElementById("out4").onmouseover = function () {
+            document.getElementById("in4").style.top = "0px";
+        };
+        document.getElementById("out4").onmouseleave = function () {
+            document.getElementById("in4").style.top = "25px";
         };
     </script>
 </body>
