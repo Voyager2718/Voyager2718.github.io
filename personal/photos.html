@@ -17,6 +17,14 @@
                 color: white;
             }
     </style>
+    <script type="text/javascript">
+        function showpic(nopic) {
+            switch (nopic) {
+                case 0: document.getElementById("pic").src = "resources/1.jpg"; break;
+            }
+        }
+
+    </script>
 </head>
 <body>
     <div style="background-image: url(resources/title.jpg); position: absolute; height: 315px; width: 100%; box-shadow: rgba(128, 128, 128, 0.5) 10px 0px 10px; left: 0px; top: 0px; z-index: -1;"></div>
@@ -36,7 +44,7 @@
                     <div>Mood</div>
                 </a>
                 </td>
-                <td class="box_selected"><a href="photos.html">
+                <td class="box_selected"><a href="photos.html#photos">
                     <div>Photos</div>
                 </a>
                 </td>
@@ -47,14 +55,31 @@
             </tr>
         </table>
     </div>
+    <div id="#photos"></div>
     <div class="content">
         <div class="main" style="background-color: wheat; width: 70%; box-shadow: rgba(128, 128, 128,0.5) 0px 0px 10px;">
             <div style="margin-left: 20px; margin-right: 20px;">
                 <br />
-                <p>即将开启</p>
+                <div id="out1" class="outerimgbox">
+                    <div id="in1" class="innerimgbox">
+                        <div class="innerimgboxtext">
+                        </div>
+                        <p class="imgdescription">
+                            暂无照片
+                        </p>
+                    </div>
+                </div>
                 <br />
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        document.getElementById("out1").onmouseover = function () {
+            document.getElementById("in1").style.top = "0px";
+        };
+        document.getElementById("out1").onmouseleave = function () {
+            document.getElementById("in1").style.top = "25px";
+        };
+    </script>
 </body>
 </html>
