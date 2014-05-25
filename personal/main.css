@@ -108,3 +108,8 @@ ul {
     color: white;
     text-shadow: white 0px 0px 10px;
 }
+
+.imgboxwidth {
+    width: 200px;
+    height: 100%;
+}
