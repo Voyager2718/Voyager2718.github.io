@@ -19,7 +19,8 @@
     </style>
 </head>
 <body>
-    <div style="background-image: url(resources/title.jpg); position: absolute; height: 315px; width: 100%; box-shadow: rgba(128, 128, 128, 0.5) 10px 0px 10px; left: 0px; top: 0px; z-index: -1;"></div>
+    <input type="button" value="Hide" onclick="Hide()" style="position: absolute;top: 30px; left: 100px;" />
+    <div id="title" style="background-image: url(resources/title.jpg); position: absolute; height: 315px; width: 100%; box-shadow: rgba(128, 128, 128, 0.5) 10px 0px 10px; left: 0px; top: 0px; z-index: -1;"></div>
     <div class="main">
         <h1 style="color: white; font-weight: 100; margin-top: 100px;"><a href="blog.html" style="width: 0;">Voyager2718</a></h1>
         <table class="menu">
@@ -56,5 +57,10 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        function Hide() {
+            document.getElementById("title").style.height = "0px";
+        }
+    </script>
 </body>
 </html>
