@@ -6,38 +6,127 @@
     <title>CV·简历</title>
     <style type="text/css">
         body {
+            background-color: wheat;
             font-family: 'Microsoft YaHei','Ping Hei';
+            text-shadow: rgba(0, 0, 0,1) 0px 0px 5px;
+            color: white;
         }
+
+        a {
+            color: white;
+        }
+
+            a:visited {
+                color: rgb(255, 216, 0);
+            }
 
         .title {
             font-size: 100px;
             font-family: 'Microsoft YaHei','Ping Hei';
+            text-shadow: rgba(0, 0, 0,0.5) 0px 0px 15px;
             position: absolute;
             left: 180px;
             top: 60px;
             color: white;
-            text-shadow: black 0px 0px 10px;
         }
 
         .main {
             position: relative;
             width: 61.8%;
-            background-color: black;
             margin: 0 auto;
             top: 300px;
-            background-color: pink;
-            height: 20px;
+        }
+
+        .maintable {
+            width: 80%;
+            text-align: left;
+            margin: 0 auto;
         }
     </style>
 </head>
-<body style="background-color: wheat;">
+<body>
     <p class="title">简历</p>
     <div class="main">
-        <table>
+        <br />
+        <br />
+        <table class="maintable">
             <tr>
-                <td></td>
+                <th style="width: 20%;">姓名</th>
+                <td style="width: 80%;">杨志鹏</td>
+            </tr>
+            <tr>
+                <th>出生年月</th>
+                <td>1992年11月</td>
+            </tr>
+            <tr>
+                <th>性别</th>
+                <td>男</td>
+            </tr>
+            <tr>
+                <th>学历</th>
+                <td>本科</td>
+            </tr>
+            <tr>
+                <th>专业</th>
+                <td>计算机</td>
+            </tr>
+            <tr>
+                <th>婚姻状况</th>
+                <td>未婚</td>
+            </tr>
+            <tr>
+                <th>联系方式</th>
+                <td>+33 695328879</td>
+            </tr>
+            <tr>
+                <th>个人主页</th>
+                <td><a href="http://voyager2718.github.io/list.html">GitHub</a></td>
+            </tr>
+            <tr>
+                <th>通讯地址</th>
+                <td>Résidence Jules Mousseron, C345, Rue du Chemin Vert,<br />
+                    59300, Valenciennes</td>
+            </tr>
+            <tr>
+                <th>邮编</th>
+                <td>59300</td>
+            </tr>
+            <tr>
+                <th>外语能力</th>
+                <td>英语、法语、粤语</td>
+            </tr>
+            <tr>
+                <th>工作经历</th>
+                <td>市场研究暑期工，餐馆跑堂、洗碗、洗厨房等</td>
+            </tr>
+            <tr>
+                <th>个人能力</th>
+                <td>C++开发<br />
+                    C#开发<br />
+                    <img src="resources/Csharp.jpg" /><br />
+                    以上是C#开发的一个多密码生成器（就是只需填入某个网站名，账号和一个万年不变的密码，就可以很方便的生成一个针对特定网站，每个网站都不一样的密码了。（因为某次我被盗了QQ密码，担心其他账号也会被泄露。所以打算每个网站用不同的密码。但是这样用不同密码记忆难度太大。所以开发了一个针对不同网站生成不同密码的工具））
+                </td>
+            </tr>
+            <tr>
+                <th>HTML/CSS<br />
+                    JS/PHP<br />
+                    MySQL</th>
+                <td>项目展示：请参考以下链接<a href="http://voyager2718.github.io/list.html">GitHub</a></td>
+            </tr>
+            <tr>
+                <th>个人爱好</th>
+                <td>做机器人（高中曾经获得广州市机器人灭火比赛三等奖），做模型，写软件，毛笔书法，硬笔书法（在练田英章的字）等等</td>
+            </tr>
+            <tr>
+                <th>其他情况</th>
+                <td>高中一年级曾获广州市机器人灭火三等奖</td>
             </tr>
         </table>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
     </div>
 </body>
 </html>
