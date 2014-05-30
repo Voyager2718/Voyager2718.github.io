@@ -10,6 +10,7 @@
             font-family: 'Microsoft YaHei','Ping Hei';
             text-shadow: rgba(0, 0, 0,1) 0px 0px 5px;
             color: white;
+            overflow-y: hidden;
         }
 
         a {
@@ -42,17 +43,42 @@
             text-align: left;
             margin: 0 auto;
         }
+
+            .maintable td {
+                width: 80%;
+            }
+
+            .maintable th {
+                width: 20%;
+            }
+
+        .mask {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: black;
+            z-index: 99;
+            left: 0;
+            top: 0;
+        }
     </style>
+    <script>
+        function enter() {
+            alert("希望你能接纳我为你们的一员^_^（这只是测试文本）");
+            document.getElementById("enter").style.display = "none";
+        }
+    </script>
 </head>
-<body>
+<body onload="enter()">
     <p class="title">简历</p>
+    <div id="enter" class="mask"></div>
     <div class="main">
         <br />
         <br />
         <table class="maintable">
             <tr>
-                <th style="width: 20%;">姓名</th>
-                <td style="width: 80%;">杨志鹏</td>
+                <th>姓名</th>
+                <td>杨志鹏</td>
             </tr>
             <tr>
                 <th>出生年月</th>
