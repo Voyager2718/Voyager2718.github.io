@@ -13,6 +13,10 @@
             overflow-y: hidden;
         }
 
+        ::selection {
+            background-color: rgba(128, 128, 128,0.5);
+        }
+
         a {
             color: white;
         }
@@ -64,6 +68,7 @@
     </style>
     <script>
         function enter() {
+            window.location.href = "#top";
             alert("希望你能接纳我为你们的一员^_^（这只是测试文本）");
             document.getElementById("body").style.overflowY = "auto";
             document.getElementById("body").onmousewheel = "";
@@ -72,9 +77,9 @@
     </script>
 </head>
 <body onload="enter()" id="body" onmousewheel="return false">
+    <div id="top" style="position: absolute; top: 0; left: 0;"></div>
     <p class="title">简历</p>
     <div id="enter" class="mask">
-
     </div>
     <div class="main">
         <br />
