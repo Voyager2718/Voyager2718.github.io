@@ -56,7 +56,7 @@
                 width: 20%;
             }
 
-        .mask {
+        #enter {
             height: 100%;
             width: 100%;
             position: absolute;
@@ -69,29 +69,38 @@
     <script>
         function enter() {
             window.location.href = "#top";
-            alert("希望你能接纳我为你们的一员^_^（这只是测试文本）");
+            //alert("希望你能接纳我为你们的一员^_^（这只是测试文本）");
+            ChangeOpacity();
             document.getElementById("body").style.overflowY = "auto";
             document.getElementById("body").onmousewheel = "";
-            document.getElementById("enter").style.display = "none";
+            //document.getElementById("enter").style.display = "none";
         }
-        function changeopacity(opa) {
-            alert("2");
-            document.getElementById("enter").style.opacity = opa;
-        }
-        function transparency() {
-            var opa = 1.00;
-            alert("1");
-            for (var i = 0; i < 20; i++) {
-                setTimeout("changeopacity(opa)", 20);
-                opa -= 0.05;
+        function ChangeOpacity() {
+            /*bvar enter = document.getElementById("enter");
+            alert();
+            var opc = enter.style.opacity;
+            enter.style.opacity = opc - 0.01;
+            if (opc > 0) {
+                window.setTimeout("ChangeOpacity()", 10);
+            }*/
+            /*
+            var testDiv = document.getElementById("enter");
+            var xPos = parseInt(testDiv.style.left);
+            if (xPos == 50) {
+                return true;
             }
+            xPos++;
+            testDiv.style.left = xPos + "px";
+            setTimeout("moveDiv()", 10);
+            alert(testDiv.style.left);
+            */
         }
     </script>
 </head>
 <body onload="enter()" id="body" onmousewheel="return false">
     <div id="top" style="position: absolute; top: 0; left: 0;"></div>
     <p class="title">简历</p>
-    <div id="enter" class="mask">
+    <div id="enter">
     </div>
     <div class="main">
         <br />
