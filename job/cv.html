@@ -11,6 +11,17 @@
             text-shadow: rgba(0, 0, 0,1) 0px 0px 5px;
             color: white;
             overflow-y: hidden;
+            -webkit-animation: bodyenter 3s ease;
+        }
+
+        @-webkit-keyframes bodyenter {
+            from {
+                background-color: white;
+            }
+
+            to {
+                background-color: wheat;
+            }
         }
 
         ::selection {
@@ -73,7 +84,7 @@
             ChangeOpacity();
             document.getElementById("body").style.overflowY = "auto";
             document.getElementById("body").onmousewheel = "";
-            //document.getElementById("enter").style.display = "none";
+            document.getElementById("enter").style.display = "none";
         }
         function ChangeOpacity() {
             /*bvar enter = document.getElementById("enter");
@@ -100,8 +111,8 @@
 <body onload="enter()" id="body" onmousewheel="return false">
     <div id="top" style="position: absolute; top: 0; left: 0;"></div>
     <p class="title">简历</p>
-    <div id="enter">
-    </div>
+    <!--<div id="enter">
+    </div>-->
     <div class="main">
         <br />
         <br />
