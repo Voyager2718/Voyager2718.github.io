@@ -232,10 +232,21 @@
             var y = today.getYear() + 1900;
             var m = today.getMonth() + 1;
             var d = today.getDay() + 1;
-            resttime.innerText = 6 - d + " days left.";
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = fomat(m);
+            s = fomat(s);
+            resttime.innerText = 6 - d + " days " + (24 - h) + " hours " + (60 - m) + " minutes " + (60 - s) + " seconds left.";
             if ((m >= 6 && d >= 6) || y >= 2015) {
                 document.getElementById("cover").style.display = "none";
             }
+            setTimeout("checkdate()", 500);
+        }
+        function fomat(i) {
+            if (i < 10)
+                i = "0" + i;
+            return i;
         }
         function cover() {
             var h = window.innerHeight;
@@ -250,7 +261,7 @@
 </head>
 <body id="body" onload="checkdate();cover()" onresize="cover()">
     <div id="cover">
-        <p class="datelim">Will be showed in 2014-06-06.</p>
+        <p class="datelim">Will be showed in 2014-06-06 00:00.</p>
         <p id="resttime" class="datelim" style="top: 48%; font-size: 20px;"></p>
     </div>
     <audio id="birth" src="resources/birth.mp3"></audio>
