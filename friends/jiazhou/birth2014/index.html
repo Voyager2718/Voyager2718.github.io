@@ -235,18 +235,22 @@
             var h = today.getHours();
             var m = today.getMinutes();
             var s = today.getSeconds();
+            s = 60 - s;
+            m = 60 - m;
+            h = 24 - h;
             m = fomat(m);
             s = fomat(s);
-            resttime.innerText = 6 - d + " days " + (24 - h) + " hours " + (60 - m) + " minutes " + (60 - s) + " seconds left.";
+            resttime.innerText = 6 - d + " days " + h + " hours " + m + " minutes " + s + " seconds left.";
             if ((m >= 6 && d >= 6) || y >= 2015) {
                 document.getElementById("cover").style.display = "none";
             }
             setTimeout("checkdate()", 500);
         }
         function fomat(i) {
-            if (i < 10)
-                i = "0" + i;
-            return i;
+            if (i < 10) {
+                i = "0" + i
+            }
+            return i
         }
         function cover() {
             var h = window.innerHeight;
