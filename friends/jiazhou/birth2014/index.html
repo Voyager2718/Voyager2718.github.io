@@ -240,11 +240,15 @@
             h = 24 - h;
             m = fomat(m);
             s = fomat(s);
+            var ds = "days";
+            var hs = "hours";
+            var ms = "minutes";
+            var ss = "seconds";
             resttime.innerText = 6 - d + " days " + h + " hours " + m + " minutes " + s + " seconds left.";
             if ((m >= 6 && d >= 6) || y >= 2015) {
                 document.getElementById("cover").style.display = "none";
             }
-            setTimeout("checkdate()", 500);
+            setTimeout("checkdate()", 50);
         }
         function fomat(i) {
             if (i < 10) {
@@ -267,6 +271,7 @@
     <div id="cover">
         <p class="datelim">Will be showed in 2014-06-06 00:00.</p>
         <p id="resttime" class="datelim" style="top: 48%; font-size: 20px;"></p>
+        <p style="color: white; font-size: 10px; top: 0px; left: 1%; text-shadow: none;">Copyright YANG Zhipeng 2014</p>
     </div>
     <audio id="birth" src="resources/birth.mp3"></audio>
     <img src="resources/flowers.png" style="position: absolute; bottom: 0%; opacity: 0.2; -webkit-filter: blur(0px);" />
