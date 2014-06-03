@@ -170,7 +170,7 @@
             position: absolute;
             left: 0px;
             top: 0px;
-            background-color: black;
+            background-color: rgb(0, 0, 25);
             z-index: 9999;
         }
 
@@ -184,7 +184,7 @@
                 text-shadow: yellow 0px 0px 10px;
             }
 
-        #datelim {
+        .datelim {
             animation: datelim 0.8s infinite ease-in-out alternate;
             -webkit-animation: datelim 0.8s infinite ease-in-out alternate;
             -moz-animation: datelim 0.8s infinite ease-in-out alternate;
@@ -232,6 +232,7 @@
             var y = today.getYear() + 1900;
             var m = today.getMonth() + 1;
             var d = today.getDay() + 1;
+            resttime.innerText = 6 - d + " days left.";
             if ((m >= 6 && d >= 6) || y >= 2015) {
                 document.getElementById("cover").style.display = "none";
             }
@@ -249,7 +250,8 @@
 </head>
 <body id="body" onload="checkdate();cover()" onresize="cover()">
     <div id="cover">
-        <p id="datelim">Will be showed in 2014-06-06</p>
+        <p class="datelim">Will be showed in 2014-06-06.</p>
+        <p id="resttime" class="datelim" style="top: 48%; font-size: 20px;"></p>
     </div>
     <audio id="birth" src="resources/birth.mp3"></audio>
     <img src="resources/flowers.png" style="position: absolute; bottom: 0%; opacity: 0.2; -webkit-filter: blur(0px);" />
