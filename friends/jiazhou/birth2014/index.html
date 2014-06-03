@@ -162,6 +162,27 @@
                 -webkit-filter: brightness(1.25);
                 filter: brightness(1.5);
             }
+
+        #cover {
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background-color: black;
+            z-index: 9999;
+        }
+
+            #cover p {
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 40%;
+                left: 5%;
+                text-align: center;
+                text-shadow: yellow 0px 0px 10px;
+            }
     </style>
     <script type="text/javascript">
         function pause() {
@@ -170,9 +191,30 @@
         function play() {
             document.getElementById("birth").play();
         }
+        function checkdate() {
+            var today = new Date();
+            var y = today.getYear() + 1900;
+            var m = today.getMonth() + 1;
+            var d = today.getDay() + 1;
+            if ((m >= 6 && d >= 6) || y >= 2015) {
+                document.getElementById("cover").style.display = "none";
+            }
+        }
+        function cover() {
+            var h = window.innerHeight;
+            var w = window.innerWidth;
+            if (w < 1300 || h < 600) {
+                document.getElementById("body").innerHTML = "";
+                alert("请用分辨率为1300×600以上的设备观看");
+                window.close();
+            }
+        }
     </script>
 </head>
-<body>
+<body id="body" onload="checkdate();cover()" onresize="cover()">
+    <div id="cover">
+        <p>Will be showed in 2014-06-06</p>
+    </div>
     <audio id="birth" src="resources/birth.mp3"></audio>
     <img src="resources/flowers.png" style="position: absolute; bottom: 0%; opacity: 0.2; -webkit-filter: blur(0px);" />
     <h1>生日快乐</h1>
