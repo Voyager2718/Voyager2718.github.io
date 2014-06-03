@@ -221,6 +221,8 @@
         }
     </style>
     <script type="text/javascript">
+        var times = 0;
+        var resolution = false;
         function pause() {
             document.getElementById("birth").pause();
         }
@@ -257,12 +259,26 @@
             return i
         }
         function cover() {
-            var h = window.innerHeight;
-            var w = window.innerWidth;
-            if (w < 1300 || h < 600) {
-                document.getElementById("body").innerHTML = "";
-                alert("请用分辨率为1300×600以上的设备观看");
-                window.close();
+            if (!resolution) {
+                var h = window.innerHeight;
+                var w = window.innerWidth;
+                if (w < 1300 || h < 600) {
+                    document.getElementById("body").innerHTML = "";
+                    alert("请用分辨率为1300×600以上的设备观看");
+                    window.close();
+                }
+            }
+        }
+        function cheat() {
+            times++;
+            if (times >= 5) {
+                if (window.confirm("关闭分辨率检测？")) {
+                    resolution = true;
+                }
+                if (window.confirm("跳过cover界面？")) {
+                    document.getElementById("cover").style.display = "none";
+                }
+                times = 0;
             }
         }
     </script>
@@ -271,7 +287,7 @@
     <div id="cover">
         <p class="datelim">Will be showed in 2014-06-06 00:00:00.</p>
         <p id="resttime" class="datelim" style="top: 48%; font-size: 20px;"></p>
-        <p style="color: white; font-size: 10px; top: 0px; left: 1%; text-shadow: none;">Copyright YANG Zhipeng 2014</p>
+        <p style="color: white; font-size: 10px; top: 0px; left: 1%; text-shadow: none;" onclick="cheat()">Copyright YANG Zhipeng 2014</p>
     </div>
     <audio id="birth" src="resources/birth.mp3"></audio>
     <img src="resources/flowers.png" style="position: absolute; bottom: 0%; opacity: 0.2; -webkit-filter: blur(0px);" />
