@@ -272,8 +272,15 @@
         function cheat() {
             times++;
             if (times >= 5) {
-                if (window.confirm("关闭分辨率检测？")) {
-                    resolution = true;
+                if (!resolution == true) {
+                    if (window.confirm("关闭分辨率检测？")) {
+                        resolution = true;
+                    }
+                }
+                else {
+                    if (window.confirm("打开分辨率检测？")) {
+                        resolution = false;
+                    }
                 }
                 if (window.confirm("跳过cover界面？")) {
                     document.getElementById("cover").style.display = "none";
