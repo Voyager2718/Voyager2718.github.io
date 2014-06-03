@@ -233,19 +233,19 @@
             var m = today.getMonth() + 1;
             var d = today.getDay() + 1;
             var h = today.getHours();
-            var m = today.getMinutes();
+            var min = today.getMinutes();
             var s = today.getSeconds();
             s = 60 - s;
-            m = 60 - m;
+            min = 60 - min;
             h = 24 - h;
-            m = fomat(m);
+            min = fomat(min);
             s = fomat(s);
             var ds = "days";
             var hs = "hours";
             var ms = "minutes";
             var ss = "seconds";
-            resttime.innerText = 6 - d + " days " + h + " hours " + m + " minutes " + s + " seconds left.";
-            if ((m >= 6 && d >= 6) || y >= 2015) {
+            resttime.innerText = 6 - d + " days " + h + " hours " + min + " minutes " + s + " seconds left.";
+            if ((m >= 6 && d >= 6) || (m >= 7) || y >= 2015) {
                 document.getElementById("cover").style.display = "none";
             }
             setTimeout("checkdate()", 50);
