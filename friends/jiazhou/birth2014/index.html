@@ -183,6 +183,42 @@
                 text-align: center;
                 text-shadow: yellow 0px 0px 10px;
             }
+
+        #datelim {
+            animation: datelim 0.8s infinite ease-in-out alternate;
+            -webkit-animation: datelim 0.8s infinite ease-in-out alternate;
+            -moz-animation: datelim 0.8s infinite ease-in-out alternate;
+        }
+
+        @keyframes datelim {
+            from {
+                text-shadow: yellow 0px 0px 5px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 15px;
+            }
+        }
+
+        @-webkit-keyframes datelim {
+            from {
+                text-shadow: yellow 0px 0px 5px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 15px;
+            }
+        }
+
+        @-moz-keyframes datelim {
+            from {
+                text-shadow: yellow 0px 0px 5px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 15px;
+            }
+        }
     </style>
     <script type="text/javascript">
         function pause() {
@@ -213,7 +249,7 @@
 </head>
 <body id="body" onload="checkdate();cover()" onresize="cover()">
     <div id="cover">
-        <p>Will be showed in 2014-06-06</p>
+        <p id="datelim">Will be showed in 2014-06-06</p>
     </div>
     <audio id="birth" src="resources/birth.mp3"></audio>
     <img src="resources/flowers.png" style="position: absolute; bottom: 0%; opacity: 0.2; -webkit-filter: blur(0px);" />
