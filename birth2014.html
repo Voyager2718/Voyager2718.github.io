@@ -113,13 +113,17 @@
             }
 
         .stars {
-            animation: twinkle 0.8s infinite ease-in-out alternate;
-            -webkit-animation: twinkle 0.8s infinite ease-in-out alternate;
-            -moz-animation: twinkle 0.8s infinite ease-in-out alternate;
+            animation: twinkle2 0.8s infinite ease-in-out alternate;
+            -webkit-animation: twinkle2 0.8s infinite ease-in-out alternate;
+            -moz-animation: twinkle2 0.8s infinite ease-in-out alternate;
             color: yellow;
             position: absolute;
             color: yellow;
             font-size: 30px;
+        }
+
+        .text {
+            color: white;
         }
     </style>
     <script type="text/javascript">
@@ -199,9 +203,6 @@
             var w1 = Math.floor(Math.random() * (w + 1)), h1 = Math.floor(Math.random() * (h + 1));
             document.getElementById("universebg").innerHTML = "<p class='stars' style='left:" + w1 + "px;top:" + h1 + "px;'>.</p>";
         }
-        function genstars() {
-
-        }
     </script>
 </head>
 <body id="body" onload="genunibg();checkdate();cover();" onresize="cover()" style="background-color: rgb(0, 0, 30)">
@@ -215,5 +216,7 @@
     <div style="text-align: center; position: absolute;">
         <img style="height: 20%; width: 20%;" src="resources/earth.png" />
     </div>
+
+    <p class="text">有人说，每个人</p>
 </body>
 </html>
