@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Happy Birthday To My LinXi~</title>
+    <style type="text/css">
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            animation: bgcolor 10s infinite alternate ease-in-out;
+            -webkit-animation: bgcolor 10s infinite alternate ease-in-out;
+            -moz-animation: bgcolor 10s infinite alternate ease-in-out;
+        }
+
+        ::selection {
+            background-color: rgba(128, 128, 128, 0.8);
+        }
+
+        .datelim {
+            animation: datelim 0.8s infinite ease-in-out alternate;
+            -webkit-animation: datelim 0.8s infinite ease-in-out alternate;
+            -moz-animation: datelim 0.8s infinite ease-in-out alternate;
+        }
+
+            .datelim:hover {
+                animation: datelimhover 0.8s infinite ease-in-out alternate;
+                -webkit-animation: datelimhover 0.8s infinite ease-in-out alternate;
+                -moz-animation: datelimhover 0.8s infinite ease-in-out alternate;
+            }
+
+        @keyframes datelimhover {
+            from {
+                text-shadow: yellow 0px 0px 15px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 50px;
+            }
+        }
+
+        @-webkit-keyframes datelimhover {
+            from {
+                text-shadow: yellow 0px 0px 15px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 50px;
+            }
+        }
+
+        @-moz-keyframes datelimhover {
+            from {
+                text-shadow: yellow 0px 0px 15px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 50px;
+            }
+        }
+
+        @keyframes datelim {
+            from {
+                text-shadow: yellow 0px 0px 5px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 15px;
+            }
+        }
+
+        @-webkit-keyframes datelim {
+            from {
+                text-shadow: yellow 0px 0px 5px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 15px;
+            }
+        }
+
+        @-moz-keyframes datelim {
+            from {
+                text-shadow: yellow 0px 0px 5px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 15px;
+            }
+        }
+
+        #cover {
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background-color: rgb(0, 0, 25);
+            z-index: 9999;
+        }
+
+            #cover p {
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 40%;
+                left: 5%;
+                text-align: center;
+                text-shadow: yellow 0px 0px 10px;
+            }
+    </style>
+    <script type="text/javascript">
+        var times = 0;
+        var resolution = false;
+        function pause() {
+            document.getElementById("birth").pause();
+        }
+        function play() {
+            document.getElementById("birth").play();
+        }
+        function checkdate() {
+            var today = new Date();
+            var y = today.getYear() + 1900;
+            var m = today.getMonth() + 1;
+            var d = today.getDay() + 1;
+            var h = today.getHours();
+            var min = today.getMinutes();
+            var s = today.getSeconds();
+            s = 60 - s;
+            min = 60 - min;
+            h = 24 - h;
+            min = fomat(min);
+            s = fomat(s);
+            var ds = "days";
+            var hs = "hours";
+            var ms = "minutes";
+            var ss = "seconds";
+            resttime.innerText = (11 - m) + " months " + (27 - d) + " days " + h + " hours " + min + " minutes " + s + " seconds left.";
+            if ((m >= 11 && d >= 27) || (m >= 12) || y >= 2015) {
+                document.getElementById("cover").style.display = "none";
+            }
+            setTimeout("checkdate()", 50);
+        }
+        function fomat(i) {
+            if (i < 10) {
+                i = "0" + i
+            }
+            return i
+        }
+        function cover() {
+            if (!resolution) {
+                var h = window.innerHeight;
+                var w = window.innerWidth;
+                if (w < 1300 || h < 600) {
+                    document.getElementById("body").innerHTML = "";
+                    alert("请用分辨率为1300×600以上的设备观看");
+                    window.close();
+                }
+            }
+        }
+        function cheat() {
+            times++;
+            if (times >= 5) {
+                if (!resolution == true) {
+                    if (window.confirm("关闭分辨率检测？")) {
+                        resolution = true;
+                    }
+                }
+                else {
+                    if (window.confirm("打开分辨率检测？")) {
+                        resolution = false;
+                    }
+                }
+                if (window.confirm("跳过cover界面？")) {
+                    document.getElementById("cover").style.display = "none";
+                }
+                times = 0;
+            }
+        }
+    </script>
+</head>
+<body id="body" onload="checkdate();cover()" onresize="cover()">
+    <div id="cover" style="font-family: 'Microsoft YaHei','Ping Hei',SimHei">
+        <p class="datelim" style="top: 30%;">Will be showed in 2014-11-27 00:00:00.</p>
+        <p id="resttime" class="datelim" style="top: 40%; font-size: 20px;"></p>
+        <p style="color: white; font-size: 10px; top: 0px; left: 1%; text-shadow: none;" onclick="cheat()">Copyright YANG Zhipeng 2014</p>
+    </div>
+</body>
+</html>
