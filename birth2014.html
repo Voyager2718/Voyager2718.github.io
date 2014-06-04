@@ -196,12 +196,11 @@
         }
         function genunibg() {
             var w = window.innerWidth, h = window.innerHeight;
-            for (var i = 0; i < 1; i++) {
-                var w1 = Math.floor(Math.random() * (w + 1)), h1 = Math.floor(Math.random() * (h + 1));
-                //document.getElementById("universebg").innerHTML = "<p class=\"stars\" style=\"left:" + w1 + "top:" + h1 + "\">.</p>";
-                document.getElementById("universebg").innerHTML = "<p class=\"stars\" style=\"left: 50px; top: 300px;\">.</p>";
-                alert(w1 + " " + h1);
-            }
+            var w1 = Math.floor(Math.random() * (w + 1)), h1 = Math.floor(Math.random() * (h + 1));
+            document.getElementById("universebg").innerHTML = "<p class='stars' style='left:" + w1 + "px;top:" + h1 + "px;'>.</p>";
+        }
+        function genstars() {
+
         }
     </script>
 </head>
