@@ -233,24 +233,22 @@
             var today = new Date();
             var y = today.getYear() + 1900;
             var m = today.getMonth() + 1;
-            var d = today.getDay() + 1;
+            var d = today.getDate();
             var h = today.getHours();
             var min = today.getMinutes();
             var s = today.getSeconds();
+            alert(y + " " + m + " " + d + " " + h + " " + min + " " + s);
             s = 60 - s;
             min = 60 - min;
             h = 24 - h;
             min = fomat(min);
             s = fomat(s);
-            var ds = "days";
-            var hs = "hours";
-            var ms = "minutes";
-            var ss = "seconds";
             resttime.innerText = 6 - d + " days " + h + " hours " + min + " minutes " + s + " seconds left.";
             if ((m >= 6 && d >= 6) || (m >= 7) || y >= 2015) {
                 document.getElementById("cover").style.display = "none";
             }
-            setTimeout("checkdate()", 50);
+            //setTimeout("checkdate()", 50);
+            alert(y + " " + m + " " + d + " " + h + " " + min + " " + s);
         }
         function fomat(i) {
             if (i < 10) {
