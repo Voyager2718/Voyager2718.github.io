@@ -237,7 +237,6 @@
             var h = today.getHours();
             var min = today.getMinutes();
             var s = today.getSeconds();
-            alert(y + " " + m + " " + d + " " + h + " " + min + " " + s);
             s = 60 - s;
             min = 60 - min;
             h = 24 - h;
@@ -247,8 +246,6 @@
             if ((m >= 6 && d >= 6) || (m >= 7) || y >= 2015) {
                 document.getElementById("cover").style.display = "none";
             }
-            //setTimeout("checkdate()", 50);
-            alert(y + " " + m + " " + d + " " + h + " " + min + " " + s);
         }
         function fomat(i) {
             if (i < 10) {
