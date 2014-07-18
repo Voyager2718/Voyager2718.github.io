@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0044)http://davidmlane.com/hyperstat/z_table.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Z table - Normal Distribution Calculator Compatible with iPhone and iPad</title>
+
+<script src="./nor_distribution_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-141388-1";
+urchinTracker();
+</script>
+
+
+<script type="text/javascript" src="./nor_distribution_files/normal.js"></script>
+<script type="text/javascript" src="./nor_distribution_files/hyperstat.js"></script>
+<script language="javascript">
+var ctx,h,w,box
+
+var inset = 20
+function clearFields() {
+	document.getElementById("belowX").value=""
+	document.getElementById("aboveX").value=""
+	document.getElementById("betweenX").value=""
+	document.getElementById("outsideX").value=""
+	
+	
+	
+}
+function rect(x1,y1,x2,y2){
+	this.x1=x1
+	this.x2=x2
+	this.y1=y1
+	this.y2=y2
+}
+
+function linTran(x0,xf,y0,yf) {
+	// finds b and a for transforming from x to y
+	r = new Array(2)
+	r[1]=(yf-y0)/(xf-x0);
+	r[0] = (yf+y0)/2- r[1] * (xf+x0)/2;
+	return r
+	
+}
+function init() {
+	canvas = document.getElementById('normal'); 
+	ctx = canvas.getContext('2d');
+	ctx.fillStyle = "white";
+	h = canvas.height 
+	w = canvas.width
+	var x1 = inset
+	var x2 = x1+w - 2*inset
+	
+	var y1 = inset
+	var y2 = y1+ h - 2*inset
+	box = new rect(x1,y1,x2,y2)
+
+	
+}
+
+function draw2() {
+	
+	var pField = document.getElementById("p")
+	var M = parseFloat(document.getElementById("mean").value)
+	var sd = parseFloat(document.getElementById("sd").value)
+	var tail = false
+	
+	if(document.form1.area[0].checked) {
+		ll = parseFloat(document.getElementById("above").value)
+		ul=999999
+		z=(M-ll)/sd
+		pField.value=Math.round(zProb(z)*10000)/10000
+		
+	}
+	else if (document.form1.area[1].checked){
+		ul = parseFloat(document.getElementById("below").value)
+		ll=-999999
+		z=(M-ul)/sd
+		pField.value=1-Math.round(zProb(z)*10000)/10000
+		
+	}
+	
+	else if (document.form1.area[2].checked){
+	
+	
+	  ll = parseFloat(document.getElementById("ll").value)
+	  ul = parseFloat(document.getElementById("ul").value)
+	  
+	  z1=(ll-M)/sd
+	  z2 = (ul-M)/sd
+	  zp = zProb(z2) - zProb(z1)
+	  pField.value=Math.round(zp*10000)/10000
+	
+	}
+	else if (document.form1.area[3].checked){
+	tail = true
+	  ll = parseFloat(document.getElementById("oll").value)
+	  ul = parseFloat(document.getElementById("oul").value)
+		z1=(ll-M)/sd
+	  z2 = (ul-M)/sd
+	
+	   zp = zProb(z1) +(1- zProb(z2))
+	  pField.value=Math.round(zp*10000)/10000
+	
+	
+	}
+	
+	if(sd<=0) return
+	
+	 
+	
+	
+	
+	
+	ctx.clearRect(0,0,w,h)
+	
+	drawNormal(ctx,box,M,sd,ll,ul,tail) //canvas, bounds, mean, standard deviation, lower limit, upper limit, tail (outside or inside)
+	
+}
+function inverse() {
+	clearFields()
+	var ll, ul, x1,x2
+	var M = parseFloat(document.getElementById("mean1").value)
+	var sd = parseFloat(document.getElementById("sd1").value)
+	ctx.clearRect(0,0,w,h)
+	tail = false
+	
+	var p = parseFloat(document.getElementById("p2").value)
+	var x1 = zinv(p)
+	x1=M+sd*x1
+	
+	
+	
+	
+	if (document.form1.area1[0].checked) {
+		x1 = zinv(p)
+		x1=-M+sd*x1
+		ul=M+3.1*sd
+		ll=-x1
+		drawNormal(ctx,box,M,sd,ll,ul,tail)
+		ll = Math.round(1000*ll)/1000
+		
+		document.getElementById("aboveX").value=ll
+	}
+	else if (document.form1.area1[1].checked){
+		ll=M-3.1*sd
+		ul=x1
+		drawNormal(ctx,box,M,sd,ll,ul,tail)
+		ul = Math.round(1000*ul)/1000
+		document.getElementById("belowX").value=ul
+		
+	}
+	
+	else if (document.form1.area1[2].checked){
+		var p2=p/2
+		x1=zinv(.5-p2)
+		ll=x1
+		ul=-x1
+		ll=Math.round((M+sd*ll)*1000)/1000
+		ul=Math.round((M+sd*ul)*1000)/1000
+		drawNormal(ctx,box,M,sd,ll,ul,tail)
+		document.getElementById("betweenX").value=ll + " and " + ul
+		
+	
+	}
+	else if (document.form1.area1[3].checked){
+		/*var p2=p/2
+		x1=zinv(p2)
+		ll=x1
+		ul=-x1
+		drawNormal(ctx,box,M,sd,ll,ul,true)
+		*/
+		var p2=p/2
+		x1=zinv(p2)
+		ll=x1
+		ul=-x1
+		ll=Math.round((M+sd*ll)*1000)/1000
+		ul=Math.round((M+sd*ul)*1000)/1000
+		drawNormal(ctx,box,M,sd,ll,ul,true)
+		document.getElementById("outsideX").value=ll + " and " + ul
+	
+	}
+}
+
+function drawNormal(ctx,box,M,sd,lFill,hFill, tail) {
+	ctx.beginPath()
+	
+	var w = box.x2-box.x1
+	var h = box.y2-box.y1
+	
+	
+	//ctx.fillRect(b.x1,b.y1,w,h)
+	
+	var v = sd*sd
+	var constant = 1/Math.sqrt(2*Math.PI*v)
+	var x=M
+	
+	var maxDensity = constant
+	
+	var r = linTran(0,1.1*maxDensity,h,box.y1)
+	
+  	var Ay=r[0]
+  	var by=r[1]
+
+	
+	var lowX = M - 3.5*sd
+	var highX = M + 3.5*sd
+
+	var r = linTran(lowX,highX,box.x1,box.x2)
+	
+   	var Ax=r[0]; var bx=r[1]
+
+
+   	var x0 = lowX*bx+Ax
+	var xf=highX*bx+Ax
+	
+   ctx.moveTo(xf,Ay)
+   ctx.lineTo(x0,Ay)
+   
+	var inc = 1/bx
+
+   var dmax = 0
+   ctx.strokeStyle = "black";
+
+
+   for (var i=lowX;i<=highX;i+=inc*.5){
+  		xp=bx*i +Ax
+		d =  constant*Math.exp(-Math.pow((i-M),2)/(2*v))
+		dmax = Math.max(dmax,d)
+	
+		dp= by*d+Ay
+		
+		
+		//height in pixels
+		
+		ctx.lineTo(xp,dp) 
+		
+		
+		if (tail) {
+			
+			if(i>=hFill || i <= lFill) {
+			
+			ctx.moveTo(xp,Ay)	
+			ctx.lineTo(xp,dp+1)
+			
+		}
+			
+			
+			
+		}
+		
+		else 
+		  if(i<=hFill && i >=lFill) {
+			  ctx.moveTo(xp,Ay)	
+			  ctx.lineTo(xp,dp+1)
+		  }
+	}
+	
+	ctx.textAlign = "center";
+	ctx.font = "12px Courier sans-serif";
+	
+	y = Ay+ 15
+	ctx.fillStyle = "black";
+	for (var i = M - 3*sd;i<=M+3*sd;i+=sd) {
+		x=bx*i+Ax
+		ctx.moveTo(x,Ay)
+		ctx.lineTo(x,Ay+4)
+		var xlab = Math.round(1000*i)
+		xlab=xlab/1000
+		ctx.fillText(xlab, x, y);
+	}
+	ctx.stroke();
+	//ctx.closePath()
+	
+	
+}
+ 
+</script>
+
+<style type="text/css">
+#apDiv1 {
+	position:absolute;
+	width:362px;
+	height:115px;
+	z-index:1;
+	top: 400px;
+	left:50px;
+	
+}
+#apDiv2 {
+	position:absolute;
+	width:362px;
+	height:115px;
+	z-index:1;
+	top: 400px;
+	left:50px;
+}
+#apDivx1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:1;
+	left: 12px;
+	top: 700px;
+}
+#apDivx2 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:1;
+	left: 239px;
+	top: 700px;
+}
+
+
+
+</style>
+</head>
+
+<body onload="init();draw2()">
+
+<a href="http://davidmlane.com/hyperstat/index.html">HyperStat Online Home Page</a><br>
+<canvas id="normal" width="500" height="300">
+  <p>Your browser doesn't support canvas. Please update your browser.</p>
+</canvas>
+
+
+<form name="form1">
+<div id="apDivx1"><a href="http://precisionconsultingcompany.com/dissertation-help.shtml"><img src="./nor_distribution_files/Precision2.png" alt="precision consulting" width="336" height="280" border="1"></a>
+</div>
+<input name="which" type="radio" value="" checked="" onclick="document.getElementById(&#39;apDiv2&#39;).style.visibility=&#39;visible&#39;;document.getElementById(&#39;apDiv1&#39;).style.visibility=&#39;hidden&#39;">
+Area from  a value (Use to compute p from Z)
+<br>
+<input name="which" type="radio" value="" onclick="document.getElementById(&#39;apDiv1&#39;).style.visibility=&#39;visible&#39;;document.getElementById(&#39;apDiv2&#39;).style.visibility=&#39;hidden&#39;;inverse()">
+Value from an area (Use to compute Z for confidence intervals)
+<div id="apDiv1" style="visibility:hidden">
+  
+
+  Specify Parameters:<br>
+  <table width="100" border="0">
+  <tbody><tr>
+  	<td>Area</td>
+    <td> <input name="p" type="text" id="p2" size="8" maxlength="6" value="0.025" onchange="inverse()"></td>
+    </tr><tr>
+      <td>Mean</td>
+      <td><input name="mean" type="text" id="mean1" value="0" size="8" maxlength="8" onchange="inverse()"></td>
+    </tr>
+    <tr>
+      <td>SD</td>
+      <td> <input name="sd" type="text" id="sd1" value="1" size="8" maxlength="8" onchange="inverse()"></td>
+    </tr>
+  </tbody></table>
+  <br> 
+  <div style="background-color:#FFC">
+  Results:<br>
+    <input type="button" value="Recalculate" onclick="inverse()">
+   <br>
+   <label>
+        <input name="area1" type="radio" id="abovea1" value="above" checked="checked" onclick="inverse()">
+        Above 
+        <input type="text" name="above1" id="aboveX" border="0" readonly="">
+   </label>
+        <br>
+        <label>
+           <input name="area1" type="radio" id="belowa1" value="above" onclick="inverse()" readonly="">
+           Below
+           <input type="text" name="above1" id="belowX" readonly="">
+        </label>
+         <br>
+        <label>
+           <input name="area1" type="radio" id="betweena1" value="above" onclick="inverse()">
+           Between <input type="text" name="above1" id="betweenX" readonly="">
+        </label>
+         <br>
+        <label>
+           <input name="area1" type="radio" id="outside1" value="above" onclick="inverse()">
+           Outside
+           <input type="text" name="above1" id="outsideX" readonly="">
+        </label>
+      </div> 
+        
+        
+  
+</div>
+
+<div id="apDiv2" style="visibility:visible">
+Specify Parameters:<br>
+  <table width="100" border="0">
+  <tbody><tr>
+    <td>Mean</td>
+    <td><input name="mean" type="text" id="mean" value="0" size="8" maxlength="8" onchange="draw2()"></td>
+  </tr>
+  <tr>
+    <td>SD</td>
+    <td> <input name="sd" type="text" id="sd" value="1" size="8" maxlength="8" onchange="draw2()"></td>
+  </tr>
+</tbody></table>
+ 
+  
+
+
+    <label>
+      <input name="area" type="radio" id="above1" value="above" checked="checked" onclick="draw2()">
+      Above</label>
+      
+      <input name="above" type="text" id="above" value="1.96" size="8" maxlength="8" onchange="draw2()">
+    <br>
+    
+    
+	<input type="radio" name="area" id="below1" value="below" onclick="draw2()">
+    
+      Below 
+      
+<input name="below" type="text" id="below" value="1.96" size="8" maxlength="8" onchange="draw2()">
+      <br>
+      
+      <label>
+      <input type="radio" name="area" id="between" value="between" onclick="draw2()">
+      Between</label>
+      
+      <input name="ll" type="text" id="ll" value="-1.96" size="8" maxlength="8" onchange="draw2()">
+  and 
+  
+  <input name="ul" type="text" id="ul" value="1.96" size="8" maxlength="8" onchange="draw2()">
+  <br><label>
+   
+   <input type="radio" name="area" id="between" value="between" onclick="draw2()">
+      Outside</label>
+      
+      <input name="outsideLL" type="text" id="oll" value="-1.96" size="8" maxlength="8" onchange="draw2()">
+  and 
+  <input name="outsideUL" type="text" id="oul" value="1.96" size="8" maxlength="8" onchange="draw2()">
+ 
+  
+  <br>
+  <br>
+  <div style="background-color:#FFC">
+  Results:<br>
+  Area (probability) <input name="p" type="text" id="p" size="8" maxlength="6" readonly="">
+<br>
+<input name="draw" type="button" value="Recalculate" onclick="draw2()">
+</div>
+
+    
+
+ 
+  
+
+  </div>
+</form>
+<br>
+<script type="text/javascript">
+
+tracking()
+</script>
+
+
+
+
+
+
+
+
+</body></html>
