@@ -1,0 +1,18 @@
+body {
+    background-color:#eee;
+}
+.main {
+    text-align:center;
+    margin-top:15%;
+}
+.big {
+    font-family :'Microsoft YaHei',helvetica,SimHei;
+    color:black;
+    font-size:40px;
+    font-weight:bold;
+}
+.small {
+    font-family :'Microsoft YaHei',helvetica,SimHei;
+    color:black;
+    font-size:20px;
+}
