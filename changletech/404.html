@@ -4,16 +4,27 @@
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="resources/favicon1.ico" />
-    <link rel="stylesheet" type="text/css" href="resources/404style.css" />
+    <link rel="stylesheet" type="text/css" href="http://voyager2718.github.io/changletech/resources/404style.css" />
     <title>File Not Found</title>
-    <script src="resources/404script.js"></script>
 </head>
 <body>
     <div class="main">
         <p class="big">File Not Found (404 Error)</p>
         <p class="small">We are sorry. But seems there's nothing on this site.</p>
-        <p>You will be redirected to the homepage in 5 seconds.</p>
+        <p id="time">You will be redirected to the homepage in 5 seconds.</p>
     </div>
-    <script src="resources/404script.js"></script>
+    <script>
+        var t = 4;
+        var p = document.getElementById('time');
+        time.innerText = "You will be redirected to the homepage in " + (t + 1) + " seconds.";
+        function TimeOut() {
+            time.innerText = "You will be redirected to the homepage in " + t + " seconds.";
+            if (t <= 0) {
+                self.location.href = 'http://changletech.com';
+                clearInterval(inter);
+            }
+            t--;
+        }
+        var inter = setInterval("TimeOut()", 1000);</script>
 </body>
 </html>
