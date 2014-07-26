@@ -6,6 +6,7 @@ body {
     -webkit-user-select: none;
     font-size: 25px;
     text-shadow: black 1px 1px 20px;
+    color: white;
 }
 
 .logindiv {
