@@ -43,6 +43,9 @@ p {
     }
 
 .homebutton {
+    position: absolute;
+    left: 15px;
+    top: 15px;
     height: 30px;
     width: 49px;
     background-color: rgb(187, 255, 249);
@@ -52,12 +55,12 @@ p {
     box-shadow: black 0px 0px 20px;
 }
 
-.homebutton:hover {
-    background-color: rgb(102, 255, 249);
-}
+    .homebutton:hover {
+        background-color: rgb(102, 255, 249);
+    }
 
-.homebutton:active {
-    background-color: rgb(80, 220, 249);
-    height: 28px;
-    width: 46px;
-}
+    .homebutton:active {
+        background-color: rgb(80, 220, 249);
+        height: 28px;
+        width: 46px;
+    }
