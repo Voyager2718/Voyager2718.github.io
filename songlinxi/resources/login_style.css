@@ -41,3 +41,23 @@ p {
         height: 45px;
         width: 72px;
     }
+
+.homebutton {
+    height: 30px;
+    width: 49px;
+    background-color: rgb(187, 255, 249);
+    border-radius: 100px;
+    font-weight: bold;
+    border: hidden;
+    box-shadow: black 0px 0px 20px;
+}
+
+.homebutton:hover {
+    background-color: rgb(102, 255, 249);
+}
+
+.homebutton:active {
+    background-color: rgb(80, 220, 249);
+    height: 45px;
+    width: 72px;
+}
