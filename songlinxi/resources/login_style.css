@@ -58,6 +58,6 @@ p {
 
 .homebutton:active {
     background-color: rgb(80, 220, 249);
-    height: 45px;
-    width: 72px;
+    height: 28px;
+    width: 46px;
 }
