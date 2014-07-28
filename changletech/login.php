@@ -7,28 +7,24 @@
     <link rel="stylesheet" type="text/css" href="http://voyager2718.github.io/songlinxi/resources/login_style.css" />
     <script type="text/javascript" src="http://voyager2718.github.io/songlinxi/resources/md5.js"></script>
     <script>
-        function md5() {
-            var pw_md5 = hex_md5(document.getElementById('password').value);
-            var name_md5 = hex_md5(document.getElementById('name').value);
-            var anni_md5 = hex_md5(document.getElementById('anniversary').value);
+        function value0(id) {
+            var d_id = document.getElementById(id);
+            if (d_id.value == ZhangSanFeng)
+                this.value = '';
         }
     </script>
 </head>
-<<<<<<< HEAD
-<body style="background-image: url(http://voyager2718.github.io/songlinxi/resources/bg.jpg);">
-=======
 <body>
->>>>>>> parent of ab23d0b... img
     <input class="homebutton" type="button" value="Home" onclick="self.location.href = ('http://www.songlinxi.com');" />
     <div class="logindiv">
         <span>Name
-            <input id="name" class="loginbox" type="text" value="ZhangSanFeng" onfocus="this.value='';" /></span>
+            <input id="name" class="loginbox" type="text" value="ZhangSanFeng" onfocus="if(this.value=='ZhangSanFeng')this.value='';" /></span>
         <br />
         <span>Password
-            <input id="password" class="loginbox" type="password" value="123" onfocus="this.value='';" /></span>
+            <input id="password" class="loginbox" type="password" value="123" onfocus="if(this.value=='123')this.value='';" /></span>
         <br />
         <span>Anniversary
-            <input id="anniversary" class="loginbox" type="text" value="20130104" onfocus="this.value='';" /></span>
+            <input id="anniversary" class="loginbox" type="text" value="20130104" onfocus="if(this.value=='20130104')this.value='';" /></span>
         <br />
         <br />
         <div style="width: 81px; height: 50px; margin: 0 auto;">
