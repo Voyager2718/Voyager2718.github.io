@@ -5,7 +5,7 @@ body {
     -moz-user-select: none;
     -webkit-user-select: none;
     font-size: 25px;
-    text-shadow: black 1px 1px 20px;
+    text-shadow: black 1px 1px 5px;
 }
 
 .logindiv {
