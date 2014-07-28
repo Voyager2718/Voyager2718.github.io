@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>登陆</title>
+    <link rel="icon" href="http://voyager2718.github.io/songlinxi/resources/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="http://voyager2718.github.io/songlinxi/resources/login_style.css" />
+    <script type="text/javascript" src="http://voyager2718.github.io/songlinxi/resources/md5.js"></script>
+    <script>
+        function md5() {
+          //  document.getElementById('password').value = hex_md5(hex_md5(hex_md5(document.getElementById('password').value)));
+        }
+    </script>
+</head>
+<body style="background-image: url(http://voyager2718.github.io/songlinxi/resources/bg_1.jpg); color: white;">
+    <input class="homebutton" type="button" value="Home" onclick="self.location.href = ('http://www.songlinxi.com');" />
+    <div class="logindiv">
+        <form action="login.php" method="post">
+            <span>Name
+            <input id="name" class="loginbox" name="username" type="text" value="ZhangSanFeng" onfocus="if(this.value=='ZhangSanFeng')this.value='';" /></span>
+            <br />
+            <span>Password
+            <input id="password"class="loginbox" name="password" type="password" value="123" onfocus="if(this.value=='123')this.value='';" /></span>
+            <br />
+            <span>Anniversary
+            <input id="anniversary" name="anni" class="loginbox" type="text" value="20130104" onfocus="if(this.value=='20130104')this.value='';" /></span>
+            <br />
+            <br />
+            <div style="width: 81px; height: 50px; margin: 0 auto;">
+                <input class="loginbutton" onclick="md5()" type="submit" value="Login" />
+            </div>
+        </form>
+    </div>
+    <br />
+    <br />
+    <br />
+    <p>If this is your first login, you don't have to enter the password.</p>
+</body>
+</html>
