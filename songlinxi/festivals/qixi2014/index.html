@@ -3,18 +3,29 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <title>Untitled</title>
+    <title>七夕快乐2014</title>
     <!--Adobe Edge Runtime-->
+    <link rel="icon" href="http://voyager2718.github.io/songlinxi/resources/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="http://voyager2718.github.io/songlinxi/resources/login_style.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <script type="text/javascript" charset="utf-8" src="index_edgePreload.js"></script>
     <style>
-        .edgeLoad-EDGE-22549854 { visibility:hidden; }
+        .edgeLoad-EDGE-22549854 {
+            visibility: hidden;
+        }
     </style>
-<!--Adobe Edge Runtime End-->
+    <!--Adobe Edge Runtime End-->
 
 </head>
 <body style="margin: 0; padding: 0; background-color: #ffe;">
-    <div style="margin: 0 auto;" id="Stage" class="EDGE-22549854">
+    <p style="position: absolute; left: 48%; top: 10%; z-index: -99; text-shadow: none; text-shadow: rgb(128, 128, 128) 0px 0px 10px;">正在读取</p>
+    <input class="homebutton" type="button" value="主页" onclick="self.location.href = ('http://www.songlinxi.com');" />
+    <div style="margin: 0 auto; text-shadow: none;" id="Stage" class="EDGE-22549854">
     </div>
+    <p id="copyright" style="text-align: center; text-shadow: rgb(128, 128, 128) 0px 0px 10px;"></p>
+    <script>
+        var today = new Date();
+        document.getElementById('copyright').innerText = ("杨志鹏 " + (today.getYear() + 1900));
+    </script>
 </body>
 </html>
