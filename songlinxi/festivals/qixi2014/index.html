@@ -15,12 +15,43 @@
         }
     </style>
     <!--Adobe Edge Runtime End-->
-
+    <script>
+        function disappear() {
+            document.getElementById('loading').style.display = "none";
+        }
+    </script>
 </head>
-<body style="margin: 0; padding: 0; background-color: #ffe;">
-    <p style="position: absolute; left: 48%; top: 10%; z-index: -99; text-shadow: none; text-shadow: rgb(128, 128, 128) 0px 0px 10px;">正在读取</p>
+<body style="margin: 0; padding: 0; background-color: #ffe;" onload="disappear()">
+    <div id="loading">
+        <div id="foo"></div>
+    </div>
+    <script src="spin.min.js">
+    </script>
+    <script>
+        var opts = {
+            lines: 13, // The number of lines to draw
+            length: 20, // The length of each line
+            width: 11, // The line thickness
+            radius: 30, // The radius of the inner circle
+            corners: 1, // Corner roundness (0..1)
+            rotate: 7, // The rotation offset
+            direction: 1, // 1: clockwise, -1: counterclockwise
+            color: '#C0E2AA', // #rgb or #rrggbb or array of colors
+            speed: 2.2, // Rounds per second
+            trail: 100, // Afterglow percentage
+            shadow: true, // Whether to render a shadow
+            hwaccel: false, // Whether to use hardware acceleration
+            className: 'spinner', // The CSS class to assign to the spinner
+            zIndex: 2e9, // The z-index (defaults to 2000000000)
+            top: '50%', // Top position relative to parent
+            left: '50%' // Left position relative to parent
+        };
+        var target = document.getElementById('foo');
+        var spinner = new Spinner(opts).spin(target);
+    </script>
+    <audio src="resources/music.mp3" autoplay loop>无法播放背景音乐</audio>
     <input class="homebutton" type="button" value="主页" onclick="self.location.href = ('http://www.songlinxi.com');" />
-    <div style="margin: 0 auto; text-shadow: none;" id="Stage" class="EDGE-22549854">
+    <div style="margin: 0 auto; text-shadow: none; border-radius: 0px 0px 15px 15px; border-color: black;" id="Stage" class="EDGE-22549854">
     </div>
     <p id="copyright" style="text-align: center; text-shadow: rgb(128, 128, 128) 0px 0px 10px;"></p>
     <script>
