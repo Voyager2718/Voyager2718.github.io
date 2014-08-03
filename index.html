@@ -52,7 +52,11 @@
             <li><a href="letters/lettre_de_moti_lille1.pdf">lettre de motivation pour Lille 1.pdf</a></li>
         </ul>
         <hr />
-        <p style="font-size: 10px;">Creator: YANG Zhipeng</p>
+        <p id="copyright" style="font-size: 10px; text-align: center; text-shadow: rgb(128, 128, 128) 0px 0px 10px;"></p>
+        <script>
+            var today = new Date();
+            document.getElementById('copyright').innerText = ("Creator: YANG Zhipeng " + (today.getYear() + 1900));
+        </script>
     </div>
 </body>
 </html>
