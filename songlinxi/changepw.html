@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="http://voyager2718.github.io/songlinxi/resources/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="http://voyager2718.github.io/songlinxi/resources/index_style.css" />
+    <link rel="stylesheet" type="text/css" href="http://voyager2718.github.io/songlinxi/resources/pw_style.css" />
+    <link rel="stylesheet" type="text/css" href="http://voyager2718.github.io/songlinxi/resources/main.css" />
+    <title>修改密码</title>
+    <script>
+        function md5() {
+            document.getElementById('password1').value = hex_md5(document.getElementById('password1').value);
+            document.getElementById('password2').value = hex_md5(document.getElementById('password2').value);
+        }
+        function samechk() {
+            if (document.getElementById('password1').value != document.getElementById('password2').value) {
+                alert('两次输入的密码不一样，请重新输入');
+                self.location.href = 'changepw.html';
+            }
+            else {
+                md5();
+            }
+        }
+    </script>
+</head>
+<body style="background-color: #ffe;">
+    <table class="personalmenu" style="left: 17.5%;">
+        <tr style="color: white;">
+            <td class="box">
+                <a href="personal.html">
+                    <div>礼物</div>
+                </a>
+            </td>
+            <td class="box_selected"><a href="changepw.html">
+                <div>修改密码</div>
+            </a>
+            </td>
+        </tr>
+    </table>
+    <input class="homebutton" type="button" value="主页" onclick="self.location.href = ('http://www.songlinxi.com');" />
+    <div class="logindiv" style="margin-top: 20%;">
+        <form action="changepw.php" method="post">
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td>原密码</td>
+                    <td>
+                        <input id="name" style="border-radius: 5px;" class="loginbox" name="oripassword" type="password" /></td>
+                </tr>
+                <tr>
+                    <td>新密码</td>
+                    <td>
+                        <input id="password1" style="border-radius: 5px;" class="loginbox" name="password1" type="password" /></td>
+                </tr>
+                <tr>
+                    <td>重复输入</td>
+                    <td>
+                        <input id="password2" style="border-radius: 5px;" class="loginbox" name="password2" type="password" /></td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <div style="width: 280px; height: 50px; margin: 0 auto;">
+                <input class="loginbutton" onclick="samechk()" type="submit" />
+                <input class="loginbutton" type="reset" />
+            </div>
+        </form>
+    </div>
+    <br />
+    <br />
+    <br />
+</body>
+</html>
