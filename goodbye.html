@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Disappeared</title>
+    <style>
+        body {
+            background-color: #fee;
+            font-family: Helvetica,'Microsoft YaHei',SimHei;
+        }
+
+        p {
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body id="body">
+    <p style="font-size: 80px" id="p404">404</p>
+    <p id="bye" class="p">本页面曾在此处等候着妳的足迹，但你却从未出现，于是我只能默默地消失在夜空中了...</p>
+    <script>
+        var o = 1, c1 = 238, c2 = 255, c3 = 0,c4=0;
+        var byetext = document.getElementById('bye');
+        var body = document.getElementById('body');
+        var p = document.getElementById('p404');
+        setTimeout('bye()', 3000);
+        function bye() {
+            byetext.style.opacity = o;
+            body.style.backgroundColor = 'rgb(' + c2 + ',' + c1 + ',' + c1 + ')';
+            p.style.color = 'rgb(' + c3 + ',' + c3 + ',' + c3 + ')';
+            //byetext.style.color = 'rgb(' + c4 + ',' + c4 + ',' + c4 + ')';
+            o -= 0.01;
+            c1 -= 3;
+            c2 -= 3;
+            c3 += 4;
+            c4 += 10;
+            if (o > 0)
+                setTimeout('bye()', 100);
+            else {
+                document.location.href = 'http://songlinxi.com';
+            }
+        }
+    </script>
+</body>
+</html>
