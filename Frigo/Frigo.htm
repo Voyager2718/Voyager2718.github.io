@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="imagetoolbar" content="no">
+    <title>Frigo à vente</title>
+    <link rel="stylesheet" href="frigo_files/style.css">
+    <script type="text/javascript" src="frigo_files/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#gallery_output img").not(":first").hide();
+
+            $("#gallery a").click(function () {
+                if ($("#" + this.rel).is(":hidden")) {
+                    $("#gallery_output img").slideUp();
+                    $("#" + this.rel).slideDown();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="content">
+        <h1>Frigo à vente</h1>
+        <p>
+            [FR]Frigo acheté chez Carrefour l'année dernière. La garantie reste 1 an (Je l'ai acheté le Octobre 2013, et la garantie est à 2 ans). [EN]Fridge bought in Carrefour last year. It has 1 year's guarantee
+        (I bought it in October 2013, and it's guarantee is 2 years). [CN]上年在家乐福买的冰箱，还剩一年保修（2013年10月买，保修两年）
+        </p>
+        <p>Prix: 75EUR Price: 75EUR 价格: 75欧元</p>
+        <p>Télé/Tele/电话: 0695328879 mél/E-mail/电邮: voyager2718.github@qq.com</p>
+        <hr>
+        <div id="gallery" style="height: 450px;">
+            <div id="gallery_nav">
+                <a rel="img1" href="javascript:;">
+                    <img src="./Frigo_files/frigo1.jpg" style="width: 110px; height: 90px;"></a> <a rel="img2" href="javascript:;">
+                        <img src="./Frigo_files/frigo2.jpg" style="width: 110px; height: 90px;"></a> <a rel="img3" href="javascript:;">
+                            <img src="./Frigo_files/frigo3.jpg" style="width: 110px; height: 90px;"></a> <a rel="img4" href="javascript:;">
+                                <img src="./Frigo_files/frigo4.jpg" style="width: 110px; height: 90px;"></a>
+            </div>
+            <div id="gallery_output">
+                <img id="img1" style="width: 550px; height: 329px;" src="./Frigo_files/frigo1.jpg">
+                <img id="img2" style="width: 550px; height: 329px;display: none;" src="./Frigo_files/frigo2.jpg">
+                <img id="img3" style="width: 550px; height: 329px;display: none;" src="./Frigo_files/frigo3.jpg">
+                <img id="img4" style="width: 550px; height: 329px;display: none;" src="./Frigo_files/frigo4.jpg">
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div style="width: 550px; margin: 20px auto;"></div>
+</body>
+</html>
