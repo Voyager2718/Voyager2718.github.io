@@ -51,7 +51,40 @@ body {
 
     .title_list-box:hover {
         background-color: #6BCFFF;
+        animation: ease trans_color 0.5s;
+        -webkit-animation: ease trans_color 0.5s;
+        -moz-animation: ease trans_color 0.5s;
     }
+
+@keyframes trans_color {
+    from {
+        background-color: rgba(128, 128, 128,0.8);
+    }
+
+    to {
+        background-color: #6BCFFF;
+    }
+}
+
+@-moz-keyframes trans_color {
+    from {
+        background-color: rgba(128, 128, 128,0.8);
+    }
+
+    to {
+        background-color: #6BCFFF;
+    }
+}
+
+@-webkit-keyframes trans_color {
+    from {
+        background-color: rgba(128, 128, 128,0.8);
+    }
+
+    to {
+        background-color: #6BCFFF;
+    }
+}
 
 .a_no_under_line_white {
     text-decoration: none;
