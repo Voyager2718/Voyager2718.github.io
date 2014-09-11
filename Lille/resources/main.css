@@ -1,0 +1,77 @@
+body {
+    text-shadow: rgba(128, 128, 128, 0.5) 1px 1px 5px;
+    background-color: #ffe;
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title_icon {
+    width: 100px;
+    margin-left: 40px;
+    float: left;
+}
+
+.title {
+    font-family: 'Microsoft YaHei';
+    float: left;
+    margin-left: 30px;
+}
+
+#title_list {
+    float: left;
+    background-color: rgba(128, 128, 128,0.8);
+    box-shadow: rgba(128, 128, 128,0.8) 0px 0px 50px;
+    border-radius: 50px;
+    width: 45%;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    line-height: 45px;
+    z-index: 99;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.title_list-box {
+    width: 20%;
+    border-radius: 50px;
+}
+
+    .title_list-box:hover {
+        background-color: rgb(255, 216, 0);
+    }
+
+.a_no_under_line_white {
+    text-decoration: none;
+    color: white;
+}
+
+.showbar {
+    z-index: -99;
+    margin-top: 10px;
+    border-radius: 15px;
+    height: 344px;
+    overflow: hidden;
+    box-shadow: rgba(128, 128, 128, 0.5) 0px 0px 10px;
+}
+
+.showbar-img {
+    width: 100%;
+    height: 344px;
+    padding: 0;
+}
+
+.showbar-introduction {
+    float: left;
+    width: 45%;
+    height: 100%;
+    background-color: black;
+    z-index: 99;
+}
