@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>里尔学联</title>
+    <link rel="icon" href="resources/favicon.ico" />
+    <link rel="stylesheet" href="resources/main.css" />
+    <script>
+        function ResetPositions() {
+            if (window.innerWidth < 1245) {
+                document.getElementById('title_list').style.width = '100%';
+                document.getElementById('title_list').style.marginLeft = '0px';
+            }
+            else if (window.innerWidth >= 1245) {
+                document.getElementById('title_list').style.width = '45%';
+                document.getElementById('title_list').style.marginLeft = '50px';
+            }
+        }
+    </script>
+</head>
+<body onresize="ResetPositions();" onload="ResetPositions()">
+    <div class="main">
+        <div style="height: 100px;">
+            <!--标题栏-->
+            <img class="title_icon" src="resources/icon.png" />
+            <table class="title">
+                <tr>
+                    <td style="font-size: 40px;">里尔学联</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10px;">UNION DES RECHERCHEURS ET ETUDIANTS CHINOIS<br />
+                        EN FRANCE A LILLE</td>
+                </tr>
+            </table>
+            <table id="title_list">
+                <tr style="color: white;">
+                    <td class="title_list-box "><a class="a_no_under_line_white" href="index.html">
+                        <div>主页</div>
+                    </a>
+                    </td>
+                    <td class="title_list-box "><a class="a_no_under_line_white" href="intro.html">
+                        <div>简介</div>
+                    </a>
+                    </td>
+                    <td class="title_list-box "><a class="a_no_under_line_white" href="activities.html">
+                        <div>活动信息</div>
+                    </a>
+                    </td>
+                    <td class="title_list-box "><a class="a_no_under_line_white" href="resources.html">
+                        <div>资源</div>
+                    </a>
+                    </td>
+                    <td class="title_list-box "><a class="a_no_under_line_white" href="news.html">
+                        <div>新闻</div>
+                    </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="showbar">
+            <!--布告栏-->
+            <div class="showbar-introduction_layer">
+            </div>
+            <div class="showbar-introduction">
+                <table>
+                    <tr>
+                        <th><a style="text-decoration: none; color: wheat;" href="dynamic">最新动态</a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><a class="a_no_under_line_white" href="test3">2014年里尔学联招新网上报名系统</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a class="a_no_under_line_white" href="test3">2014中秋迎新联欢会Le fête de la mi-autumne (inscription ici )</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a class="a_no_under_line_white" href="test3">2014年新疆籍优秀自费留学生奖学金</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <p style="text-align: center;">里尔学联首页-Alpha Created by 杨志鹏 2014 All rights reserved</p>
+</body>
+</html>
