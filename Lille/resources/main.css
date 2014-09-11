@@ -4,6 +4,11 @@ body {
     font-family: 'Microsoft YaHei',Helvetica,SimHei;
 }
 
+::selection {
+    color: wheat;
+    background-color: wheat;
+}
+
 .main {
     width: 80%;
     margin: 0 auto;
@@ -45,7 +50,7 @@ body {
 }
 
     .title_list-box:hover {
-        background-color: rgb(255, 216, 0);
+        background-color: #6BCFFF;
     }
 
 .a_no_under_line_white {
