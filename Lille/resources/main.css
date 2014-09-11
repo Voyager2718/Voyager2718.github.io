@@ -1,6 +1,7 @@
 body {
     text-shadow: rgba(128, 128, 128, 0.5) 1px 1px 5px;
     background-color: #ffe;
+    font-family: 'Microsoft YaHei',Helvetica,SimHei;
 }
 
 .main {
@@ -15,7 +16,6 @@ body {
 }
 
 .title {
-    font-family: 'Microsoft YaHei';
     float: left;
     margin-left: 30px;
 }
