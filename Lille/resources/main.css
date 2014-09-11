@@ -84,10 +84,12 @@ body {
 .showbar-introduction {
     margin: 0 auto;
     width: 27%;
+    height: 47%;
     margin-left: 20px;
     margin-top: 20px;
     position: absolute;
     z-index: 99;
     color: wheat;
     line-height: 30px;
+    overflow: hidden;
 }
