@@ -51,12 +51,12 @@ body {
 
     .title_list-box:hover {
         background-color: #6BCFFF;
-        animation: ease trans_color 0.25s;
-        -webkit-animation: ease trans_color 0.25s;
-        -moz-animation: ease trans_color 0.25s;
+        animation: ease trans_color0 0.25s;
+        -webkit-animation: ease trans_color0 0.25s;
+        -moz-animation: ease trans_color0 0.25s;
     }
 
-@keyframes trans_color {
+@keyframes trans_color0 {
     from {
         background-color: rgba(128, 128, 128, 0);
     }
@@ -66,7 +66,7 @@ body {
     }
 }
 
-@-moz-keyframes trans_color {
+@-moz-keyframes trans_color0 {
     from {
         background-color: rgba(128, 128, 128, 0);
     }
@@ -76,7 +76,7 @@ body {
     }
 }
 
-@-webkit-keyframes trans_color {
+@-webkit-keyframes trans_color0 {
     from {
         background-color: rgba(128, 128, 128, 0);
     }
@@ -126,4 +126,64 @@ body {
     color: wheat;
     line-height: 30px;
     overflow: hidden;
+}
+
+.showbar-button {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    background-color: #6BCFFF;
+    border-radius: 5px;
+    box-shadow: #478bac 0px 5px 0px;
+    left: 70%;
+    top: 350px;
+    font-size: 100%;
+    text-align: center;
+    line-height: 40px;
+    border: none;
+    font-family: 'Microsoft YaHei',Helvetica,SimHei;
+    z-index: 100;
+}
+
+    .showbar-button:hover {
+        animation: trans_color1 0.25s ease;
+        -webkit-animation: trans_color1 0.25s ease;
+        -moz-animation: trans_color1 0.25s ease;
+        background-color: #c0ebff;
+    }
+
+    .showbar-button:active {
+        background-color: #5aacd3;
+        box-shadow: none;
+        top: 355px;
+    }
+
+@keyframes trans_color1 {
+    from {
+        background-color: #6BCFFF;
+    }
+
+    to {
+        background-color: #c0ebff;
+    }
+}
+
+@-moz-keyframes trans_color1 {
+    from {
+        background-color: #6BCFFF;
+    }
+
+    to {
+        background-color: #c0ebff;
+    }
+}
+
+@-webkit-keyframes trans_color1 {
+    from {
+        background-color: #6BCFFF;
+    }
+
+    to {
+        background-color: #c0ebff;
+    }
 }
