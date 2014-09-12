@@ -8,19 +8,25 @@
     <link rel="stylesheet" href="resources/main.css" />
     <script>
         function ResetPositions() {
-            if (window.innerWidth < 1245) {
+            if (window.innerWidth < 1262) {
                 document.getElementById('title_list').style.width = '100%';
                 document.getElementById('title_list').style.marginLeft = '0px';
+                document.getElementById('top_bar').innerText = '建议在横向分辨率大于1280的设备上浏览本网页';
+                document.getElementById('top_bar').style.display = 'inline';
             }
-            else if (window.innerWidth >= 1245) {
+            else if (window.innerWidth >= 1262) {
                 document.getElementById('title_list').style.width = '45%';
                 document.getElementById('title_list').style.marginLeft = '50px';
+                document.getElementById('top_bar').innerText = '';
+                document.getElementById('top_bar').style.display = 'none';
             }
         }
     </script>
     <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
 </head>
 <body onresize="ResetPositions();" onload="ResetPositions()">
+    <div id="top_bar"></div>
+    <br />
     <div class="main">
         <div style="height: 100px;">
             <!--标题栏-->
