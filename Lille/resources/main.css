@@ -1,5 +1,5 @@
 body {
-    text-shadow: rgba(128, 128, 128, 1) 2px 2px 5px;
+    text-shadow: gray 2px 2px 5px;
     background-color: #ffe;
     font-family: 'Microsoft YaHei',Helvetica,SimHei;
 }
