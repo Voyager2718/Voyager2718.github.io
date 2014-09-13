@@ -10,19 +10,21 @@
     <link rel="stylesheet" href="resources/main.css" />
     <script>
         function ResetPositions() {
+            var TL = document.getElementById('title_list');
+            var TB = document.getElementById('top_bar');
             if (window.innerWidth < 1262) {
-                document.getElementById('title_list').style.width = '100%';
-                document.getElementById('title_list').style.marginLeft = '0px';
-                document.getElementById('title_list').style.marginBottom = '10px';
-                document.getElementById('top_bar').innerText = '建议在横向分辨率大于1280的设备上浏览本网页';
-                document.getElementById('top_bar').style.display = 'inline';
+                TL.style.width = '100%';
+                TL.style.marginLeft = '0px';
+                TL.style.marginBottom = '10px';
+                TB.innerText = '建议在横向分辨率大于1280的设备上浏览本网页';
+                TB.style.display = 'inline';
             }
             else if (window.innerWidth >= 1262) {
-                document.getElementById('title_list').style.width = '45%';
-                document.getElementById('title_list').style.marginLeft = '50px';
-                document.getElementById('title_list').style.marginBottom = '0px';
-                document.getElementById('top_bar').innerText = '';
-                document.getElementById('top_bar').style.display = 'none';
+                TL.style.width = '45%';
+                TL.style.marginLeft = '50px';
+                TL.style.marginBottom = '0px';
+                TB.innerText = '';
+                TB.style.display = 'none';
             }
         }
     </script>
