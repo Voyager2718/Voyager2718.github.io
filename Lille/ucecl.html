@@ -7,30 +7,14 @@
     <meta name="keywords" content="里尔学联" />
     <meta name="description" content="里尔学联" />
     <link rel="icon" href="resources/favicon.ico" />
-    <link rel="stylesheet" href="resources/main.css" />
-    <script>
-        function ResetPositions() {
-            var TL = document.getElementById('title_list');
-            var TB = document.getElementById('top_bar');
-            if (window.innerWidth < 1262) {
-                TL.style.width = '100%';
-                TL.style.marginLeft = '0px';
-                TL.style.marginBottom = '10px';
-                TB.innerText = '建议在横向分辨率大于1280的设备上浏览本网页';
-                TB.style.display = 'inline';
-            }
-            else if (window.innerWidth >= 1262) {
-                TL.style.width = '45%';
-                TL.style.marginLeft = '50px';
-                TL.style.marginBottom = '0px';
-                TB.innerText = '';
-                TB.style.display = 'none';
-            }
-        }
-    </script>
-    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+    <link rel="stylesheet" href="resources/index.css" />
+    <script type="text/javascript" src="resources/index.js"></script>
+    <!--<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+    -->
 </head>
-<body onresize="ResetPositions();" onload="ResetPositions()">
+<body onresize="ResetPage();" onload="ResetPage()">
+    <!--
+    <div id="test" style="position: absolute; top: 50px;"></div>-->
     <div id="top_bar"></div>
     <br />
     <div class="main">
@@ -94,11 +78,15 @@
                     </tr>
                 </table>
             </div>
-            <input class="showbar-button" value="更多信息" type="button" onclick="location.href = 'infos.html'" />
+            <input id="more_info" value="更多信息" type="button" onclick="location.href = 'infos.html'" />
         </div>
     </div>
+    <!--
+    <div class="frame">
+        <div class="frame_1"></div>
+    </div>-->
     <br />
     <br />
-    <p style="text-align: center;">里尔学联首页-Alpha-0004 Created by 杨志鹏 2014 All rights reserved</p>
+    <p style="text-align: center;">里尔学联首页-Alpha-0005 Created by 杨志鹏 2014 All rights reserved</p>
 </body>
 </html>
