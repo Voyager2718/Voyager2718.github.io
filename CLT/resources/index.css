@@ -1,0 +1,225 @@
+body {
+    text-shadow: gray 2px 2px 5px;
+    background-color: #ffe;
+    font-family: 'Microsoft YaHei',Helvetica,SimHei;
+}
+
+::selection {
+    color: wheat;
+    background-color: wheat;
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#top_bar {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 28px;
+    background-color: #caab73;
+    line-height: 28px;
+    text-align: center;
+    display: none;
+}
+
+.title_icon {
+    width: 100px;
+    margin-left: 40px;
+    float: left;
+}
+
+.title {
+    float: left;
+    margin-left: 30px;
+}
+
+#title_list {
+    float: left;
+    background-color: rgba(128, 128, 128,0.8);
+    box-shadow: rgba(128, 128, 128,0.8) 0px 0px 50px;
+    border-radius: 50px;
+    width: 45%;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    line-height: 45px;
+    z-index: 99;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.title_list-box {
+    width: 20%;
+    border-radius: 50px;
+}
+
+    .title_list-box:hover {
+        background-color: #6BCFFF;
+        animation: ease trans_color0 0.25s;
+        -webkit-animation: ease trans_color0 0.25s;
+        -moz-animation: ease trans_color0 0.25s;
+    }
+
+@keyframes trans_color0 {
+    from {
+        background-color: rgba(128, 128, 128, 0);
+    }
+
+    to {
+        background-color: #6BCFFF;
+    }
+}
+
+@-moz-keyframes trans_color0 {
+    from {
+        background-color: rgba(128, 128, 128, 0);
+    }
+
+    to {
+        background-color: #6BCFFF;
+    }
+}
+
+@-webkit-keyframes trans_color0 {
+    from {
+        background-color: rgba(128, 128, 128, 0);
+    }
+
+    to {
+        background-color: #6BCFFF;
+    }
+}
+
+.a_no_under_line_white {
+    text-decoration: none;
+    color: white;
+}
+
+.showbar {
+    z-index: -99;
+    margin-top: 10px;
+    border-radius: 15px;
+    height: 344px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: rgba(128, 128, 128, 0.8) -5px 5px 10px;
+    background: url('iemn-lille1.jpg');
+    background-size: 100% 100%;
+    border: 1px solid silver;
+}
+
+.showbar-introduction_layer {
+    float: left;
+    width: 38.2%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    opacity: 0.5;
+    z-index: 50;
+    position: relative;
+}
+
+.showbar-introduction {
+    margin: 0 auto;
+    width: 27%;
+    height: 47%;
+    margin-left: 20px;
+    margin-top: 20px;
+    position: absolute;
+    z-index: 99;
+    color: wheat;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+#more_info {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    background-color: #6BCFFF;
+    border-radius: 5px;
+    box-shadow: #478bac 0px 5px 0px;
+    left: 70%;
+    top: 380px;
+    font-size: 100%;
+    line-height: 40px;
+    border: none;
+    font-family: 'Microsoft YaHei',Helvetica,SimHei;
+    z-index: 100;
+}
+
+    #more_info:hover {
+        animation: trans_color1 0.25s ease;
+        -webkit-animation: trans_color1 0.25s ease;
+        -moz-animation: trans_color1 0.25s ease;
+        background-color: #c0ebff;
+    }
+
+    #more_info:active {
+        background-color: #5aacd3;
+        box-shadow: none;
+        top: 355px;
+    }
+
+@keyframes trans_color1 {
+    from {
+        background-color: #6BCFFF;
+    }
+
+    to {
+        background-color: #c0ebff;
+    }
+}
+
+@-moz-keyframes trans_color1 {
+    from {
+        background-color: #6BCFFF;
+    }
+
+    to {
+        background-color: #c0ebff;
+    }
+}
+
+@-webkit-keyframes trans_color1 {
+    from {
+        background-color: #6BCFFF;
+    }
+
+    to {
+        background-color: #c0ebff;
+    }
+}
+
+.frame_main {
+    width: 80%;
+    height: 1000px;
+    position: relative;
+    background-color: rgba(128, 128, 128,0.8);
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: -99;
+}
+
+.frame_1 {
+    float: left;
+    width: 32.709%;
+    height: 300px;
+    background-color: #e9f8ff;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: static;
+    margin-left: 10px;
+    position: relative;
+}
