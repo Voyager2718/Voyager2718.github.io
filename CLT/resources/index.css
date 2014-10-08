@@ -2,7 +2,7 @@ body {
     text-shadow: gray 2px 2px 5px;
     background-color: #ffe;
     font-family: 'Microsoft YaHei',Helvetica,SimHei;
-    background-image: url(bg.jpg);
+    /*background-image: url(bg.jpg);*/
     background-repeat: repeat;
 }
 
