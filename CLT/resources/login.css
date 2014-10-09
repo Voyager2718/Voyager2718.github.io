@@ -66,3 +66,9 @@ a {
     right: 10px;
     top: 10px;
 }
+
+#index {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
