@@ -28,15 +28,16 @@ body {
 #login_button {
     position: absolute;
     width: 100px;
-    height: 25px;
-    background-color: #6BCFFF;
-    border-radius: 5px;
-    box-shadow: #478bac 0px 5px 0px;
+    height: 30px;
+    background-color: rgba(128, 128, 128, 0.5); /*#6BCFFF;*/
+    /*box-shadow: #478bac 0px 5px 0px;*/
     font-size: 10px;
     line-height: 5px;
-    border: none;
+    border: 1px solid white;
+    border-radius: 3px;
     font-family: 'Microsoft YaHei',Helvetica,SimHei;
     z-index: 100;
+    color: white;
 }
 
     #login_button:hover {
@@ -44,12 +45,13 @@ body {
         -webkit-animation: trans_color1 0.25s ease;
         -moz-animation: trans_color1 0.25s ease;
         background-color: #c0ebff;
+        color: black;
     }
 
     #login_button:active {
         background-color: #5aacd3;
         box-shadow: none;
-        top: 5px;
+        top: 2px;
     }
 
 #top_bar {
