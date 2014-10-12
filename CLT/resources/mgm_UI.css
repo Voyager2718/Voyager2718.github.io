@@ -1,0 +1,18 @@
+#acc {
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
+    #acc tr {
+        background-color: silver;
+    }
+
+        #acc tr th {
+            width: 200px;
+        }
+
+.show_frame {
+    text-align: center;
+    margin: 0 auto;
+}
