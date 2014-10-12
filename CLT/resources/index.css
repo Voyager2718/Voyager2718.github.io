@@ -48,11 +48,11 @@ body {
         color: black;
     }
 
-    #login_button:active {
-        background-color: #5aacd3;
-        box-shadow: none;
-        top: 2px;
-    }
+#login_button:active {
+    background-color: #5aacd3;
+    box-shadow: none;
+    top: 2px;
+}
 
 #top_bar {
     width: 100%;
@@ -76,6 +76,19 @@ body {
     float: left;
     margin-left: 30px;
 }
+
+    .title tr td a {
+        color: black;
+        text-decoration: none;
+    }
+
+        .title tr td a:active {
+            color: black;
+        }
+
+        .title tr td a:visited {
+            color: black;
+        }
 
 #title_list {
     float: left;
