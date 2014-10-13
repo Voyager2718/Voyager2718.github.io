@@ -77,19 +77,6 @@ body {
     margin-left: 30px;
 }
 
-    .title tr td a {
-        color: black;
-        text-decoration: none;
-    }
-
-        .title tr td a:active {
-            color: black;
-        }
-
-        .title tr td a:visited {
-            color: black;
-        }
-
 #title_list {
     float: left;
     background-color: rgba(128, 128, 128,0.8);
@@ -112,43 +99,19 @@ body {
 .title_list-box {
     width: 20%;
     border-radius: 50px;
+    transition: ease background-color 0.25s;
+    -webkit-transition: ease background-color 0.25s;
+    -moz-transition: ease background-color 0.25s;
 }
 
     .title_list-box:hover {
         background-color: #6BCFFF;
-        animation: ease trans_color0 0.25s;
-        -webkit-animation: ease trans_color0 0.25s;
-        -moz-animation: ease trans_color0 0.25s;
     }
 
-@keyframes trans_color0 {
-    from {
-        background-color: rgba(128, 128, 128, 0);
-    }
-
-    to {
-        background-color: #6BCFFF;
-    }
-}
-
-@-moz-keyframes trans_color0 {
-    from {
-        background-color: rgba(128, 128, 128, 0);
-    }
-
-    to {
-        background-color: #6BCFFF;
-    }
-}
-
-@-webkit-keyframes trans_color0 {
-    from {
-        background-color: rgba(128, 128, 128, 0);
-    }
-
-    to {
-        background-color: #6BCFFF;
-    }
+.title_list-box_checked {
+    width: 20%;
+    border-radius: 50px;
+    background-color: #FFF945;
 }
 
 .a_no_under_line_white {
@@ -210,9 +173,9 @@ body {
 }
 
     #more_info:hover {
-        animation: trans_color1 0.25s ease;
-        -webkit-animation: trans_color1 0.25s ease;
-        -moz-animation: trans_color1 0.25s ease;
+        transition: background-color 0.25s ease;
+        -webkit-transition: background-color 0.25s ease;
+        -moz-transition: background-color 0.25s ease;
         background-color: #c0ebff;
     }
 
@@ -221,36 +184,6 @@ body {
         box-shadow: none;
         top: 355px;
     }
-
-@keyframes trans_color1 {
-    from {
-        background-color: #6BCFFF;
-    }
-
-    to {
-        background-color: #c0ebff;
-    }
-}
-
-@-moz-keyframes trans_color1 {
-    from {
-        background-color: #6BCFFF;
-    }
-
-    to {
-        background-color: #c0ebff;
-    }
-}
-
-@-webkit-keyframes trans_color1 {
-    from {
-        background-color: #6BCFFF;
-    }
-
-    to {
-        background-color: #c0ebff;
-    }
-}
 
 .frame_main {
     width: 80%;
