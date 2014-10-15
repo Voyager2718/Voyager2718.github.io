@@ -4,6 +4,7 @@ function veri_username(id) {
     var un = document.getElementById(id);
     if (un.value.length < 4 || un.value.length > 16) {
         un.style.backgroundColor = bg_color;
+        verified[0] = false;
     }
     else {
         un.style.backgroundColor = 'white';
@@ -16,6 +17,7 @@ function veri_nickname(id) {
     var un = document.getElementById(id);
     if (un.value.length < 4 || un.value.length > 32) {
         un.style.backgroundColor = bg_color;
+        verified[0] = false;
     }
     else {
         un.style.backgroundColor = 'white';
@@ -28,6 +30,7 @@ function veri_password(id) {
     var un = document.getElementById(id);
     if (un.value.length < 6 || un.value.length > 16) {
         un.style.backgroundColor = bg_color;
+        verified[0] = false;
     }
     else {
         un.style.backgroundColor = 'white';
@@ -40,6 +43,7 @@ function veri_add(id) {
     var un = document.getElementById(id);
     if (un.value.length < 6 || un.value.length > 128) {
         un.style.backgroundColor = bg_color;
+        verified[0] = false;
     }
     else {
         un.style.backgroundColor = 'white';
