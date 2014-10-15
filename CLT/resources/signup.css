@@ -1,11 +1,11 @@
 body {
     font-family: 'Microsoft YaHei',Helvetica;
-    background-color: rgb(0, 255, 144);
+    background-color: #4DE86B;
     text-shadow: gray 0px 0px 10px;
 }
 
 a {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.75);
     text-decoration: none;
     -webkit-transition: color 0.5s;
 }
@@ -15,7 +15,7 @@ a {
     }
 
     a:visited {
-        color: rgba(255,255,255,0.8);
+        color: rgba(255,255,255,0.75);
         text-decoration: none;
     }
 
