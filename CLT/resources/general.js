@@ -11,17 +11,17 @@ function getBrowserVersion() {
     0;
     var version = "";
     if (browser.ie) {
-        version = 'msie ' + browser.ie;
+        version = 'MSIE ' + browser.ie;
     } else if (browser.firefox) {
-        version = 'firefox ' + browser.firefox;
+        version = 'Firefox ' + browser.firefox;
     } else if (browser.chrome) {
-        version = 'chrome ' + browser.chrome;
+        version = 'Chrome ' + browser.chrome;
     } else if (browser.opera) {
-        version = 'opera ' + browser.opera;
+        version = 'Opera ' + browser.opera;
     } else if (browser.safari) {
-        version = 'safari ' + browser.safari;
+        version = 'Safari ' + browser.safari;
     } else {
-        version = 'unknown';
+        version = 'Unknown';
     }
     return version;
 }
