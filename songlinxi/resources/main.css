@@ -1,0 +1,178 @@
+.homebutton {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    height: 30px;
+    width: 49px;
+    background-color: rgb(187, 255, 249);
+    border-radius: 100px;
+    font-weight: bold;
+    border: hidden;
+    box-shadow: rgba(128, 128, 128, 0.5) 0px 0px 20px;
+    opacity: 0.5;
+}
+
+    .homebutton:hover {
+        background-color: rgb(102, 255, 249);
+        opacity: 1;
+    }
+
+    .homebutton:active {
+        background-color: rgb(80, 220, 249);
+        height: 28px;
+        width: 46px;
+        opacity: 1;
+    }
+
+.loginbutton {
+    height: 50px;
+    width: 81px;
+    background-color: rgb(187, 255, 249);
+    border-radius: 100px;
+    font-weight: bold;
+    border: hidden;
+    box-shadow: black 0px 0px 10px;
+}
+
+    .loginbutton:hover {
+        background-color: rgb(102, 255, 249);
+    }
+
+    .loginbutton:active {
+        background-color: rgb(80, 220, 249);
+        height: 45px;
+        width: 72px;
+    }
+
+.banner {
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    z-index: -99;
+    opacity: 0.5;
+    box-shadow: rgb(128, 128, 128) 0px 5px 10px;
+}
+
+.disturb {
+    height: 20px;
+    width: 1px;
+}
+
+body {
+    background-repeat: repeat;
+    background-color: white;
+    background-size: 100%;
+    font-family: 'Microsoft YaHei',SimHei;
+    text-shadow: rgba(128, 128, 128,0.8) 0px 0px 15px;
+}
+
+::selection {
+    background: rgba(128, 128, 128,0.5);
+}
+
+::-moz-selection {
+    background: rgba(128, 128, 128,0.5);
+}
+
+.outercontent {
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 40px;
+}
+
+.personalmenu {
+    background-color: rgba(128, 128, 128,0.5);
+    box-shadow: rgba(128, 128, 128,0.5) 0px 0px 50px;
+    border-radius: 50px;
+    width: 65%;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    position: absolute;
+    top: 150px;
+    left: 0 auto;
+    line-height: 45px;
+    z-index: 99;
+}
+
+.box {
+    width: 20%;
+    border-radius: 50px;
+}
+
+    .box:hover {
+        background-color: rgb(255, 216, 0);
+    }
+
+.box_selected {
+    width: 20%;
+    border-radius: 50px;
+    background-color: rgb(0, 255, 193);
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+    a:visited {
+        color: white;
+    }
+
+.content {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 180px;
+}
+
+ul {
+    color: black;
+}
+
+.outerimgbox {
+    width: 150px;
+    height: 175px;
+    margin: 0 auto;
+}
+
+.innerimgbox {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: black 0px 0px 10px;
+    position: relative;
+    top: 25px;
+}
+
+.innerimgboxtext {
+    width: 100%;
+    height: 25px;
+    background-color: rgba(128, 128, 128,0.8);
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+    top: 125px;
+    z-index: 10;
+}
+
+.imgdescription {
+    text-align: center;
+    color: white;
+    text-shadow: white 0px 0px 10px;
+}
+
+.imgboxwidth {
+    width: 200px;
+    height: 100%;
+}

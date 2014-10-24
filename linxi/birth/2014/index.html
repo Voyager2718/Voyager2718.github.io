@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Happy Birthday To My LinXi~</title>
+    <style type="text/css">
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            animation: bgcolor 10s infinite alternate ease-in-out;
+            -webkit-animation: bgcolor 10s infinite alternate ease-in-out;
+            -moz-animation: bgcolor 10s infinite alternate ease-in-out;
+            overflow: hidden;
+        }
+
+        ::selection {
+            background-color: rgba(128, 128, 128, 0.8);
+        }
+
+        .twinkle {
+            animation: twinkle 0.8s infinite ease-in-out alternate;
+            -webkit-animation: twinkle 0.8s infinite ease-in-out alternate;
+            -moz-animation: twinkle 0.8s infinite ease-in-out alternate;
+        }
+
+            .twinkle:hover {
+                animation: twinkle2 0.8s infinite ease-in-out alternate;
+                -webkit-animation: twinkle2 0.8s infinite ease-in-out alternate;
+                -moz-animation: twinkle2 0.8s infinite ease-in-out alternate;
+            }
+
+        @keyframes twinkle2 {
+            from {
+                text-shadow: yellow 0px 0px 15px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 50px;
+            }
+        }
+
+        @-webkit-keyframes twinkle2 {
+            from {
+                text-shadow: yellow 0px 0px 15px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 50px;
+            }
+        }
+
+        @-moz-keyframes twinkle2 {
+            from {
+                text-shadow: yellow 0px 0px 15px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 50px;
+            }
+        }
+
+        @keyframes twinkle {
+            from {
+                text-shadow: yellow 0px 0px 5px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 15px;
+            }
+        }
+
+        @-webkit-keyframes twinkle {
+            from {
+                text-shadow: yellow 0px 0px 5px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 15px;
+            }
+        }
+
+        @-moz-keyframes twinkle {
+            from {
+                text-shadow: yellow 0px 0px 5px;
+            }
+
+            to {
+                text-shadow: yellow 0px 0px 15px;
+            }
+        }
+
+        #cover {
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background-color: rgb(0, 0, 25);
+            z-index: 9999;
+        }
+
+            #cover p {
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 40%;
+                left: 5%;
+                text-align: center;
+                text-shadow: yellow 0px 0px 10px;
+            }
+
+        .stars {
+            animation: twinkle2 0.8s infinite ease-in-out alternate;
+            -webkit-animation: twinkle2 0.8s infinite ease-in-out alternate;
+            -moz-animation: twinkle2 0.8s infinite ease-in-out alternate;
+            color: yellow;
+            position: absolute;
+            color: yellow;
+            font-size: 30px;
+        }
+
+        .text {
+            color: white;
+        }
+    </style>
+    <script type="text/javascript">
+        var times = 0;
+        var resolution = false, chedate = true;
+        function pause() {
+            document.getElementById("birth").pause();
+        }
+        function play() {
+            document.getElementById("birth").play();
+        }
+        function checkdate() {
+            if (chedate == false) {
+                document.getElementById("cover").style.display = "none";
+                return 0;
+            }
+            var today = new Date();
+            var y = today.getYear() + 1900;
+            var m = today.getMonth() + 1;
+            var d = today.getDate() + 1;
+            var h = today.getHours();
+            var min = today.getMinutes();
+            var s = today.getSeconds();
+            s = 60 - s;
+            min = 60 - min;
+            h = 24 - h;
+            min = fomat(min);
+            s = fomat(s);
+            var ds = "days";
+            var hs = "hours";
+            var ms = "minutes";
+            var ss = "seconds";
+            resttime.innerText = (11 - m) + " months " + (27 - d) + " days " + h + " hours " + min + " minutes " + s + " seconds left.";
+            if ((m >= 11 && d >= 27) || (m >= 12) || y >= 2015) {
+                chedate = false;
+            }
+            setTimeout("checkdate()", 50);
+        }
+        function fomat(i) {
+            if (i < 10) {
+                i = "0" + i
+            }
+            return i
+        }
+        function cover() {
+            if (resolution) {
+                var h = window.innerHeight;
+                var w = window.innerWidth;
+                if (w < 1300 || h < 600) {
+                    document.getElementById("body").innerHTML = "";
+                    alert("请用分辨率为1300×600以上的设备观看");
+                    window.close();
+                }
+            }
+        }
+        function cheat() {
+            times++;
+            if (times >= 10) {
+                if (resolution == true) {
+                    if (window.confirm("关闭分辨率检测？")) {
+                        resolution = false;
+                    }
+                }
+                else {
+                    if (window.confirm("打开分辨率检测？")) {
+                        resolution = true;
+                    }
+                }
+                if (window.confirm("跳过cover界面？")) {
+                    document.getElementById("cover").style.display = "none";
+                }
+                times = 0;
+            }
+        }
+        function genunibg() {
+            var w = window.innerWidth, h = window.innerHeight;
+            var w1 = Math.floor(Math.random() * (w + 1)), h1 = Math.floor(Math.random() * (h + 1));
+            document.getElementById("universebg").innerHTML = "<p class='stars' style='left:" + w1 + "px;top:" + h1 + "px;'>.</p>";
+        }
+    </script>
+</head>
+<body id="body" onload="genunibg();checkdate();cover();" onresize="cover()" style="background-color: rgb(0, 0, 30)">
+    <div id="universebg" style="position: absolute;">
+    </div>
+    <div id="cover" style="font-family: 'Microsoft YaHei','Ping Hei',SimHei">
+        <p class="twinkle" style="top: 30%;">Will be showed in 2014-11-27 00:00:00.</p>
+        <p id="resttime" class="twinkle" style="top: 40%; font-size: 20px;"></p>
+        <p style="color: white; font-size: 10px; top: 0px; left: 1%; text-shadow: none;" onclick="cheat()">Copyright YANG Zhipeng 2014</p>
+    </div>
+    <div style="text-align: center; position: absolute;">
+        <img style="height: 20%; width: 20%;" src="resources/earth.png" />
+    </div>
+
+    <p class="text">有人说，每个人</p>
+</body>
+</html>
