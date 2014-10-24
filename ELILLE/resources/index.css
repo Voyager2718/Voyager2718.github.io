@@ -2,6 +2,8 @@ body {
     text-shadow: gray 2px 2px 5px;
     background-color: #ffe;
     font-family: 'Microsoft YaHei',Helvetica,SimHei;
+    /*background-image: url(bg.jpg);*/
+    background-repeat: repeat;
 }
 
 ::selection {
@@ -14,13 +16,51 @@ body {
     margin: 0 auto;
 }
 
+.acc_bar {
+    height: 30px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: #caab73;
+}
+
+.acc_button {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(128, 128, 128, 0.5); /*#6BCFFF;*/
+    /*box-shadow: #478bac 0px 5px 0px;*/
+    font-size: 10px;
+    line-height: 5px;
+    border: 1px solid white;
+    border-radius: 3px;
+    font-family: 'Microsoft YaHei',Helvetica,SimHei;
+    z-index: 100;
+    color: white;
+}
+
+    .acc_button:hover {
+        animation: trans_color1 0.25s ease;
+        -webkit-animation: trans_color1 0.25s ease;
+        -moz-animation: trans_color1 0.25s ease;
+        background-color: #c0ebff;
+        color: black;
+    }
+
+#login_button:active {
+    background-color: #5aacd3;
+    box-shadow: none;
+    top: 2px;
+}
+
 #top_bar {
     width: 100%;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 30px;
     height: 28px;
-    background-color: #caab73;
+    background-color: rgba(202, 171, 115,0.5);
     line-height: 28px;
     text-align: center;
     display: none;
@@ -36,6 +76,19 @@ body {
     float: left;
     margin-left: 30px;
 }
+
+    .title tr td a {
+        color: black;
+        text-decoration: none;
+    }
+
+        .title tr td a:active {
+            color: black;
+        }
+
+        .title tr td a:visited {
+            color: black;
+        }
 
 #title_list {
     float: left;
@@ -59,43 +112,19 @@ body {
 .title_list-box {
     width: 20%;
     border-radius: 50px;
+    transition: ease background-color 0.25s;
+    -webkit-transition: ease background-color 0.25s;
+    -moz-transition: ease background-color 0.25s;
 }
 
     .title_list-box:hover {
         background-color: #6BCFFF;
-        animation: ease trans_color0 0.25s;
-        -webkit-animation: ease trans_color0 0.25s;
-        -moz-animation: ease trans_color0 0.25s;
     }
 
-@keyframes trans_color0 {
-    from {
-        background-color: rgba(128, 128, 128, 0);
-    }
-
-    to {
-        background-color: #6BCFFF;
-    }
-}
-
-@-moz-keyframes trans_color0 {
-    from {
-        background-color: rgba(128, 128, 128, 0);
-    }
-
-    to {
-        background-color: #6BCFFF;
-    }
-}
-
-@-webkit-keyframes trans_color0 {
-    from {
-        background-color: rgba(128, 128, 128, 0);
-    }
-
-    to {
-        background-color: #6BCFFF;
-    }
+.title_list-box_checked {
+    width: 20%;
+    border-radius: 50px;
+    background-color: #FFF945;
 }
 
 .a_no_under_line_white {
@@ -111,7 +140,7 @@ body {
     width: 100%;
     overflow: hidden;
     box-shadow: rgba(128, 128, 128, 0.8) -5px 5px 10px;
-    background: url('iemn-lille1.jpg');
+    background: url('lille.jpg');
     background-size: 100% 100%;
     border: 1px solid silver;
 }
@@ -157,9 +186,9 @@ body {
 }
 
     #more_info:hover {
-        animation: trans_color1 0.25s ease;
-        -webkit-animation: trans_color1 0.25s ease;
-        -moz-animation: trans_color1 0.25s ease;
+        transition: background-color 0.25s ease;
+        -webkit-transition: background-color 0.25s ease;
+        -moz-transition: background-color 0.25s ease;
         background-color: #c0ebff;
     }
 
@@ -168,36 +197,6 @@ body {
         box-shadow: none;
         top: 355px;
     }
-
-@keyframes trans_color1 {
-    from {
-        background-color: #6BCFFF;
-    }
-
-    to {
-        background-color: #c0ebff;
-    }
-}
-
-@-moz-keyframes trans_color1 {
-    from {
-        background-color: #6BCFFF;
-    }
-
-    to {
-        background-color: #c0ebff;
-    }
-}
-
-@-webkit-keyframes trans_color1 {
-    from {
-        background-color: #6BCFFF;
-    }
-
-    to {
-        background-color: #c0ebff;
-    }
-}
 
 .frame_main {
     width: 80%;
