@@ -55,3 +55,19 @@ input {
     #submit:hover {
         background-color: #cbb56d;
     }
+
+table {
+    margin: 0 auto;
+    font-size: 30px;
+    width: 80%;
+    font-family: STXingkai,'Microsoft YaHei',helvetica,SimHei;
+}
+
+th {
+    background-color: #cbb56d;
+    font-size: 40px;
+}
+
+td {
+    height: 30px;
+}
