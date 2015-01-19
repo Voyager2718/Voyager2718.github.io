@@ -1,0 +1,129 @@
+@charset "utf-8";
+.px12 {
+	FONT-SIZE: 12px;
+	color: 000000;
+}
+.px12 a{
+	FONT-SIZE: 12px;
+	color: 000000;
+}
+.whitenav {
+	FONT-SIZE: 12px; COLOR: #FFFFFF
+}
+.whitenav A {
+	FONT-SIZE: 12px; COLOR: #FFFFFF
+}
+A {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+.default {
+	FONT-SIZE: 12px; LINE-HEIGHT: 21px
+}
+.Ltd1 {
+	BORDER-RIGHT: #555 1px solid; 
+	BORDER-TOP: #555 1px solid; 
+	BORDER-LEFT: #555 1px solid; 
+	BORDER-BOTTOM: #555 1px solid;
+	PADDING-LEFT: 5px; 
+	PADDING-BOTTOM: 5px; 
+	PADDING-RIGHT: 5px; 
+	PADDING-TOP: 5px; 
+}
+#pgn {
+	position: absolute;
+	width: 150px;
+	padding: 0px;
+	border: 1px solid #292929;
+	background: #e8e8e8;
+	font-size: 12px;
+	line-height: 130%;
+	z-index: 2;
+	left:740px;
+	top:95px;
+	display:none;
+}
+#daydh {
+	position: absolute;
+	left:expression(800 + logoTable.offsetLeft);
+	top:110px;
+	display:none;
+	filter:alpha(opacity=90);
+}
+#btdh {
+	position: absolute;
+	left:expression(850 + logoTable.offsetLeft);
+	top:105px;
+	display:none;
+	filter:alpha(opacity=90);
+}
+#bmdh {
+	position: absolute;
+	left:expression(760 + logoTable.offsetLeft);
+	top:105px;
+	display:none;
+	filter:alpha(opacity=90);
+}
+
+.font01{
+	text-align:center;
+	font-size: 26px;
+	line-height: 150%;
+	font-family: "黑体" ,Arial Black,sans-serif;
+	font-weight:bolder;
+}
+.font02 {
+	font-size: 14px;
+	color: #797873;
+	line-height: 160%;
+	text-align:center;
+}
+.banmianmulu_huise {
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #C0C0C0;
+	border-right-color: #C0C0C0;
+	border-bottom-color: #C0C0C0;
+	border-left-color: #C0C0C0;
+}
+
+
+.tit {
+	font-family: "??";
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+}
+.tit2 {
+	font-family: "??";
+	font-size: 12px;
+	line-height: 22px;
+	color: #333333;
+	text-decoration: none;
+}
+
+
+.xx{overflow:hidden; width:360px; margin:5px 0;} 
+.xx .xxtit{height:30px; background:url(http://www.ycwb.com/ePaper/xkb/tplimg/tit_001.gif); padding-top:5px;}
+.xx .xxtit .zhedie{ font-size:12px; cursor:pointer;}
+.xx .xxlist{ float:left; padding-top:8px; }
+.xx .xxlist li{ list-style:none;line-height: 22px;text-align:left;}
+.xx .xxlist li a{ font-size: 12px;color: #000;text-decoration: none;}
+
+
+.menu {width:360px;margin:5px 0;padding:0px;text-align:left;list-style:none}
+.menu .item {margin:5px 0px;padding:0px;list-style:none}
+.menu .item ul {margin:0;width:118px;padding:3px 0px 3px 30px;background:#fff;list-style:none;}
+.menu .item ul li {display:block; list-style:none;line-height: 22px;text-align:left;}
+.menu .item ul li a{ font-size: 12px;color: #333333;text-decoration: none;}
+
+.op{ cursor:hand;}
+

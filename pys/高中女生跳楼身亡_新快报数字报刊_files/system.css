@@ -1,0 +1,104 @@
+.text1{
+   font-size:16px;
+   font-weight:bold;
+   color:white;
+}
+.text_13px{
+   font-size:13px;
+   color:white;
+}
+
+a.links{
+   font-size:13px;
+   font-weight:normal;
+   color:#8F8F8F;
+   text-decoration:none;
+}
+a.links:hover{
+   color:#66CCFF;
+   text-decoration:underline;
+}
+
+a.link1{
+   font-size:14px;
+   font-weight:normal;
+   color:#FF9900;
+   text-decoration:none;
+}
+a.link1:hover{
+   color:white;
+   text-decoration:underline;
+}
+
+a.link2{
+   font-size:12px;
+   font-weight:normal;
+   color:#FF9900;
+   text-decoration:none;
+}
+a.link2:hover{
+   color:white;
+   text-decoration:underline;
+}
+
+a.link3{
+   font-size:12px;
+   font-weight:normal;
+   color:#FFFF00;
+   text-decoration:none;
+}
+a.link3:hover{
+   color:white;
+   text-decoration:underline;
+}
+
+a.link4{
+   font-size:12px;
+   font-weight:normal;
+   color:white;
+   text-decoration:none;
+}
+a.link4:hover{
+   color:#FFFF00;
+   text-decoration:underline;
+}
+a.link5{
+   text-decoration:underline;
+   color:#330000;   
+}
+a.link5:hover{
+   color:#9B9B9B;   
+}
+
+a.link6{
+   text-decoration:underline;
+   color:#B7B7B7;   
+}
+a.link6:hover{
+   color:#9B9B9B;   
+}
+
+a.link7{
+   text-decoration:none;
+   color:#242424;
+   font-size:15px
+   font-weight:bold;
+}
+a.link7:hover{
+   color:#000099;
+   text-decoration:underline;
+}
+
+a.link8{
+   text-decoration:underline;
+   color:#330000;   
+}
+a.link8:hover{
+   color:#9B9B9B;   
+}
+
+.wordbox{    
+	height:100px;
+	width:100%;
+	border:solid #AFCDBD 1px;
+}
