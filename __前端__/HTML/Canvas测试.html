@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas测试</title>
+    <script>
+        function click_() {
+            alert(document.getElementById('sel').value);
+        }
+    </script>
+</head>
+<body>
+    <select id="sel">
+        <option value="val0">Val0</option>
+        <option value="val1">Val1</option>
+    </select>
+    <input type="text" value="123" />
+    <button onclick="click_();">测试</button>
+    <textarea style="resize: none;"></textarea>
+    <br />
+    <br />
+    <canvas id="myCanvas" width="500" height="500" style="background-color: darkslategrey;"></canvas>
+    <script>
+        var c = document.getElementById('myCanvas');
+        var ctx = c.getContext('2d');
+
+        var grd = ctx.createRadialGradient(0, 0, 0, 400, 400, 400);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, 400, 400);
+
+        ctx.moveTo(0, 0);
+        ctx.lineTo(350, 200);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(150, 100, 50, 0, 3.1);
+        ctx.stroke();
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 0, 150, 100);
+
+        ctx.font = "50px Arial";
+        ctx.fillStyle = "darkblue";
+        ctx.fillText("Hello, World!", 100, 100);
+    </script>
+    <br />
+    <br />
+    <canvas id="myCanvas1" width="300" height="200"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas1');
+        var flag = canvas.getContext('2d');
+        var flag_w = canvas.width;
+        var flag_h = canvas.height;
+        var circle_x = flag_w / 4;
+        var circle_y = flag_h / 4;
+        //滿地紅
+        flag.fillStyle = 'rgb(254, 0, 0)';
+        flag.fillRect(0, 0, flag_w, flag_h);
+        //青天
+        flag.fillStyle = 'rgb(0, 0, 149)';
+        flag.fillRect(0, 0, flag_w / 2, flag_h / 2);
+        //白日:星芒
+        flag.beginPath();
+        var star_radius = flag_w / 8;
+        var angle = 0;
+        for (var i = 0; i < 24; i++) { //12道星芒,24條線
+            angle += 5 * Math.PI * 2 / 12;
+            var toX = circle_x + Math.cos(angle) * star_radius;
+            var toY = circle_y + Math.sin(angle) * star_radius;
+            if (i) flag.lineTo(toX, toY);
+            else flag.moveTo(toX, toY);
+        }
+        flag.closePath(); //可忽略
+        flag.fillStyle = '#fff';
+        flag.fill();
+        //白日:藍圈
+        flag.beginPath();
+        flag.arc(circle_x, circle_y, flag_w * 17 / 240, 0, Math.PI * 2, true);
+        flag.closePath();
+        flag.fillStyle = 'rgb(0, 0, 149)';
+        flag.fill();
+        //白日:白心
+        flag.beginPath();
+        flag.arc(circle_x, circle_y, flag_w / 16, 0, Math.PI * 2, true);
+        flag.closePath();
+        flag.fillStyle = '#fff';
+        flag.fill();
+    </script>
+    <br />
+    <br />
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <script>
+        /** 
+    使用HTML5绘制标准五星红旗 
+  */
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext('2d');
+        var width = canvas.width;
+        var height = width * 2 / 3;
+        var w = width / 30;//小网格的宽
+        context.fillStyle = "red";
+        context.fillRect(0, 0, width, height);
+        var maxR = 0.15, minR = 0.05;//
+        var maxX = 0.25, maxY = 0.25;//大五星的位置
+        var minX = [0.50, 0.60, 0.60, 0.50];
+        var minY = [0.10, 0.20, 0.35, 0.45];
+        // 画大☆
+        var ox = height * maxX, oy = height * maxY;
+        create5star(context, ox, oy, height * maxR, "#ff0", 0);//绘制五角星
+        // 画小★
+        for (var idx = 0; idx < 4; idx++) {
+            var sx = minX[idx] * height, sy = minY[idx] * height;
+            var theta = Math.atan((oy - sy) / (ox - sx));
+            create5star(context, sx, sy, height * minR, "#ff0", -Math.PI / 2 + theta);
+        }
+        //绘制五角星
+        /**
+         * 创建一个五角星形状. 该五角星的中心坐标为(sx,sy),中心到顶点的距离为radius,rotate=0时一个顶点在对称轴上
+         * rotate:绕对称轴旋转rotate弧度
+         */
+        function create5star(context, sx, sy, radius, color, rotato) {
+            context.save();
+            context.fillStyle = color;
+            context.translate(sx, sy);//移动坐标原点
+            context.rotate(Math.PI + rotato);//旋转
+            context.beginPath();//创建路径
+            var x = Math.sin(0);
+            var y = Math.cos(0);
+            var dig = Math.PI / 5 * 4;
+            for (var i = 0; i < 5; i++) {//画五角星的五条边
+                var x = Math.sin(i * dig);
+                var y = Math.cos(i * dig);
+                context.lineTo(x * radius, y * radius);
+            }
+            context.closePath();
+            context.stroke();
+            context.fill();
+            context.restore();
+        }
+    </script>
+</body>
+</html>
