@@ -70,6 +70,32 @@ ul {
         background-color: rgb(0, 91, 203);
     }
 
+.button {
+    cursor: pointer;
+    background-color: rgb(17, 124, 255);
+    border: rgba(128, 128, 128, 0.9) solid 1px;
+    margin-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 2.5px;
+    text-align: center;
+    transition: all linear 0.25s;
+    -webkit-transition: all linear 0.25s;
+    -moz-transition: all linear 0.25s;
+    -o-transition: all linear 0.25s;
+    border: rgb(17, 124, 255) solid 1px;
+}
+
+    .button:hover {
+        border: gray solid 1px;
+        background-color: rgb(117, 179, 255);
+    }
+
+    .button:active {
+        border: gray solid 1px;
+        background-color: rgb(0, 91, 203);
+    }
+
 .login_div {
     display: none;
     position: absolute;
@@ -77,7 +103,7 @@ ul {
     left: 11px;
     z-index: 999;
     background-color: rgb(17, 124, 255);
-    height: 85px;
+    height: 100px;
     width: 180px;
 }
 
