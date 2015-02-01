@@ -1,0 +1,209 @@
+::selection {
+    background-color: rgb(255, 216, 0);
+}
+
+body {
+    background-color: rgb(255, 249, 212);
+    /*background-image: url(bg.jpg);*/
+    background-repeat: repeat;
+    font-family: 'Microsoft YaHei','Helvetica',sans-serif,SimHei;
+}
+
+.login_eff {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    top: 40px;
+    z-index: 99;
+    background-color: rgba(128, 128, 128, 0.75);
+    display: none;
+}
+
+a {
+    color: inherit;
+}
+
+td a {
+    text-decoration: none;
+}
+
+hr {
+    border: solid rgba(128, 128, 128, 0.5) 1px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.9);
+}
+
+.login {
+    cursor: pointer;
+    background-color: rgb(17, 124, 255);
+    border: rgba(128, 128, 128, 0.9) solid 1px;
+    margin-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 2.5px;
+    text-align: center;
+    transition: all linear 0.25s;
+    -webkit-transition: all linear 0.25s;
+    -moz-transition: all linear 0.25s;
+    -o-transition: all linear 0.25s;
+}
+
+    .login:hover {
+        border: gray solid 1px;
+        background-color: rgb(117, 179, 255);
+    }
+
+    .login:active {
+        border: gray solid 1px;
+        background-color: rgb(0, 91, 203);
+    }
+
+.login_div {
+    display: none;
+    position: absolute;
+    margin-top: 29px;
+    left: 11px;
+    z-index: 999;
+    background-color: rgb(17, 124, 255);
+    height: 85px;
+    width: 180px;
+}
+
+    .login_div form input {
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+
+.title_div {
+    background-color: rgba(128, 128, 128, 0.5);
+    width: 79.9%;
+    height: 382px;
+    top: 32px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.avatar {
+    height: 280px;
+    width: 280px;
+    position: relative;
+    left: 5%;
+    top: 100px;
+    background-image: url(avatar.jpg);
+    background-size: cover;
+    background-color: black;
+    border-radius: 10px;
+    border: rgba(128, 128, 128, 0.9) solid 1px;
+    box-shadow: rgba(128, 128, 128, 0.9) 0px 0px 50px;
+}
+
+.titlebox {
+    width: 40%;
+    height: 60px;
+    left: 33%;
+    top: 20px;
+    position: relative;
+}
+
+.title {
+    color: white;
+    text-shadow: black 0px 0px 50px;
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.description {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.menu {
+    background-color: rgb(17, 124, 255);
+    font-size: 25px;
+    line-height: 25px;
+    height: 50px;
+    width: 80%;
+    position: relative;
+    top: 30px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: rgba(128, 128, 128, 0.5) 0px 0px 10px;
+    border: rgba(128, 128, 128, 0.2) solid 1px;
+}
+
+    .menu::selection {
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    .menu .actived {
+        background-color: rgb(255, 216, 0);
+        cursor: default;
+    }
+
+    .menu td {
+        width: 20%;
+        border: rgb(17, 124, 255) solid 1px;
+        transition: all linear 0.25s;
+        -webkit-transition: all linear 0.25s;
+        -moz-transition: all linear 0.25s;
+        -o-transition: all linear 0.25s;
+        cursor: pointer;
+    }
+
+        .menu td:hover {
+            border-bottom: rgb(255, 216, 0) solid 3px;
+            background-color: rgb(117, 179, 255);
+        }
+
+        .menu td:active {
+            border: gray solid 1px inset;
+            border-bottom: rgb(178, 151, 0) solid 3px;
+            background-color: rgb(0, 91, 203);
+        }
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: rgba(117, 179, 255, 0.95);
+    box-shadow: gray 0px 0px 10px;
+}
+
+.main_content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+.bottom_banner {
+    width: 80%;
+    bottom: 10px;
+    margin: 0 auto;
+    background-color: rgba(117, 179, 255, 0.95);
+    box-shadow: gray 0px 0px 10px;
+}
+
+.bottom_content {
+    width: 90%;
+    margin: 0 auto;
+}
