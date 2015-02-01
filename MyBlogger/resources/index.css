@@ -3,8 +3,11 @@
 }
 
 body {
+    background-color: white;
+    /*
     background-color: rgb(255, 249, 212);
-    /*background-image: url(bg.jpg);*/
+    background-image: url(bg.jpg);
+    */
     background-repeat: repeat;
     font-family: 'Microsoft YaHei','Helvetica',sans-serif,SimHei;
 }
@@ -51,6 +54,7 @@ ul {
     border: rgba(128, 128, 128, 0.9) solid 1px;
     margin-left: 10px;
     height: 35px;
+    font-size: 20px;
     line-height: 35px;
     margin-top: 2.5px;
     text-align: center;
@@ -103,11 +107,14 @@ ul {
     left: 11px;
     z-index: 999;
     background-color: rgb(17, 124, 255);
-    height: 100px;
-    width: 180px;
+    height: 125px;
+    width: 280px;
 }
 
     .login_div form input {
+        height: 30px;
+        font-size: 20px;
+        line-height: 30px;
         margin-left: 8px;
         margin-top: 5px;
     }
