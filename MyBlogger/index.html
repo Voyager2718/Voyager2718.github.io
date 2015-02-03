@@ -11,7 +11,7 @@
     <script type="text/javascript" src="resources/login.js">
     </script>
 </head>
-<body onkeyup="key();">
+<body>
     <div class="banner">
         <button class="login" onclick="login_form();">登录</button>
     </div>
@@ -19,9 +19,9 @@
     </div>
     <div id="login_div" class="login_div">
         <form action="login.php" method="post">
-            <input style="width:260px;" type="text" placeholder="用户名" />
+            <input id="username" style="width:260px;" name="username" type="text" placeholder="用户名" />
             <br />
-            <input style="width:260px;" type="password" name="password" placeholder="密码" />
+            <input id="password" style="width:260px;" type="password" name="password" placeholder="密码" />
             <br />
             <span>
                 <input class="button" style="width:100px;" type="reset" value="重置" />
