@@ -17,7 +17,7 @@ function show_login_div() {
     }
     else {
         fps++;
-        cover.setAttribute("style", "-webkit-filter:blur(" + fps + "px);");
+        cover.setAttribute("style", "-webkit-filter:blur(" + fps / 6 + "px);");
         login_div.style.marginTop = 9 + fps + "px";
         login_div.style.opacity = fps / 20;
     }
@@ -35,7 +35,7 @@ function close_login_div() {
     }
     else {
         fps--;
-        cover.setAttribute("style", "-webkit-filter:blur(" + fps + "px);");
+        cover.setAttribute("style", "-webkit-filter:blur(" + fps / 6 + "px);");
         login_div.style.marginTop = 9 + fps + "px";
         login_div.style.opacity = fps / 20;
 
@@ -50,11 +50,11 @@ function login_form() {
     if (login_display == false) {
         login_eff.style.height = window_h + "px";
         login_display = true;
-        timerID = setInterval(show_login_div, 10);
+        timerID = setInterval(show_login_div, 15);
     }
     else {
         login_display = false;
-        timerID = setInterval(close_login_div, 10);
+        timerID = setInterval(close_login_div, 15);
     }
 }
 
