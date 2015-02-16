@@ -6,8 +6,30 @@
     <title>誓言录</title>
     <link type="text/css" rel="stylesheet" href="resources/index.css" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script>
+        function key(e) {
+            /*    var kc = e.keyCode;e.keyCode==82&&
+                if (kc == 'r' && kc == 27) {
+                    document.getElementById('Admin').style.display = "block";
+                }
+                */
+            if (e.keyCode == 27)
+                document.getElementById('Admin').style.display = 'none';
+            if (e.keyCode == 82 && e.altKey)
+                document.getElementById('Admin').style.display = 'block';
+
+        }
+    </script>
 </head>
-<body>
+<body onkeyup="key(event)">
+    <div id="Admin" style="display:none;">
+        <form action="send.php">
+            <input type="text" name="pms" style="width: 60%;" placeholder="誓言" />
+            <input type="text" name="pmsID" placeholder="誓言代码" />
+            <input type="password" name="password" placeholder="管理员密码" />
+            <input type="submit" />
+        </form>
+    </div>
     <div class="title">誓言录</div>
     <div style="margin:0 auto;">
         <form class="form">
