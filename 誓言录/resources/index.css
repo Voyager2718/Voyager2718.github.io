@@ -1,0 +1,73 @@
+::selection {
+    background-color: rgb(255, 216, 0);
+}
+
+body {
+    text-shadow: 0px 0px 10px black;
+    background-color: rgb(14,75,142);
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position-y: bottom;
+    background-position-x: right;
+}
+
+.title {
+    font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif,;
+    color: white;
+    font-size: 8em;
+    text-align: center;
+}
+
+.form {
+    margin-top: 2.5%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.input_box {
+    width: 10em;
+    margin-top: 1em;
+    margin-left: 0.01em;
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif, 'Microsoft YaHei';
+    border-radius: 100em;
+}
+
+.input_button {
+    font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif,;
+    width: 5em;
+    margin-top: 0.2em;
+    border-bottom-left-radius: 0.01em;
+    font-size: 3.4em;
+    border-radius: 100em;
+    background-color: white;
+    -webkit-transition: 0.5s all;
+}
+
+    .input_button:hover {
+        background-color: darkblue;
+        color: white;
+    }
+
+    .input_button:active {
+        border: solid black;
+    }
+
+#idBox {
+    margin-top: 1em;
+    text-align: left;
+    color: white;
+    font-size: 3em;
+    font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif, 'Microsoft YaHei';
+}
+
+#showBox {
+    margin-top: 0.1em;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif, 'Microsoft YaHei';
+}
