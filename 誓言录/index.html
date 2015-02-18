@@ -1,31 +1,19 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>誓言录</title>
     <link type="text/css" rel="stylesheet" href="resources/index.css" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <script>
-        function key(e) {
-            /*    var kc = e.keyCode;e.keyCode==82&&
-                if (kc == 'r' && kc == 27) {
-                    document.getElementById('Admin').style.display = "block";
-                }
-                */
-            if (e.keyCode == 27)
-                document.getElementById('Admin').style.display = 'none';
-            if (e.keyCode == 82 && e.altKey)
-                document.getElementById('Admin').style.display = 'block';
-
-        }
-    </script>
+    <script src="resources/index.js"></script>
 </head>
 <body onkeyup="key(event)">
     <div id="Admin" style="display:none;">
-        <form action="send.php">
-            <input type="text" name="pms" style="width: 60%;" placeholder="誓言" />
+        <form action="send.php" method="post">
+            <input type="text" name="pms" style="width: 40%;" placeholder="誓言" />
             <input type="text" name="pmsID" placeholder="誓言代码" />
+            <input type="date" name="deadline" />
+            <input type="password" name="pmsPW" placeholder="誓言密码" />
             <input type="password" name="password" placeholder="管理员密码" />
             <input type="submit" />
         </form>
@@ -34,14 +22,15 @@
     <div style="margin:0 auto;">
         <form class="form">
             <div style="text-align:center;">
-                <input type="text" name="pmsID" placeholder="誓言代码" class="input_box" />
-                <input type="password" name="password" placeholder="查询密码" class="input_box" />
-                <input type="submit" class="input_button" />
+                <input id="pmsID" type="text" name="pmsID" placeholder="誓言代码" class="input_box" />
+                <input type="password" id="pw" name="pw" placeholder="查询密码" class="input_box" />
+                <input type="button" value="Submit" class="input_button" onclick="getPMS()" />
             </div>
         </form>
     </div>
-    <div id="idBox"></div>
-    <div id="showBox">
+    <div id="PMSShow">
+        <div id="idBox"></div>
+        <div id="showBox"></div>
     </div>
 </body>
 </html>
