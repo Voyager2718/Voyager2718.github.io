@@ -2,6 +2,20 @@ body {
     font-family: 'Microsoft YaHei', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+ul {
+    list-style: square;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+    a:hover {
+        text-decoration: underline;
+        color: rgb(50, 50, 50);
+    }
+
 #titleLayer { /*顶端100%宽度的那个图层*/
     position: absolute;
     left: 0px;
@@ -17,10 +31,19 @@ body {
     width: 1000px;
 }
 
+.logoBox {
+    float: left;
+    height: 100px;
+    font-size: 60px;
+    line-height: 100px;
+    background-color: lightblue;
+}
+
 .buttonBox { /*放按钮用*/
+    margin-left: 20px;
     float: left;
     position: relative;
-    margin-top: 30px;
+    margin-top: 32px;
     background-color: yellow;
     height: 36px;
     border-radius: 100px;
@@ -52,7 +75,7 @@ body {
         box-shadow: inset gray 0px 0px 10px, silver 0px 1px 1px;
     }
 
-#galleryBox { /*放图片用的最大一块*/
+#galleryBox { /*放图片用的最大一块（图片导航栏）*/
     position: absolute;
     left: 0;
     top: 100px;
@@ -60,6 +83,52 @@ body {
     height: 400px;
     background-color: yellow;
     box-shadow: gray 0px 3px 20px;
+}
+
+.outsideFrame { /*图片导航栏框架*/
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    height: 400px;
+    background-color: darkblue;
+}
+
+.galleryExplanation { /*图片说明*/
+    position: absolute;
+    height: 175px;
+    width: 450px;
+    background-color: chartreuse;
+    left: 550px;
+    top: 200px;
+}
+
+#gallerySelectorContainer { /*图片选择器容器*/
+    position: absolute;
+    height: 75px;
+    width: 450px;
+    background-color: darkorange;
+    left: 550px;
+    top: 300px;
+}
+
+.gallerySelector { /*图片选择器*/
+    float: left;
+    position: relative;
+    height: 65px;
+    width: 100px;
+    background-color: orange;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#selectorSelected { /*选择了的*/
+    position: absolute;
+    border: solid 5px black;
+    border-left: solid 10px black;
+    border-right: solid 10px black;
+    background-color: darkmagenta;
+    width: 100px;
+    height: 65px;
 }
 
 #main { /*主窗格*/
@@ -80,7 +149,7 @@ body {
     background-color: green;
 }
 
-.centerBox {
+.centerBox { /*中间的内容窗格*/
     position: relative;
     float: left;
     width: 320px;
@@ -90,7 +159,7 @@ body {
     background-color: green;
 }
 
-.rightBox {
+.rightBox { /*右侧的内容窗格*/
     position: relative;
     float: left;
     width: 320px;
@@ -100,7 +169,7 @@ body {
     background-color: green;
 }
 
-#bottomLayer {
+#bottomLayer { /*底层*/
     height: 100px;
     width: 1000px;
     margin: 0 auto;
