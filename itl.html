@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var q = 0;
+        function createForm() {
+            var ct = document.getElementById('cT');
+            var p = document.createElement('p');
+            p.innerHTML = "选择题";
+            ct.appendChild(p);
+
+
+            for (var i = 0; i < document.getElementById('num').value; i++) {
+                var p = document.createElement('p');
+                p.innerHTML = "第" + (q + 1) + "题";
+                ct.appendChild(p);
+
+                for (var j = 0; j < 4; j++) {
+                    var span = document.createElement('span');
+                    switch (j) {
+                        case 0: span.innerHTML = 'A'; break;
+                        case 1: span.innerHTML = 'B'; break;
+                        case 2: span.innerHTML = 'C'; break;
+                        case 3: span.innerHTML = 'D'; break;
+                    }
+                    ct.appendChild(span);
+
+                    var radio = document.createElement('input');
+                    radio.setAttribute("value", j);
+                    radio.setAttribute("id", "a" + q.toString() + j.toString());
+                    radio.name = "a[]";
+                    radio.setAttribute("name", "a" + q);
+                    radio.setAttribute("class", "input");
+                    radio.setAttribute("type", "radio");
+                    ct.appendChild(radio);
+                }
+                ct.appendChild(document.createElement('br'));
+                q++
+            }
+        }
+        function destroyForm() {
+            while (q != 0) {
+                var par = document.getElementById('cT');
+                par.removeChild(document.getElementById('a' + (q - 1).toString()));
+                q--
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="num" placeholder="新增题目数量" />
+    <button onclick="createForm();">新增题目</button>
+    <form method="post" action="handle.php">
+        <div id="cT"></div>
+        <br />
+        <input type="submit" />
+    </form>
+</body>
+</html>
