@@ -1,0 +1,61 @@
+body {
+    background-image: url(background1.png);
+    background-size: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#qrcode {
+    display: none;
+    top: 30px;
+    box-shadow: white 0px 0px 10px;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 999;
+}
+
+#picBox {
+    position: relative;
+    width: 337px;
+    height: 600px;
+    margin: 20px auto;
+    box-shadow: black 0px 0px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 337px;
+    height: 600px;
+    /*background-image: url(pic/1.png);*/
+    background-size: auto 100%;
+}
+
+#left {
+    cursor: pointer;
+    width: 76px;
+    height: 137px;
+    position: absolute;
+    top: 200px;
+    left: 475px;
+    background-image: url(left.png);
+    background-size: 100%;
+}
+
+#right {
+    cursor: pointer;
+    width: 76px;
+    height: 137px;
+    position: absolute;
+    top: 200px;
+    right: 475px;
+    background-image: url(right.png);
+    background-size: 100%;
+}
+
+#right {
+}

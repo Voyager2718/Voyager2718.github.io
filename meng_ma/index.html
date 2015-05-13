@@ -1,0 +1,27 @@
+﻿
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="resources/jquery.qrcode.min.js"></script>
+    <script type="text/javascript" src="resources/index.js"></script>
+    <link type="text/css" rel="stylesheet" href="resources/index.css" />
+</head>
+<body onload="positioning();" onresize="positioning();">
+    <div id="qrcode" onmouseover="displayQRCode();" onmouseout="hideQRCode();"></div>
+    <script>
+        jQuery('#qrcode').qrcode({
+            render: "Canvas",
+            width: 300,
+            height: 300,
+            text: "http://voyager2718.github.io/meng_ma"
+        });
+    </script>
+    <div id="picBox" onmouseover="displayQRCode();" onmouseout="hideQRCode();">
+        <div class="pic" id="pic0"></div>
+        <div class="pic" id="pic1" style="background-image:url(resources/pic/1.png)"></div>
+    </div>
+    <div id="left" onclick="changeImg('left')"></div>
+    <div id="right" onclick="changeImg('right')"></div>
+</body>
+</html>
