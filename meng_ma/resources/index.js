@@ -24,13 +24,14 @@ var interval0;
 function changeImgAnimation(type) {
     var pic0 = document.getElementById("pic0"),
        pic1 = document.getElementById("pic1");
-    if (flames == 20) {
+    if (flames == 21) {
         lock = false;
-        pic0.style.left = "0px";
-        pic1.style.left = "0px";
         pic1.style.backgroundImage = pic0.style.backgroundImage;
+        pic0.style.left = "0";
+        pic1.style.left = "0";
         flames = 0;
         clearInterval(interval0);
+        return;
     }
     if (type == "left") {
         pic0.style.left = -337 + (16 * (flames + 1)) + "px";
