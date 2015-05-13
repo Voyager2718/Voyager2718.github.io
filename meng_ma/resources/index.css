@@ -23,6 +23,11 @@ body {
     box-shadow: black 0px 0px 20px,black 0px 0px 20px inset;
     border-radius: 10px;
     overflow: hidden;
+    text-align: center;
+    background-color: lightgray;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Helvetica';
 }
 
 .pic {
