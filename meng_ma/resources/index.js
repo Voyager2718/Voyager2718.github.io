@@ -5,6 +5,10 @@ function positioning() {
     pic.style.margin = ((window.innerHeight - 600) / 2) + "px auto";
     left.style.left = ((window.innerWidth / 2 - 337 / 2) - 40) + "px";
     right.style.right = ((window.innerWidth / 2 - 337 / 2) - 40) + "px";
+    if (window.innerHeight > window.innerWidth)
+        document.body.style.backgroundSize = "auto 100%";
+    else
+        document.body.style.backgroundSize = "100%";
 }
 
 function displayQRCode() {
@@ -70,6 +74,6 @@ function changeImg(type) {
             picNum = 1;
         }
     }
-    interval0 = setInterval(changeImgAnimation, 25, type);
+    interval0 = setInterval(changeImgAnimation, 15, type);
     lock = true;
 }
