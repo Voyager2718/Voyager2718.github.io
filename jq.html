@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery效果</title>
+    <script type="text/javascript" src="resources/jquery-1.11.3.min.js"></script>
+    <style>
+        #imgs img {
+            height: 100px;
+            width: 100px;
+            border: solid 3px;
+        }
+    </style>
+    <script>
+        //Overall
+        $(document).ready(function () { for (var i = 0; i < 4; i++) { $("#img" + i).attr("title", "Double click to hide this img."); $ } });
+        //Hide and show
+        $(document).ready(function () { $("img").dblclick(function () { $(this).hide(); alert("hidden"); }) });
+        $(document).ready(function () { $("#showHidden").click(function () { for (var i = 0; i < 4; i++) { $("#img" + i).show(); } }); })
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Hide and show</legend>
+        <button id="showHidden">Show All</button>
+        <br /><br />
+        <div id="imgs">
+            <img id="img0" src="resources/earth.png" style="border-color:darkblue;" />
+            <br /><br />
+            <img id="img1" src="resources/earth.png" style="border-color:black;" />
+            <br /><br />
+            <img id="img2" src="resources/earth.png" style="border-color:red;" />
+            <br /><br />
+            <img id="img3" src="resources/earth.png" style="border-color:blue;" />
+        </div>
+    </fieldset>
+</body>
+</html>
