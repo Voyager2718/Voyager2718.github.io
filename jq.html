@@ -6,18 +6,39 @@
     <title>jQuery效果</title>
     <script type="text/javascript" src="resources/jquery-1.11.3.min.js"></script>
     <style>
-        #imgs img {
+        #imgs0 img, #imgs1 img {
             height: 100px;
             width: 100px;
             border: solid 3px;
         }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            a:visited {
+                color: black;
+            }
     </style>
     <script>
         //Overall
         $(document).ready(function () { for (var i = 0; i < 4; i++) { $("#img" + i).attr("title", "Double click to hide this img."); $("#img" + i).css("cursor", "pointer"); } });
+        $(document).ready(function () { $("#p0").attr("title", "Change to red."); $("#p1").attr("title", "Change to blue."); for (var i = 0; i < 2; i++) { $("#p" + i).css("cursor", "pointer"); } });
+        $(document).ready(function () { $("#img4").attr("title", "Click!"); $("#img4").css("cursor", "pointer"); })
         //Hide and show
-        $(document).ready(function () { $("img").dblclick(function () { $(this).hide(); alert("hidden"); }) });
+        $(document).ready(function () { $("img").dblclick(function () { $(this).hide(); }) });
         $(document).ready(function () { $("#showHidden").click(function () { for (var i = 0; i < 4; i++) { $("#img" + i).show(); } }); })
+        //Set css value
+        $(document).ready(function () { $("#p0").click(function () { for (var i = 0; i < 2; i++) { $("#p" + i).css("color", "red"); } }); $("#p1").click(function () { for (var i = 0; i < 2; i++) { $("#p" + i).css("color", "blue"); } }); });
+        //Selector
+        $(document).ready(function () { $("[href='http://google.com']").mouseover(function () { $(this).text("Bing"); $(this).attr("href", "https://bing.com"); }); });
+        //Effect 0
+        $(document).ready(function () { $("#eff0").click(function () { $("#img4").toggle("slow"); $("#img5").fadeToggle("slow"); $("#img6").slideToggle("slow"); $("#img7").toggle("slow").slideToggle("slow").slideToggle("slow"); }) });
     </script>
 </head>
 <body>
@@ -25,14 +46,32 @@
         <legend>Hide and show</legend>
         <button id="showHidden">Show All</button>
         <br /><br />
-        <div id="imgs">
+        <div id="imgs0">
             <img id="img0" src="resources/earth.png" style="border-color:darkblue;" />
-            <br /><br />
             <img id="img1" src="resources/earth.png" style="border-color:black;" />
-            <br /><br />
             <img id="img2" src="resources/earth.png" style="border-color:red;" />
-            <br /><br />
             <img id="img3" src="resources/earth.png" style="border-color:blue;" />
+        </div>
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Set css value</legend>
+        <p id="p0">Click me to change color.</p>
+        <p id="p1">Click me to change color.</p>
+    </fieldset>
+    <fieldset>
+        <legend>Selector</legend>
+        <a href="http://google.com">Google</a>
+    </fieldset>
+    <fieldset>
+        <legend>Effect 0</legend>
+        <button id="eff0">Show effects</button>
+        <br /><br />
+        <div id="imgs1">
+            <img id="img4" src="resources/earth.png" style="border-color:darkblue;" />
+            <img id="img5" src="resources/earth.png" style="border-color:yellow;" />
+            <img id="img6" src="resources/earth.png" style="border-color:red;" />
+            <img id="img7" src="resources/earth.png" style="border-color:purple;" />
         </div>
     </fieldset>
 </body>
