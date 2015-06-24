@@ -14,7 +14,7 @@
     </style>
     <script>
         //Overall
-        $(document).ready(function () { for (var i = 0; i < 4; i++) { $("#img" + i).attr("title", "Double click to hide this img."); $ } });
+        $(document).ready(function () { for (var i = 0; i < 4; i++) { $("#img" + i).attr("title", "Double click to hide this img."); $("#img" + i).css("cursor", "pointer"); } });
         //Hide and show
         $(document).ready(function () { $("img").dblclick(function () { $(this).hide(); alert("hidden"); }) });
         $(document).ready(function () { $("#showHidden").click(function () { for (var i = 0; i < 4; i++) { $("#img" + i).show(); } }); })
