@@ -24,27 +24,32 @@
             a:visited {
                 color: black;
             }
+
+        fieldset fieldset {
+            background-color: lightyellow;
+        }
     </style>
     <script>
         //Overall
-        $(document).ready(function () { for (var i = 0; i < 4; i++) { $("#img" + i).attr("title", "Double click to hide this img."); $("#img" + i).css("cursor", "pointer"); } });
-        $(document).ready(function () { $("#p0").attr("title", "Change to red."); $("#p1").attr("title", "Change to blue."); for (var i = 0; i < 2; i++) { $("#p" + i).css("cursor", "pointer"); } });
-        $(document).ready(function () { $("#img4").attr("title", "Click!"); $("#img4").css("cursor", "pointer"); })
+        $(document).ready(function () { for (var i = 0; i < 4; i++) { $("#img" + i).attr("title", "#img" + i + " | Double click to hide this img."); $("#img" + i).css("cursor", "pointer"); } });
+        $(document).ready(function () { $("#p0").attr("title", "#p0"); $("#p1").attr("title", "#p1"); for (var i = 0; i < 2; i++) { $("#p" + i).css("cursor", "pointer"); } });
+        $(document).ready(function () { for (var i = 4; i < 8; i++) { $("#img" + i).attr("title", "#img" + i); } });
         //Hide and show
         $(document).ready(function () { $("img").dblclick(function () { $(this).hide(); }) });
-        $(document).ready(function () { $("#showHidden").click(function () { for (var i = 0; i < 4; i++) { $("#img" + i).show(); } }); })
+        $(document).ready(function () { $("#showHidden").click(function () { for (var i = 0; i < 4; i++) { $("#img" + i).show(); } }); });
         //Set css value
         $(document).ready(function () { $("#p0").click(function () { for (var i = 0; i < 2; i++) { $("#p" + i).css("color", "red"); } }); $("#p1").click(function () { for (var i = 0; i < 2; i++) { $("#p" + i).css("color", "blue"); } }); });
         //Selector
         $(document).ready(function () { $("[href='http://google.com']").mouseover(function () { $(this).text("Bing"); $(this).attr("href", "https://bing.com"); }); });
         //Effect 0
         $(document).ready(function () { $("#eff0").click(function () { $("#img4").toggle("slow"); $("#img5").fadeToggle("slow"); $("#img6").slideToggle("slow"); $("#img7").toggle("slow").slideToggle("slow").slideToggle("slow"); }) });
+        $(document).ready(function ($) { $.get });
     </script>
 </head>
 <body>
     <fieldset>
         <legend>Hide and show</legend>
-        <button id="showHidden">Show All</button>
+        <button id="showHidden" title="#showHidden">Show All</button>
         <br /><br />
         <div id="imgs0">
             <img id="img0" src="resources/earth.png" style="border-color:darkblue;" />
@@ -52,20 +57,41 @@
             <img id="img2" src="resources/earth.png" style="border-color:red;" />
             <img id="img3" src="resources/earth.png" style="border-color:blue;" />
         </div>
+        <fieldset>
+            <legend>jQuery</legend>
+            <code>
+                $(document).ready(function () { $("img").dblclick(function () { $(this).hide(); }) });<br />
+                $(document).ready(function () { $("#showHidden").click(function () { for (var i = 0; i < 4; i++) { $("#img" + i).show(); } }); });
+            </code>
+        </fieldset>
     </fieldset>
     <br />
     <fieldset>
         <legend>Set css value</legend>
         <p id="p0">Click me to change color.</p>
         <p id="p1">Click me to change color.</p>
+        <fieldset>
+            <legend>jQuery</legend>
+            <code>
+                $(document).ready(function () { $("#p0").click(function () { for (var i = 0; i < 2; i++) { $("#p" + i).css("color", "red"); } }); $("#p1").click(function () { for (var i = 0; i < 2; i++) { $("#p" + i).css("color", "blue"); } }); });
+            </code>
+        </fieldset>
     </fieldset>
+    <br />
     <fieldset>
         <legend>Selector</legend>
-        <a href="http://google.com">Google</a>
-    </fieldset>
+        <a href="http://google.com" title="href='http://google.com'">Google</a>
+        <fieldset>
+            <legend>jQuery</legend>
+            <code>
+                $(document).ready(function () { $("[href='http://google.com']").mouseover(function () { $(this).text("Bing"); $(this).attr("href", "https://bing.com"); }); });
+
+            </code>
+        </fieldset>
+    </fieldset><br />
     <fieldset>
         <legend>Effect 0</legend>
-        <button id="eff0">Show effects</button>
+        <button id="eff0" title="#eff0">Show effects</button>
         <br /><br />
         <div id="imgs1">
             <img id="img4" src="resources/earth.png" style="border-color:darkblue;" />
@@ -73,6 +99,12 @@
             <img id="img6" src="resources/earth.png" style="border-color:red;" />
             <img id="img7" src="resources/earth.png" style="border-color:purple;" />
         </div>
+        <fieldset>
+            <legend>jQuery</legend>
+            <code>
+                $(document).ready(function () { $("#eff0").click(function () { $("#img4").toggle("slow"); $("#img5").fadeToggle("slow"); $("#img6").slideToggle("slow"); $("#img7").toggle("slow").slideToggle("slow").slideToggle("slow"); }) });
+            </code>
+        </fieldset>
     </fieldset>
 </body>
 </html>
