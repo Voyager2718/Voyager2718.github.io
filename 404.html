@@ -3,48 +3,51 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Oops!</title>
+    <title>Oops! 404 again!</title>
     <style type="text/css">
-        p {
-            font-family: 'Segoe UI';
-            color: white;
-            line-height: 100%;
-            font-size: 30px;
+        ::selection {
+            background-color: rgb(255, 225, 109);
+        }
+
+        button {
+            cursor: pointer;
         }
 
         body {
-            overflow-x: hidden;
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
-
-        ::selection {
-            background: rgba(128, 128, 128,0.5);
-        }
-
-        ::-moz-selection {
-            background: rgba(128, 128, 128,0.5);
+            font-family: 'Microsoft YaHei', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
         a {
+            cursor: pointer;
             text-decoration: none;
-            color: white;
+            color: black;
+            transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -webkit-transition: all 0.25s ease-in-out;
         }
 
             a:visited {
-                color: white;
+                color: black;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                color: rgb(50, 50, 50);
             }
     </style>
+    <meta name="description" title="404, page not found!" />
+    <meta name="keywords" title="PHP;MySQL;C;C++;C#;Java;Neural Networks;Artificial Intelligence;OCaml;Javascript;Data mining;Inherit Algorithm;Algorithm;Data Structure;" />
+    <link href="resources/css/unistyle.css" rel="stylesheet" />
+    <link href="resources/css/404.css" rel="stylesheet" />
 </head>
-<body style="background-color: rgb(38, 173, 198)">
-    <div style="margin: 0 auto; width: 40%;">
-        <p style="font-size: 150px; line-height: 0%;">:(</p>
-        <p>Your browser couldn't find out my page,</p>
-        <p>maybe you should tell him the address.</p>
+<body>
+    <div id="background"></div>
+    <div id="main">
+        <div id="_404"><p><span>4</span>0<span>4</span></p></div>
+        <div id="detail">We are very sorry to inform you that :<br />the page you're looking for is instantaneous unavailable.</div>
         <br />
-        <p style="font-size: 15px;">Perhaps you want to visit my <span style="font-weight: bolder;" title="Return to my Homepage."><a href="http://voyager2718.github.io/personal/index.html" title="Homepage">Homepage</a></span>? (Error 404)</p>
+        <a href="index.php">Homepage</a>
     </div>
 </body>
 </html>
