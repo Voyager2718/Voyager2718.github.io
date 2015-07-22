@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>制作我的头条新闻</title>
+    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+    <style>
+        html {
+            font-family: "Microsoft YaHei", Verdana, Geneva, sans-serif;
+            text-shadow: gray 0px 0px 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        fieldset {
+            background-color: lightblue;
+        }
+
+        #main {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>制作我的头条新闻</h1>
+    <hr />
+    <fieldset>
+        <legend>Powered By 无无聊聊工作室</legend>
+        设计很丑吧，因为这个做这个网页根本没有美工 而且还是玩票性质无聊作品<br />
+        联系方式：zhipeng.yang.it@hotmail.com
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>
+            来，选一下你喜欢的
+        </legend>
+        <div id="main">
+            <input id="name" type="text" placeholder="名字写在这" style="width:100%;" />
+            <br />
+            <select id="reputation_type" style="width:100%;">
+                <option value="0">奥巴马颁奖</option>
+                <option value="1">MIT入学通知书</option>
+                <option value="2">习大大授勋</option>
+                <option value="3">清华求别走</option>
+                <option value="4">高考725分</option>
+                <option value="5">和爱人结婚</option>
+                <option value="6">公司开业</option>
+                <option value="7">诺贝尔奖候选人</option>
+                <option value="8">泰坦尼克号2主演</option>
+                <option value="9">见义勇为</option>
+                <option value="10">智力=214</option>
+                <option value="11">校花</option>
+                <option value="12">校花</option>
+            </select>
+            <br />
+            <button id="generate" style="width:100%; cursor:pointer;">制作！</button>
+        </div>
+    </fieldset>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#generate").click(function () {
+                var name = $("#name");
+                if (!name.val()) {
+                    alert("名字不能为空！");
+                    return;
+                }
+                if (name.val() == "刘格格") {
+                    alert("名字不能是刘格格！！");
+                    alert("好吧 给你玩咯……");
+                    alert("真的给？");
+                    if (!confirm("是不是真的玩？"))
+                        return;
+                }
+                location.href = "result.html?name=" + name.val() + "&type=" + $("#reputation_type option:selected").val();
+            });
+        });
+    </script>
+</body>
+</html>
