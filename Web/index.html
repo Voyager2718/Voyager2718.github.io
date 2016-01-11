@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>CV</title>
+    <script type="text/javascript" src="resources/jq.js"></script>
+    <script type="text/javascript" src="resources/index.js"></script>
+    <script id="language" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            jQuery.getScript("resources/lang_en.js");
+            var browLang = navigator.language.substr(0, 2);
+            $("#h1").text(lang.MyCV);
+        });
+    </script>
+
+</head>
+<body>
+    <h1 id="h1"></h1>
+</body>
+</html>
