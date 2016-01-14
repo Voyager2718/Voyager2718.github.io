@@ -18,9 +18,9 @@
             //});
             //var browLang = navigator.language.substr(0, 2);
             document.write("<script id='language' src='resources/lang_en.js'><\/script>");
-            document.getElementById("language").onload(function () {
+            document.getElementById("language").onload = function () {
                 $("#h1").text(lang.language);
-            });
+            }
         });
     </script>
 </head>
