@@ -1,6 +1,6 @@
 ﻿var lang =
 {
-    "MyCV": "My CV",
+    "WebCV": "Web CV",
     "LastName": "Last name",
     "FirstName": "First name",
     "Age": "Age",

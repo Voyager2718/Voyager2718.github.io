@@ -1,6 +1,16 @@
 //Init
 $(document).ready(function () {
-    $("#cv").text(lang.MyCV);
+    //Device detect
+    var zoom = 100;
+    if (device.mobile()) {
+        $("body").css("font-size", "300%");
+        zoom = 300;
+    }
+    else if (device.tablet()) {
+        $("body").css("font-size", "400%");
+        zoom = 400;
+    }
+    $("#cv").text(lang.WebCV);
     $("#cardTitle0").text(lang.PersonalInfo);
     $("#cardTitle1").text(lang.PersonalInfo);
     $("#contact").text(lang.Email).css({
@@ -28,4 +38,8 @@ $(window).resize(function () {
 //Functions
 function setPositions() {
     $("#canvas").css("left", ($(window).width() - 900) / 2 + "px");
+    if (device.landscape())
+        $("body").css("font-size", "400%");
+    else
+        $("body").css("font-size", zoom + "%");
 }
