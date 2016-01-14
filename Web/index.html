@@ -15,15 +15,11 @@
         });
         $(document).ready(function () {
             var browLang = navigator.language.substr(0, 2);
-            //$("#h1").text(lang.MyCV);
-            $("#h1").click(function () {
-                $("#h1").text(lang.language);
-            });
         });
 
     </script>
 </head>
-<body>
+<body onload="$('#h1').text(lang.language);">
     <h1 id="h1">Test</h1>
 </body>
 </html>
