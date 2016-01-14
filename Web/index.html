@@ -9,17 +9,22 @@
     <script id="language" type="text/javascript"></script>
     <script>
         $(document).ready(function () {
-            $.getScript("resources/lang_en.js", function () {
-                console.info("Success");
-            });
+            //$.getScript("resources/lang_en.js")
+            //.success(function () {
+            //    console.info("Success")
+            //}).
+            //fail(function () {
+            //    console.info("Fail")
+            //});
+            //var browLang = navigator.language.substr(0, 2);
+            document.write("<script id='language' src='resources/lang_en.js'><\/script>");
+            document.getElementById("language").onload() = function () {
+                $("#h1").text(lang.language);
+            };
         });
-        $(document).ready(function () {
-            var browLang = navigator.language.substr(0, 2);
-        });
-
     </script>
 </head>
-<body onload="$('#h1').text(lang.language);">
+<body>
     <h1 id="h1">Test</h1>
 </body>
 </html>
