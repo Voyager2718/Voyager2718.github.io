@@ -4,5 +4,5 @@ var lang =
     "LastName": "Last name",
     "FirstName": "First name",
     "Age": "Age",
-    "": ""
+    "language": "English"
 }
