@@ -6,25 +6,60 @@
     <title>CV</title>
     <script type="text/javascript" src="resources/jq.js"></script>
     <script type="text/javascript" src="resources/index.js"></script>
-    <script id="language" type="text/javascript"></script>
+    <script type="text/javascript" src="resources/lang_en.js"></script>
+    <link rel="stylesheet" href="resources/index.css" />
     <script>
         $(document).ready(function () {
-            //$.getScript("resources/lang_en.js")
-            //.success(function () {
-            //    console.info("Success")
-            //}).
-            //fail(function () {
-            //    console.info("Fail")
-            //});
-            //var browLang = navigator.language.substr(0, 2);
-            document.write("<script id='language' src='resources/lang_en.js'><\/script>");
-            document.getElementById("language").onload = function () {
-                $("#h1").text(lang.language);
-            }
+            $("#cv").text(lang.MyCV);
+            $("#cardTitle0").text(lang.PersonalInfo);
+            $("#cardTitle1").text(lang.PersonalInfo);
+            $("#contact").text(lang.Email).css({
+                "title": lang.Clickboard,
+                "cursor": "pointer",
+                "display": "inline-block"
+            }).attr("title", lang.Clipboard);
+
+            //Onclick listener
+            $(".cardContent").css("display", "none");
+            $(".cardTitle").click(function () {
+                $("#cardContent" + $(this).attr("id").substring(9, 10)).slideToggle("fast");
+            })
+            $("#contact").click(function () {
+
+            });
         });
     </script>
 </head>
 <body>
-    <h1 id="h1">Test</h1>
+    <div class="topBox">
+        <!--Top box that contain title -->
+        <h1 id="cv"></h1>
+        <h2 id="contact"></h2>
+    </div>
+    <div id="cardsBox">
+        <!--Main box for cards-->
+        <div>
+            <!--First card-->
+            <div class="cardTitle" id="cardTitle0">
+                <!--Title area-->
+                <h2 id="cardTitle0"></h2>
+            </div>
+            <div class="cardContent" id="cardContent0">
+                <!--Card content-->
+                <p>Something</p>
+            </div>
+        </div>
+        <div>
+            <!--Second card-->
+            <div class="cardTitle" id="cardTitle1">
+                <!--Title area-->
+                <h2 id="cardTitle1"></h2>
+            </div>
+            <div class="cardContent" id="cardContent1">
+                <!--Card content-->
+                <p>Something</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

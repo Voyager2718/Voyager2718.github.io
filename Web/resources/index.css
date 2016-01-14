@@ -1,0 +1,61 @@
+@font-face {
+    font-family: myFont;
+    src: url(sansation_light.woff);
+}
+
+body {
+    font-family: myFont,'Helvetica', 'Microsoft YaHei', sans-serif;
+    font-size: 100%;
+    text-shadow: gray 0 0 5px;
+}
+
+/*
+::selection {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+*/
+h1 {
+    font-size: 320%;
+    margin: 0;
+}
+
+h2 {
+    font-size: 100%;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+h3 {
+    font-size: 100%;
+    font-weight: 100;
+    line-height: 100%;
+}
+
+#cardsBox {
+    margin: 0 auto;
+    width: 90%;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    box-shadow: gray 0 0 10px;
+    background-color: #65c8ff;
+}
+
+.cardTitle {
+    cursor: pointer;
+    font-size: 100%;
+    width: 98%;
+    height: auto;
+    background-color: #65c8ff;
+    background-image: -webkit-linear-gradient(top, #65c8ff, #0075b6);
+    padding: 0.5% 1%;
+    border-radius: 10px 10px 0 0;
+    box-shadow: #005a8b 0 5px 0px, inset lightblue 0 0 5px;
+}
+
+.cardContent {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #65c8ff;
+}
