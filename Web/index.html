@@ -7,30 +7,11 @@
     <script type="text/javascript" src="resources/jq.js"></script>
     <script type="text/javascript" src="resources/index.js"></script>
     <script type="text/javascript" src="resources/lang_en.js"></script>
+    <script type="text/javascript" src="resources/solar.js"></script>
     <link rel="stylesheet" href="resources/index.css" />
-    <script>
-        $(document).ready(function () {
-            $("#cv").text(lang.MyCV);
-            $("#cardTitle0").text(lang.PersonalInfo);
-            $("#cardTitle1").text(lang.PersonalInfo);
-            $("#contact").text(lang.Email).css({
-                "title": lang.Clickboard,
-                "cursor": "pointer",
-                "display": "inline-block"
-            }).attr("title", lang.Clipboard);
-
-            //Onclick listener
-            $(".cardContent").css("display", "none");
-            $(".cardTitle").click(function () {
-                $("#cardContent" + $(this).attr("id").substring(9, 10)).slideToggle("fast");
-            })
-            $("#contact").click(function () {
-
-            });
-        });
-    </script>
 </head>
 <body>
+    <canvas id="canvas" height="900" width="900"></canvas>
     <div class="topBox">
         <!--Top box that contain title -->
         <h1 id="cv"></h1>
