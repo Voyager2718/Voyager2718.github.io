@@ -101,6 +101,11 @@
             $("#contact").click(function () {
                 //TODO: Copy to clipboard
             });
+
+            //Double click listener
+            $(".cardTitle").dblclick(function () {
+                $(".cardContent").slideDown();
+            })
         });
 
         //Dynamic elements listener
