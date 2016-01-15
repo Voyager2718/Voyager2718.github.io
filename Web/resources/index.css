@@ -50,10 +50,6 @@ h3 {
     z-index: 999;
 }
 
-    #infoWindow:hover {
-        background-color: black;
-    }
-
 #canvas {
     position: absolute;
     z-index: -99;

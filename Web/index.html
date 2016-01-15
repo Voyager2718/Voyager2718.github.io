@@ -14,6 +14,7 @@
         var zoom = 100;
         var infoWindowOpened = false;
         var inInfoWindow = false;
+        var stopClosingInfoWindow = false;
         //Init
         $(document).ready(function () {
             //Device detect
@@ -45,21 +46,14 @@
                         "id": "infoWindow",
                     }).appendTo("body");
                     infoWindowOpened = true;
+                    stopClosingInfoWindow = true;
                 }
-            });
-
-            $("#infoWindow").mouseover(function () {
-                alert();//TODO: Why it doesn't work?
-                inInfoWindow = true;
-            });
-
-            $("#infoWindow").mouseout(function () {
-                inInfoWindow = false;
             });
 
             //Mouseout listener
             $(".mouseover").mouseout(function () {
-                setTimeout(closeInfoWindow, 1000);//TODO: should clear
+                stopClosingInfoWindow = false;
+                setTimeout(closeInfoWindow, 500);
             });
 
             //Onclick listener
@@ -72,18 +66,28 @@
             });
         });
 
+        //Dynamic elements listener
+        $(document).on("mouseover", "#infoWindow", function () {
+            inInfoWindow = true;
+        });
+
+        $(document).on("mouseout", "#infoWindow", function () {
+            inInfoWindow = false;
+        });
+
         //Mousemove listener
         $(document).mousemove(function (e) {
             var infoWindow = $("#infoWindow");
             //Deal with overflow
+            console.info("b" + inInfoWindow);
             if (infoWindowOpened && !inInfoWindow) {
                 if (parseInt(infoWindow.css("width")) + e.clientX > $(document.body).width()) {
-                    infoWindow.css("left", (e.clientX - 10 - parseInt(infoWindow.css("width"))) + "px");
-                    infoWindow.css("top", (e.clientY + 10) + "px");
+                    infoWindow.css("left", (e.clientX - 5 - parseInt(infoWindow.css("width"))) + "px");
+                    infoWindow.css("top", (e.clientY + 5) + "px");
                 }
                 else {
-                    infoWindow.css("left", ((e.clientX + 10) + "px"));
-                    infoWindow.css("top", (e.clientY + 10) + "px");
+                    infoWindow.css("left", ((e.clientX + 5) + "px"));
+                    infoWindow.css("top", (e.clientY + 5) + "px");
                 }
             }
         });
@@ -111,7 +115,7 @@
         }
 
         function closeInfoWindow() {
-            if (!inInfoWindow) {
+            if (!inInfoWindow && !stopClosingInfoWindow) {
                 $("#infoWindow").remove();
                 infoWindowOpened = false;
             }
@@ -141,7 +145,7 @@
             <div class="cardContent" id="cardContent0">
                 <!--Card content-->
                 <div class="mouseover">
-                    123
+                    <div style="height:300px;width:300px;">Test hover</div>
                 </div>
             </div>
         </div>
