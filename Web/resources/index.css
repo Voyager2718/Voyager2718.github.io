@@ -37,6 +37,23 @@ h3 {
     line-height: 100%;
 }
 
+.mouseover {
+    cursor: help;
+}
+
+#infoWindow {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: rgba(128, 128, 128, 0.75);
+    border-radius: 10px;
+    z-index: 999;
+}
+
+    #infoWindow:hover {
+        background-color: black;
+    }
+
 #canvas {
     position: absolute;
     z-index: -99;
@@ -60,11 +77,13 @@ h3 {
     font-size: 100%;
     width: 98%;
     height: auto;
-    background-color: #65c8ff;
+    background-color: #00a4ff;
     background-image: -webkit-linear-gradient(top, #65c8ff, #0075b6);
+    background-image: -moz-linear-gradient(top, #65c8ff, #0075b6);
+    background-image: -o-linear-gradient(top, #65c8ff, #0075b6);
     padding: 0.5% 1%;
     border-radius: 10px 10px 0 0;
-    box-shadow: #005a8b 0 5px 0px, inset lightblue 0 0 5px;
+    box-shadow: #005a8b 0 5px 0px, inset white 1px 0px 3px;
 }
 
 .cardContent {
