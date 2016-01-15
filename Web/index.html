@@ -11,6 +11,43 @@
     <script type="text/javascript" src="resources/device.min.js"></script>
 
     <script>
+        function copyToClipboard(value) {
+            var target = document.getElementById("hiddenText");
+            target.textContent = value;
+            console.log(target.textContent);
+            select(target);
+            document.execCommand("copy");
+        }
+
+        function select(element) {
+            var selectedText;
+
+            if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
+                element.focus();
+                element.setSelectionRange(0, element.value.length);
+
+                selectedText = element.value;
+            }
+            else {
+                if (element.hasAttribute('contenteditable')) {
+                    element.focus();
+                }
+
+                var selection = window.getSelection();
+                var range = document.createRange();
+
+                range.selectNodeContents(element);
+                selection.removeAllRanges();
+                selection.addRange(range);
+
+                selectedText = selection.toString();
+            }
+
+            return selectedText;
+        }
+    </script>
+
+    <script>
         var zoom = 100;
         var infoWindowOpened = false;
         var inInfoWindow = false;
@@ -72,6 +109,7 @@
         });
 
         $(document).on("mouseout", "#infoWindow", function () {
+            closeInfoWindow();
             inInfoWindow = false;
         });
 
@@ -144,9 +182,7 @@
             </div>
             <div class="cardContent" id="cardContent0">
                 <!--Card content-->
-                <div class="mouseover">
-                    <div style="height:300px;width:300px;">Test hover</div>
-                </div>
+                <p>YANG Zhipeng</p>
             </div>
         </div>
         <div>

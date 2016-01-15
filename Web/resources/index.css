@@ -45,7 +45,7 @@ h3 {
     position: absolute;
     height: 300px;
     width: 300px;
-    background-color: rgba(128, 128, 128, 0.75);
+    background-color: rgba(0, 171, 255, 0.6);
     border-radius: 10px;
     z-index: 999;
 }
@@ -65,7 +65,7 @@ h3 {
     overflow: hidden;
     border-radius: 10px 10px 0 0;
     box-shadow: gray 0 0 10px;
-    background-color: #65c8ff;
+    background-color: rgba(0, 171, 255, 0.6);
 }
 
 .cardTitle {
@@ -79,11 +79,30 @@ h3 {
     background-image: -o-linear-gradient(top, #65c8ff, #0075b6);
     padding: 0.5% 1%;
     border-radius: 10px 10px 0 0;
-    box-shadow: #005a8b 0 5px 0px, inset white 1px 0px 3px;
+    box-shadow: #003c5e 0 5px 0px, inset white 1px 0px 3px;
+    transition: all ease 0.25s;
+    -moz-transition: all ease 0.25s;
+    -webkit-transition: all ease 0.25s;
+    -o-transition: all ease 0.25s;
 }
+
+    .cardTitle:hover {
+        color: white;
+        background-color: #4bbfff;
+        background-image: -webkit-linear-gradient(top, #a1ddff, #00a4ff);
+        background-image: -moz-linear-gradient(top, #a1ddff, #00a4ff);
+        background-image: -o-linear-gradient(top, #a1ddff, #00a4ff);
+    }
+
+    .cardTitle:active {
+        background-color: #0075b6;
+        background-image: -webkit-linear-gradient(top, #0075b6, #65c8ff);
+        background-image: -moz-linear-gradient(top, #0075b6, #65c8ff);
+        background-image: -o-linear-gradient(top, #0075b6, #65c8ff);
+    }
 
 .cardContent {
     margin-top: 5px;
     padding: 10px;
-    background-color: #65c8ff;
+    color: white;
 }
