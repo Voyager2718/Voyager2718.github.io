@@ -39,6 +39,7 @@ h3 {
 
 .mouseover {
     cursor: help;
+    text-decoration: underline;
 }
 
 #infoWindow {

@@ -83,14 +83,14 @@
                         "id": "infoWindow",
                     }).appendTo("body");
                     infoWindowOpened = true;
-                    stopClosingInfoWindow = true;
+                    //stopClosingInfoWindow = true;
                 }
             });
 
             //Mouseout listener
             $(".mouseover").mouseout(function () {
-                stopClosingInfoWindow = false;
-                setTimeout(closeInfoWindow, 500);
+                //stopClosingInfoWindow = false;
+                setTimeout(closeInfoWindow, 0);//Remove info window after n seconds.
             });
 
             //Onclick listener
@@ -167,7 +167,7 @@
 
     <link rel="stylesheet" href="resources/index.css" />
     <script type="text/javascript">
-        console.info("WebCV v0.22");
+        console.info("WebCV v0.5");
     </script>
 </head>
 <body>
@@ -187,7 +187,13 @@
             </div>
             <div class="cardContent" id="cardContent0">
                 <!--Card content-->
-                <p>YANG Zhipeng</p>
+                <p class="mouseover">Name: <span>YANG</span></p>
+                <p class="mouseover">Surname: <span>Zhipeng</span></p>
+                <p>Age: <span>23</span></p>
+                <p>Address: <span>Résidence Bachelard, L322, Cité Scientifique, 59650, Villeneuve d'Ascq, France</span></p>
+                <p>Telephone number: <span>+33(0)6.95.32.88.79</span></p>
+                <p>E-mail: <span>zhipeng.yang.it@hotmail.com</span></p>
+                <p>Nationality: <span>Chinese</span></p>
             </div>
         </div>
         <div>
@@ -198,7 +204,10 @@
             </div>
             <div class="cardContent" id="cardContent1">
                 <!--Card content-->
-                <p>Something</p>
+                <p>2012-2013: <span>DAEFLE (DIPLÔME D’APTITUDE À L’ENSEIGNEMENT DU FRANÇAIS LANGUE ÉTRANGÈRE) à <span class="mouseover">Université de Valenciennes et du Hainaut-Cambrésis</span></span></p>
+                <p>2013-2014: <span>Licence 1 Informatique à <span class="mouseover">Université de Valenciennes et du Hainaut-Cambrésis</span></span></p>
+                <p>2014-2015: <span>Licence 2 Informatique à <span class="mouseover">Université Lille 1 Sciences et Technologies</span></span></p>
+                <p>2015-2016: <span>Licence 3 Informatique à <span class="mouseover">Université Lille 1 Sciences et Technologies</span></span></p>
             </div>
         </div>
         <div>
@@ -209,7 +218,8 @@
             </div>
             <div class="cardContent" id="cardContent2">
                 <!--Card content-->
-                <p>Something</p>
+                <p>2014-2015: <span>We have learnt coding, computer architecture, PHP, PostgreSQL, JavaScript in university, Object Oriented Programming (Java).</span></p>
+                <p>2015-2016: <span>We have learnt OS programming (Linux), Database theory, Automaton, Algorithems and Operations Research, Object Oriented Programming(Java, Design Pattern).</span></p>
             </div>
         </div>
         <div>
@@ -220,7 +230,54 @@
             </div>
             <div class="cardContent" id="cardContent3">
                 <!--Card content-->
-                <p>Something</p>
+                <p>
+                    Languages: <ul>
+                        <li>Chinese - Mother tongue</li>
+                        <li>English - Fluent</li>
+                        <li>French - Fluent</li>
+                    </ul>
+                </p>
+                <p>
+                    Softwares: <ul>
+                        <li>Microsoft Visual Studio</li>
+                        <li>Jetbrain PHP storm</li>
+                        <li>Jetbrain IntelliJ</li>
+                        <li>Eclipse</li>
+                        <li>GitHub</li>
+                        <li>Android Studio</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe After Effects</li>
+                        <li>Adobe Premiere</li>
+                        <li>Arduino</li>
+                        <li>Office</li>
+                    </ul>
+                </p>
+                <p>
+                    Professional abilities: <ul>
+                        <li>Front end and back end(CSS,JavaScript, PHP, MySQL, PostgreSQL)</li>
+                        <li>OS Programming (Linux - mutex, pthread, implemented some commands in Linux, ..)</li>
+                        <li>Desktop applications （Windows - C# WinFrom)</li>
+                        <li>Android App developing (Fundamental level)</li>
+                    </ul>
+                </p>
+                <p>
+                    Programming languages: <ul>
+                        <li>C</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                        <li>JavaScript</li>
+                        <li>C#</li>
+                        <li>Ruby</li>
+                    </ul>
+                </p>
+                <p>
+                    Others: <ul>
+                        <li>L<sub>A</sub>T<sub>E</sub>X</li>
+                        <li>MySQL/PostgreSQL</li>
+                    </ul>
+                </p>
             </div>
         </div>
         <div>
@@ -231,7 +288,8 @@
             </div>
             <div class="cardContent" id="cardContent4">
                 <!--Card content-->
-                <p>Something</p>
+                <p>Sports: <span>Swimming, Archery, Shooting, ..</span></p>
+                <p>Others: <span>Scale model, Arduino, ..</span></p>
             </div>
         </div>
     </div>
