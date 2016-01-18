@@ -43,12 +43,16 @@ h3 {
 }
 
 #infoWindow {
+    padding: 10px;
     position: absolute;
-    height: 300px;
-    width: 300px;
     background-color: rgba(0, 171, 255, 0.6);
     border-radius: 10px;
     z-index: 999;
+}
+
+.loading {
+    width: 100px;
+    height: 100%;
 }
 
 #canvas {

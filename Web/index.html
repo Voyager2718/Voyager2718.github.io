@@ -84,13 +84,20 @@
                     }).appendTo("body");
                     infoWindowOpened = true;
                     //stopClosingInfoWindow = true;
+
+                    var loadingPath = "loading" + (parseInt(Math.random() * 6 + 1)) + ".gif";
+                    $("<img>", {
+                        "class": "loading",
+                        "src": "resources/" + loadingPath
+                    }).appendTo("#infoWindow")
                 }
             });
 
             //Mouseout listener
             $(".mouseover").mouseout(function () {
                 //stopClosingInfoWindow = false;
-                setTimeout(closeInfoWindow, 0);//Remove info window after n seconds.
+                //setTimeout(closeInfoWindow, 0);//Remove info window after n seconds.
+                closeInfoWindow();
             });
 
             //Onclick listener
@@ -109,6 +116,7 @@
         });
 
         //Dynamic elements listener
+        /*
         $(document).on("mouseover", "#infoWindow", function () {
             inInfoWindow = true;
         });
@@ -117,21 +125,25 @@
             closeInfoWindow();
             inInfoWindow = false;
         });
+        */
 
         //Mousemove listener
         $(document).mousemove(function (e) {
             var infoWindow = $("#infoWindow");
+            var w = parseInt(infoWindow.css("width"));
+            var h = parseInt(infoWindow.css("height"));
             //Deal with overflow
-            console.info("b" + inInfoWindow);
             if (infoWindowOpened && !inInfoWindow) {
-                if (parseInt(infoWindow.css("width")) + e.clientX > $(document.body).width()) {
-                    infoWindow.css("left", (e.clientX - 5 - parseInt(infoWindow.css("width"))) + "px");
-                    infoWindow.css("top", (e.clientY + 5) + "px");
+                if (w + e.clientX > $(window).width())
+                    infoWindow.css("left", ((e.pageX - 5 - w) + "px"));
+                else
+                    infoWindow.css("left", ((e.pageX + 5) + "px"));
+                console.info(e.clientY + " " + $(document).height());
+                if (h + e.clientY > $(window).height()) {
+                    infoWindow.css("top", ((e.pageY - 20 - h) + "px"));
                 }
-                else {
-                    infoWindow.css("left", ((e.clientX + 5) + "px"));
-                    infoWindow.css("top", (e.clientY + 5) + "px");
-                }
+                else
+                    infoWindow.css("top", (e.pageY + 5) + "px");
             }
         });
 
@@ -254,7 +266,7 @@
                 </p>
                 <p>
                     Professional abilities: <ul>
-                        <li>Front end and back end(CSS,JavaScript, PHP, MySQL, PostgreSQL)</li>
+                        <li>Front end and back end(CSS,JavaScript/JQuery, PHP, MySQL, PostgreSQL)</li>
                         <li>OS Programming (Linux - mutex, pthread, implemented some commands in Linux, ..)</li>
                         <li>Desktop applications （Windows - C# WinFrom)</li>
                         <li>Android App developing (Fundamental level)</li>
