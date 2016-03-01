@@ -1,0 +1,34 @@
+﻿@font-face {
+    font-family: myFont;
+    src: url(sansation_light.woff);
+}
+
+body {
+    font-size: 100%;
+    font-family: myFont,'Helvetica', 'Microsoft YaHei', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+    a:visited {
+        color: black;
+    }
+
+#menu {
+    position: absolute;
+    z-index: 999;
+    list-style-type: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+    #menu li {
+        display: inline;
+        border-radius: 10px;
+        border: solid;
+        background-color: white;
+        padding: 5px 10px;
+        text-decoration: none;
+    }
