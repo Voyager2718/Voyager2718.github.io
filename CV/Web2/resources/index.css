@@ -28,7 +28,8 @@ a {
     }
 
         #menu li button {
-            border-radius: 10px;
+            margin-right: 10px;
+            border-radius: 1000px;
             border: solid;
             background-color: rgba(255, 255, 255, 0.65);
             padding: 8px 10px;
@@ -45,3 +46,29 @@ a {
             #menu li button:hover {
                 background-color: rgba(255, 255, 255, 0.85);
             }
+
+@keyframes active {
+    0% {
+        background-color: #ffbb00;
+    }
+
+    25% {
+        background-color: #7cbb00;
+    }
+
+    50% {
+        background-color: #00a1f1;
+    }
+
+    75% {
+        background-color: #f65314;
+    }
+
+    100% {
+        background-color: #ffbb00;
+    }
+}
+
+#active {
+    animation: 12s active infinite ease-in-out;
+}

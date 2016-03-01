@@ -19,7 +19,7 @@
     <script>
         $(document).ready(function () {
             $('#fullpage').fullpage({
-                sectionsColor: ['#336', '#336', '#336', '#336', '#ccddff'],
+                sectionsColor: ['#ffbb00', '#7cbb00', '#00a1f1', '#f65314', '#0071c5'],
                 anchors: ['1st', '2nd', '3rd', '4th', '5th', 'last'],
                 menu: '#menu',
                 css3: true,
@@ -42,22 +42,21 @@
 
 
     <ul id="menu">
-        <li data-menuanchor="1st" class="active"><button onclick="location.href='#1st';">Personal Info</button></li>
-        <li data-menuanchor="2nd" class="active"><button onclick="location.href='#2nd';">Education Info</button></li>
-        <li data-menuanchor="3rd" class="active"><button onclick="location.href='#3rd';">Prof Exp</button></li>
-        <li data-menuanchor="4th" class="active"><button onclick="location.href='#4th';">Abilities</button></li>
-        <li data-menuanchor="5th" class="active"><button onclick="location.href='#5th';">Interests</button></li>
+        <li data-menuanchor="1st" class="active"><button onmouseover="location.href='#1st';" onclick="location.href='#1st';">Personal Info</button></li>
+        <li data-menuanchor="2nd" class="active"><button onmouseover="location.href='#2nd';" onclick="location.href='#2nd';">Education Info</button></li>
+        <li data-menuanchor="3rd" class="active"><button onmouseover="location.href='#3rd';" onclick="location.href='#3rd';">Prof Exp</button></li>
+        <li data-menuanchor="4th" class="active"><button onmouseover="location.href='#4th';" onclick="location.href='#4th';">Abilities</button></li>
+        <li data-menuanchor="5th" class="active"><button onmouseover="location.href='#5th';" onclick="location.href='#5th';">Interests</button></li>
     </ul>
     <div id="fullpage">
-        <div class="section">Section 1</div>
+        <div class="section">Personal Information</div>
         <div class="section">
-            <div class="slide">Section 2 Slide 1</div>
-            <div class="slide">Section 2 Slide 2</div>
-            <div class="slide">Section 2 Slide 3</div>
+            <div class="slide">Education Information 1</div>
+            <div class="slide">Education Information 2</div>
         </div>
-        <div class="section">Section 3</div>
-        <div class="section">Section 4</div>
-        <div class="section">Section 5</div>
+        <div class="section">Professinal Experience</div>
+        <div class="section">Abilities</div>
+        <div class="section" id="active">Interests</div>
     </div>
 </body>
 </html>
