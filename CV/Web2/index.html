@@ -18,6 +18,10 @@
     <script type="text/javascript" src="resources/index.js"></script>
     <script>
         $(document).ready(function () {
+            $('body').mouseover(function () {
+                console.log('Stop playing pages\nE-mail:zhipeng.yang.it@hotmail.com');
+                clearInterval(switchPagesHandle);
+            });
             $('#fullpage').fullpage({
                 sectionsColor: ['#ffbb00', '#7cbb00', '#00a1f1', '#f65314', '#0071c5'],
                 anchors: ['1st', '2nd', '3rd', '4th', '5th', 'last'],
@@ -28,6 +32,7 @@
             $('html').click(function () {
                 $('#examplesList').hide();
             });
+            setSwitchPages();
         });
     </script>
 
@@ -39,8 +44,6 @@
     </style>
 </head>
 <body>
-
-
     <ul id="menu">
         <li data-menuanchor="1st" class="active"><button onmouseover="location.href='#1st';" onclick="location.href='#1st';">Personal Info</button></li>
         <li data-menuanchor="2nd" class="active"><button onmouseover="location.href='#2nd';" onclick="location.href='#2nd';">Education Info</button></li>
