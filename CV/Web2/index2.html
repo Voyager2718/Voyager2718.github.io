@@ -1,19 +1,29 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="resources/jquery.fullPage.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="resources/jquery.easings.min.js"></script>
-    <script src="resources/jquery.fullPage.min.js"></script>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="CV of YANG Zhipeng in English, Français and Chinese. " />
+    <meta name="keywords" content="CV, YANG Zhipeng, English, Français, Chinese" />
+
+    <title>My CV</title>
+
+    <link type="image/x-icon" rel="icon" href="resources/favicon.ico" />
+    <link rel="stylesheet" href="resources/jquery.fullPage.css">
+    <link rel="stylesheet" href="resources/index.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="resources/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="resources/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="resources/index.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#fullpage').fullpage({
-                sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
+                sectionsColor: ['#336', '#336', '#336', '#336'],
             });
         });
     </script>
-    <title></title>
+
     <style>
         .section {
             font-size: 6em;
@@ -21,11 +31,24 @@
         }
     </style>
 </head>
-
 <body>
-    <ul style="display:inline;">
-        <li>abc</li>
-        <li>def</li>
+    <ul id="menu">
+        <li data-menuanchor="1st" class="active"><button>Personal Info</button></li>
+        <li data-menuanchor="2nd" class="active"><button>Education Info</button></li>
+        <li data-menuanchor="3rd" class="active"><button>Prof Exp</button></li>
+        <li data-menuanchor="4th" class="active"><button>Abilities</button></li>
+        <li data-menuanchor="5th" class="active"><button>Interests</button></li>
     </ul>
+    <div id="fullpage">
+        <div class="section active" id="1st">Section 1</div>
+        <div class="section active" id="2nd">
+            <div class="slide active" id="2nds1">Section 2 Slide 1</div>
+            <div class="slide active" id="2nds2">Section 2 Slide 2</div>
+            <div class="slide active" id="2nds3">Section 2 Slide 3</div>
+        </div>
+        <div class="section active" id="3rd">Section 3</div>
+        <div class="section active" id="4th">Section 4</div>
+        <div class="section active" id="5th">Section 4</div>
+    </div>
 </body>
 </html>

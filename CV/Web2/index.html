@@ -16,7 +16,7 @@
     <script type="text/javascript" src="resources/jquery.fullPage.min.js"></script>
     <script type="text/javascript" src="resources/jquery.easings.min.js"></script>
     <script type="text/javascript" src="resources/index.js"></script>
-    <script type="text/javascript">
+    <script>
         $(document).ready(function () {
             $('#fullpage').fullpage({
                 sectionsColor: ['#336', '#336', '#336', '#336'],
@@ -32,23 +32,25 @@
     </style>
 </head>
 <body>
+
+
     <ul id="menu">
-        <li data-menuanchor="1st" class="active"><a href="#aaa">Personal Info</a></li>
-        <li data-menuanchor="2nd"><a href="#2nd">Education Info</a></li>
-        <li data-menuanchor="3rd"><a href="#3rd">Prof Exp</a></li>
-        <li data-menuanchor="4th"><a href="#4th">Abilities</a></li>
-        <li data-menuanchor="5th"><a href="#5th">Interests</a></li>
+        <li data-menuanchor="1st" class="active"><button onclick="location.href='#1st';">Personal Info</button></li>
+        <li data-menuanchor="2nd" class="active"><button onclick="location.href='#2nd';">Education Info</button></li>
+        <li data-menuanchor="3rd" class="active"><button onclick="location.href='#3rd';">Prof Exp</button></li>
+        <li data-menuanchor="4th" class="active"><button onclick="location.href='#4th';">Abilities</button></li>
+        <li data-menuanchor="5th" class="active"><button onclick="location.href='#5th';">Interests</button></li>
     </ul>
     <div id="fullpage">
-        <div class="section active" id="aaa">Section 1</div>
-        <div class="section active" id="2nd">
-            <div class="slide active" id="2nds1">Section 2 Slide 1</div>
-            <div class="slide active" id="2nds2">Section 2 Slide 2</div>
-            <div class="slide active" id="2nds3">Section 2 Slide 3</div>
+        <div class="section" id="1st">Section 1</div>
+        <div class="section" id="2nd">
+            <div class="slide" id="2nds1">Section 2 Slide 1</div>
+            <div class="slide" id="2nds2">Section 2 Slide 2</div>
+            <div class="slide" id="2nds3">Section 2 Slide 3</div>
         </div>
-        <div class="section active" id="3rd">Section 3</div>
-        <div class="section active" id="4th">Section 4</div>
-        <div class="section active" id="5th">Section 4</div>
+        <div class="section" id="3rd">Section 3</div>
+        <div class="section" id="4th">Section 4</div>
+        <div class="section" id="5th">Section 5</div>
     </div>
 </body>
 </html>

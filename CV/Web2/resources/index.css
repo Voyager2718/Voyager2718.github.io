@@ -20,15 +20,28 @@ a {
     position: absolute;
     z-index: 999;
     list-style-type: none;
-    width: 100%;
     cursor: pointer;
 }
 
     #menu li {
         display: inline;
-        border-radius: 10px;
-        border: solid;
-        background-color: white;
-        padding: 5px 10px;
-        text-decoration: none;
     }
+
+        #menu li button {
+            border-radius: 10px;
+            border: solid;
+            background-color: rgba(255, 255, 255, 0.65);
+            padding: 8px 10px;
+            text-decoration: none;
+            width: 120px;
+            font-family: myFont;
+            cursor: pointer;
+            -webkit-transition: all ease 0.25s;
+            -moz-transition: all ease 0.25s;
+            -o-transition: all ease 0.25s;
+            transition: all ease 0.25s;
+        }
+
+            #menu li button:hover {
+                background-color: rgba(255, 255, 255, 0.85);
+            }
