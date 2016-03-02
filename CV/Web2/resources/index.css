@@ -4,15 +4,19 @@
 }
 
 ::selection {
+    /*
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+        */
+    background-color: rgba(0, 161, 241, 0.40);
 }
 
 body {
     font-size: 100%;
+    text-shadow: black 2px 2px 10px;
     font-family: myFont,'Helvetica', 'Microsoft YaHei', sans-serif;
 }
 
@@ -60,7 +64,52 @@ a {
                 background-color: rgba(0, 0, 0, 0.25);
             }
 
-@keyframes active {
+#page1 {
+    font-size: 200%;
+}
+
+#me {
+    height: 100px;
+    width: 100px;
+    border-radius: 1000px;
+    box-shadow: black 0 0 10px;
+    -webkit-transition: all ease 0.25s;
+    -moz-transition: all ease 0.25s;
+    -o-transition: all ease 0.25s;
+    transition: all ease 0.25s;
+}
+
+    #me:hover {
+        box-shadow: black 0 0 30px;
+    }
+
+.title {
+    margin-top: 0;
+    font-size: 75%;
+}
+
+#content1 {
+    font-size: 50%;
+}
+
+.content2 {
+    font-size: 25%;
+}
+
+    .content2 p {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+.bg {
+    background-size: 100% auto;
+}
+
+.abilities {
+    list-style-type: none;
+}
+
+@keyframes page5 {
     0% {
         background-color: #ffbb00;
     }
@@ -83,5 +132,5 @@ a {
 }
 
 #active {
-    animation: 12s active infinite ease-in-out;
+    animation: 12s page5 infinite ease-in-out;
 }
