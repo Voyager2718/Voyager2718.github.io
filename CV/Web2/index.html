@@ -18,9 +18,9 @@
     <script type="text/javascript" src="resources/jquery.easings.min.js"></script>
     <script type="text/javascript" src="resources/index.js"></script>
     <script>
-        var mobileToOldVersion = true;
+        var mobileToOldVersion = false; //Should be change to true
         $(document).ready(function () {
-            alert(device.mobile());
+            console.log("Mobile detected? " + device.mobile());
             if (device.mobile() && mobileToOldVersion) {
                 self.location.href = '../Web/index.html';
             }//If it's mobile, go to mobile adapted version.
