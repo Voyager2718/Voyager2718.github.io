@@ -20,6 +20,7 @@
     <script>
         var mobileToOldVersion = true;
         $(document).ready(function () {
+            alert(device.mobile());
             if (device.mobile() && mobileToOldVersion) {
                 self.location.href = '../CV/index.html';
             }//If it's mobile, go to mobile adapted version.
