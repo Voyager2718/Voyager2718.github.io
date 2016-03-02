@@ -1,6 +1,6 @@
 ﻿@font-face {
     font-family: myFont;
-    src: url(sansation_light.woff);
+    src: url(galderglynn.ttf);
 }
 
 ::selection {
@@ -47,7 +47,7 @@ a {
             background-color: rgba(255, 255, 255, 0.65);
             padding: 8px 10px;
             text-decoration: none;
-            width: 120px;
+            width: 150px;
             font-family: myFont;
             cursor: pointer;
             -webkit-transition: all ease 0.25s;
