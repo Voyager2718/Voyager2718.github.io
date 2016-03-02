@@ -13,15 +13,22 @@
     <link rel="stylesheet" href="resources/index.css" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="resources/device.min.js"></script>
     <script type="text/javascript" src="resources/jquery.fullPage.min.js"></script>
     <script type="text/javascript" src="resources/jquery.easings.min.js"></script>
     <script type="text/javascript" src="resources/index.js"></script>
     <script>
+        var mobileToOldVersion = True;
         $(document).ready(function () {
+            if (device.mobile() && mobileToOldVersion) {
+                self.location.href = '../CV/index.html';
+            }//If it's mobile, go to mobile adapted version.
+
             $('body').mouseover(function () {
                 console.log('Stop playing pages\nE-mail:zhipeng.yang.it@hotmail.com');
                 clearInterval(switchPagesHandle);
-            });
+            });//Stop playing pages
+
             $('#fullpage').fullpage({
                 sectionsColor: ['#ffbb00', '#7cbb00', '#00a1f1', '#f65314', '#0071c5'],
                 anchors: ['1st', '2nd', '3rd', '4th', '5th', 'last'],
@@ -32,7 +39,8 @@
             $('html').click(function () {
                 $('#examplesList').hide();
             });
-            setSwitchPages();
+
+            setSwitchPages();//Play
         });
     </script>
 
