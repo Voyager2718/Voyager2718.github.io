@@ -17,9 +17,9 @@ function switchPages() {
     }
 }
 
-//var language = (window.navigator.userLanguage || window.navigator.language).toLowerCase();
-//switch (language) {
-//    case 'en-us': if (lan != 'en-us') window.location.href = './index.html'; break;
-//    case 'fr': if (lan != 'fr') window.location.href = './index_fr.html'; break;
-//    default: if (lan != 'en-us') window.location.href = './index.html'; break;
-//}
+var language = (window.navigator.userLanguage || window.navigator.language).toLowerCase();
+switch (language) {
+    case 'en-us': if (lan != 'en-us') window.location.href = './index.html'; break;
+    case 'fr': if (lan != 'fr') window.location.href = './index_fr.html'; break;
+    default: if (lan != 'en-us') window.location.href = './index.html'; break;
+}
