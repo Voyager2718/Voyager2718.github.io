@@ -35,8 +35,8 @@
             });//Stop playing pages
 
             $('#fullpage').fullpage({
-                sectionsColor: ['#ffbb00', '#7cbb00', '#00a1f1', '#f65314', '#0071c5'],
-                anchors: ['1st', '2nd', '3rd', '4th', '5th', 'last'],
+                sectionsColor: ['#ffbb00', '#7cbb00', '#00a1f1', '#f65314', '#0071c5', '#A4C639'],
+                anchors: ['1st', '2nd', '3rd', '4th', '5th', '6th', 'last'],
                 menu: '#menu',
                 css3: true,
                 scrollingSpeed: 1000
@@ -63,6 +63,7 @@
         <li data-menuanchor="3rd" class="active"><button onmouseover="location.href='#3rd';" onclick="location.href='#3rd';">Expériences</button></li>
         <li data-menuanchor="4th" class="active"><button onmouseover="location.href='#4th';" onclick="location.href='#4th';">Compétences</button></li>
         <li data-menuanchor="5th" class="active"><button onmouseover="location.href='#5th';" onclick="location.href='#5th';">Loisirs</button></li>
+        <li data-menuanchor="6th" class="active"><button onmouseover="location.href='#6th';" onclick="location.href='#6th';">Version mobile</button></li>
         <li><button onclick="location.href = '../Web/index.html'">Version Prec</button></li>
     </ul>
     <div id="fullpage">
@@ -180,6 +181,11 @@
                     <li>Sports: Natation, Tir à l'arc, ..</li>
                     <li>Autres: Maquettes, Arduino, ..</li>
                 </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="content2">
+                <img id="app_img" src="resources/app_img.png" onclick="window.location.href='../App/MyCV.apk'" title="Cliquez pour télécharger l'app mobile gratuitement'" />
             </div>
         </div>
     </div>

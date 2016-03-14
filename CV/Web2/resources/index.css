@@ -134,3 +134,9 @@ a {
 #active {
     animation: 12s page5 infinite ease-in-out;
 }
+
+#app_img {
+    /* Nothing for instant*/
+    overflow-y: hidden;
+    cursor: pointer;
+}
