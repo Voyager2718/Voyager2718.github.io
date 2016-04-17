@@ -3,60 +3,41 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>list</title>
-    <style type="text/css">
-        .main {
-            width: 61.8%;
-            margin: 0 auto;
-            font-family: 'Microsoft YaHei',SimHei;
-            color: white;
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            text-shadow: rgba(128, 128, 128,0.8) 0px 0px 30px;
-        }
-
-        ::selection {
-            background: rgba(128, 128, 128,0.5);
-        }
-
-        ::-moz-selection {
-            background: rgba(128, 128, 128,0.5);
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-            a:visited {
-                color: white;
-            }
-    </style>
+    <title>My GitHub</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="resources/index/index.css" />
 </head>
-<body style="background-color: rgb(38, 173, 198)">
-    <div class="main">
-        <h1>List of my pages</h1>
-        <ul>
-            <li><a href="https://github.com/Voyager2718">My Github</a></li>
-            <li><a href="job/cv.html">CV</a></li>
-            <li><a href="personal/index.html">Personal page</a></li>
-            <li><a href="personal/blog.html">Blog</a></li>
-            <li><a href="friends/jiazhou/birth2014/index.html">JiaZhou's birthday 2014</a></li>
-            <li><a href="Rockets/Index.html">Introduction to the rockets</a></li>
-            <li><a href="Love/OurLoveStory.htm">Our Love Story*</a></li>
-            <li><a href="maths/nor_distribution.htm">Nor_distribution*</a></li>
-            <li><a href="songlinxi/festivals/qixi2014/index.html">A site for Linxi</a></li>
-            <li><a href="tutors/sqltutor.pdf">SQL Tutorial</a></li>
-            <li><a href="letters/lettre_de_moti_lille1.pdf">lettre de motivation pour Lille 1.pdf</a></li>
-        </ul>
-        <hr />
-        <p id="copyright" style="font-size: 10px; text-align: center; text-shadow: rgb(128, 128, 128) 0px 0px 10px;"></p>
-        <script>
-            var today = new Date();
-            document.getElementById('copyright').innerText = ("Creator: YANG Zhipeng " + (today.getYear() + 1900));
-        </script>
+<body>
+    <div class="container-fluid">
+        <h1>Zhipeng YANG</h1>
+        <div class="row">
+            <div class="col-sm-4">4</div>
+            <div class="col-sm-4">4</div>
+            <div class="col-sm-4">4</div>
+        </div>
+        <div class="container">
+            <div class="jumbotron">
+                <p>Test</p>
+            </div>
+        </div>
+        <pre>Pre</pre>
+        <div class="well">well</div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Sony</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Tablet</a></li>
+                <li><a href="#">Smartphone</a></li>
+            </ul>
+        </div>
+
     </div>
 </body>
 </html>
