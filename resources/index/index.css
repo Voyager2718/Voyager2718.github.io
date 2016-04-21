@@ -1,0 +1,12 @@
+@font-face {
+    font-family: myFont;
+    src: url(galderglynn.ttf);
+}
+
+body {
+    font-family: Helvetica, 'Microsoft YaHei', sans-serif;
+}
+
+button, h1 {
+    font-family: myFont;
+}

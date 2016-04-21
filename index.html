@@ -4,39 +4,48 @@
 <head>
     <meta charset="utf-8" />
     <title>My GitHub</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <script src="resources/index/index.js"></script>
     <link rel="stylesheet" href="resources/index/index.css" />
 </head>
-<body>
-    <div class="container-fluid">
+<body ng-app="mySite">
+    <div title-bar class="container-fluid" ng-controller="titleBar">
         <h1>Zhipeng YANG</h1>
-        <div class="row">
-            <div class="col-sm-4">4</div>
-            <div class="col-sm-4">4</div>
-            <div class="col-sm-4">4</div>
-        </div>
-        <div class="container">
-            <div class="jumbotron">
-                <p>Test</p>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" ng-click="go('home')">Index</button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="reserved">Latest</a></li>
+                    <li><a href="reserved">Front/Back End</a></li>
+                    <li><a href="reserved">Windows</a></li>
+                    <li><a href="reserved">Linux</a></li>
+                    <li><a href="reserved">Android</a></li>
+                    <li><a href="reserved">Others</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Repo/Projects <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="reserved">CV</a></li>
+                    <li><a href="reserved">Bunny C2</a></li>
+                    <li><a href="reserved">Music Player</a></li>
+                    <li><a href="reserved">RSA Generator</a></li>
+                    <li><a href="reserved">Ray Tracing</a></li>
+                    <li><a href="reserved">Instant Messager</a></li>
+                </ul>
             </div>
         </div>
-        <pre>Pre</pre>
-        <div class="well">well</div>
-
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary">Sony</button>
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Tablet</a></li>
-                <li><a href="#">Smartphone</a></li>
-            </ul>
-        </div>
+        <p>{{test}}</p>
+    </div>
+    <div class="container">
 
     </div>
 </body>
