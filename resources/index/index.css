@@ -10,3 +10,50 @@ body {
 button, h1 {
     font-family: myFont;
 }
+
+.menu {
+    box-shadow: gray 0 5px 10px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.submenu {
+    cursor: pointer;
+    transition: all 0.25s;
+    -o-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    background-color: #0094ff;
+    background: -webkit-linear-gradient(top, #00ddff,#0094ff);
+    line-height: 300%;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.submenu-left {
+    cursor: pointer;
+    transition: all 0.25s;
+    -o-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    background-color: #0094ff;
+    background: -webkit-linear-gradient(top, #00ddff,#0094ff);
+    line-height: 300%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.submenu-right {
+    cursor: pointer;
+    transition: all 0.25s;
+    -o-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    background-color: #0094ff;
+    background: -webkit-linear-gradient(top, #00ddff,#0094ff);
+    line-height: 300%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+    .submenu:hover, .submenu-left:hover, .submenu-right:hover {
+        background: -webkit-linear-gradient(top,#0094ff, #00ddff);
+    }
