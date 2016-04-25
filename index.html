@@ -16,17 +16,28 @@
     <link rel="stylesheet" href="resources/index/index.css" />
 </head>
 <body ng-app="mySite">
+    <!-- Title menu -->
     <div title-bar class="container-fluid" ng-controller="titleBar">
         <h1>Zhipeng YANG</h1>
         <div class="container">
             <div class="row menu">
                 <div class="submenu-left col-sm-4" ng-click="go('home')">Home</div>
-                <div class="submenu col-sm-4" ng-click="go('blog')">Blog</div>
+
+                <div class="submenu col-sm-4 dropdown-toggle">Blog <span class="caret"></span></div>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="reserved">Latest</a></li>
+                    <li><a href="reserved">Front/Back End</a></li>
+                    <li><a href="reserved">Windows</a></li>
+                    <li><a href="reserved">Linux</a></li>
+                    <li><a href="reserved">Android</a></li>
+                    <li><a href="reserved">Others</a></li>
+                </ul>
+
                 <div class="submenu-right col-sm-4" ng-click="go('project')">Project</div>
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container show-card">
     </div>
 </body>
 </html>

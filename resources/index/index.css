@@ -18,6 +18,8 @@ button, h1 {
 }
 
 .submenu {
+    color: white;
+    text-shadow: 0 0 5px gray;
     cursor: pointer;
     transition: all 0.25s;
     -o-transition: all 0.25s;
@@ -31,6 +33,8 @@ button, h1 {
 }
 
 .submenu-left {
+    color: white;
+    text-shadow: 0 0 5px gray;
     cursor: pointer;
     transition: all 0.25s;
     -o-transition: all 0.25s;
@@ -43,6 +47,8 @@ button, h1 {
 }
 
 .submenu-right {
+    color: white;
+    text-shadow: 0 0 5px gray;
     cursor: pointer;
     transition: all 0.25s;
     -o-transition: all 0.25s;
@@ -56,4 +62,11 @@ button, h1 {
 
     .submenu:hover, .submenu-left:hover, .submenu-right:hover {
         background: -webkit-linear-gradient(top,#0094ff, #00ddff);
+        background-color: darkblue;
     }
+
+.show-card {
+    height: 350px;
+    width: 85%;
+    background-color: gray;
+}
