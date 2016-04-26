@@ -1,5 +1,14 @@
+@font-face {
+    font-family: myFont;
+    src: url(galderglynn.ttf);
+}
+
 body {
-    margin: 15px;
+    font-family: Helvetica, 'Microsoft YaHei', sans-serif;
+}
+
+button, h1 {
+    font-family: myFont;
 }
 
 #menu {
