@@ -12,9 +12,8 @@ button, h1 {
 }
 
 #menu {
-    font-family: Arial;
+    font-family: myFont, Helvetica,'Microsoft YaHei', sans-serif;
     font-size: 14px;
-    width: 500px;
     overflow: hidden;
 }
 
@@ -25,35 +24,39 @@ button, h1 {
         padding: 0;
     }
 
-        #menu li {
-            float: left;
+.menu-width {
+    width: 25%;
+}
+
+#menu li {
+    float: left;
+}
+
+    #menu li a {
+        display: block;
+        padding: 10px 15px;
+        color: #FFF;
+        text-decoration: none;
+        border-right: 1px solid #FFF;
+    }
+
+        #menu li a:hover {
+            background: #1BA6B2;
         }
 
-            #menu li a {
-                display: block;
-                padding: 10px 15px;
-                color: #FFF;
-                text-decoration: none;
-                border-right: 1px solid #FFF;
-            }
+    #menu li ul li {
+        float: none;
+    }
 
-                #menu li a:hover {
-                    background: #1BA6B2;
-                }
+        #menu li ul li a {
+            border-top: 1px solid #FFF;
+        }
 
-            #menu li ul li {
-                float: none;
-            }
+    #menu li ul {
+        display: none;
+        position: absolute;
+    }
 
-                #menu li ul li a {
-                    border-top: 1px solid #FFF;
-                }
-
-            #menu li ul {
-                display: none;
-                position: absolute;
-            }
-
-            #menu li:hover ul {
-                display: block;
-            }
+    #menu li:hover ul {
+        display: block;
+    }
