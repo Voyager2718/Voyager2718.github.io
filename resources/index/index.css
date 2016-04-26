@@ -3,11 +3,16 @@
     src: url(galderglynn.ttf);
 }
 
+::selection {
+    background-color: #ffd800;
+}
+
 body {
+    font-size: 100%;
     font-family: Helvetica, 'Microsoft YaHei', sans-serif;
 }
 
-button, h1 {
+h1 {
     font-family: myFont;
 }
 
@@ -22,6 +27,7 @@ button, h1 {
 
     #menu, #menu ul {
         list-style-type: none;
+        background-color: rgba(0, 208, 255, 0.9);
         background: -webkit-linear-gradient(top, rgba(0, 208, 255, 0.9), rgba(27, 166, 178, 0.9));
         margin: 0;
         padding: 0;
@@ -44,7 +50,8 @@ button, h1 {
     }
 
         #menu li a:hover {
-            background: #1BA6B2;
+            background-color: #1BA6B2;
+            background: -webkit-linear-gradient(top, rgba(27, 166, 178, 0.9), rgba(0, 208, 255, 0.9));
         }
 
     #menu li ul li {
@@ -54,6 +61,10 @@ button, h1 {
         #menu li ul li a {
             border-top: 1px solid #FFF;
         }
+
+            #menu li ul li a:hover {
+                background: #1BA6B2;
+            }
 
     #menu li ul {
         display: none;
@@ -69,3 +80,14 @@ button, h1 {
 }
 
 /* Menu bar end*/
+
+/* Detail area*/
+#detail {
+    height: 300px;
+    margin-top: 20px;
+    text-align: center;
+    border: dotted 5px lightgray;
+    border-radius: 10px;
+    font-size: 400%;
+    color: gray;
+}
