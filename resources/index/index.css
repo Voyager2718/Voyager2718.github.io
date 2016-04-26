@@ -11,17 +11,21 @@ button, h1 {
     font-family: myFont;
 }
 
+/* Menu bar begin*/
 #menu {
     font-family: myFont, Helvetica,'Microsoft YaHei', sans-serif;
     font-size: 14px;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px gray;
 }
 
     #menu, #menu ul {
         list-style-type: none;
-        background: #A3C159;
+        background: -webkit-linear-gradient(top, rgba(0, 208, 255, 0.9), rgba(27, 166, 178, 0.9));
         margin: 0;
         padding: 0;
+        box-shadow: 0 5px 10px gray;
     }
 
 .menu-width {
@@ -37,7 +41,6 @@ button, h1 {
         padding: 10px 15px;
         color: #FFF;
         text-decoration: none;
-        border-right: 1px solid #FFF;
     }
 
         #menu li a:hover {
@@ -60,3 +63,9 @@ button, h1 {
     #menu li:hover ul {
         display: block;
     }
+
+.menu-left {
+    border-radius: 10px 0 0 10px;
+}
+
+/* Menu bar end*/
