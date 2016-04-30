@@ -1,6 +1,6 @@
 {
-    "version" : "0.022a",
-    "internal_version" : 15,
+    "version" : "0.022a_branch2",
+    "internal_version" : 16,
     "description" : "Added an update button in Setting Activity.\nRemove fragment to save memory.",
     "URL" : "http://voyager2718.github.io/C2/App/Android/C2_the_bunny.apk"
 }
