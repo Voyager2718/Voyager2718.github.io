@@ -1,5 +1,6 @@
 {
-    "version" : "0.02a",
-    "internal_version" : 12,
+    "version" : "0.02b",
+    "internal_version" : 13,
+    "description" : "Added an update button in Setting Activity.",
     "URL" : "http://voyager2718.github.io/C2/App/Android/C2_the_bunny.apk"
 }
