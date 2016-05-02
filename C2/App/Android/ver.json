@@ -1,7 +1,7 @@
 {
-    "version" : "0.022c",
-    "internal_version" : 17,
-    "description" : "Added an update button in Setting Activity.\nRemove fragment to save memory.\nMultithreading.\nBug fixed.",
-    "release_date" : "01/May/2016",
+    "version" : "0.023",
+    "internal_version" : 18,
+    "description" : "Added a class to handle windows in Canvas.\nBug fixed.\nExperimental function, non-recommended update",
+    "release_date" : "02/May/2016",
     "URL" : "http://voyager2718.github.io/C2/App/Android/C2_the_bunny.apk"
 }
