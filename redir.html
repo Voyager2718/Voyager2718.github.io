@@ -4,9 +4,25 @@
 <head>
     <meta charset="utf-8" />
     <title>Redirect</title>
+    <style>
+        .link {
+            width: 90%;
+            height: 200px;
+            border-radius: 20px;
+            line-height: 200px;
+            text-shadow: 1px 1px 5px gray;
+            box-shadow: 5px 5px 20px gray;
+            font-size: 45px;
+            margin: 0 auto;
+            font-family: sans-serif, Helvetica, 'Microsoft YaHei';
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <a href="http://voyager2718.github.io/C2/App/Android/C2_the_bunny.apk">C2</a>
-    <a href="http://voyager2718.github.io/CV/App/MyCV.apk">CV</a>
+    <div class="link" style="background-color: pink;" onclick="self.location.href = 'http://voyager2718.github.io/C2/App/Android/C2_the_bunny.apk'">C2</div>
+    <br />
+    <div class="link" style="background-color:lightblue;" onclick="self.location.href = 'http://voyager2718.github.io/CV/App/MyCV.apk'">CV</div>
 </body>
 </html>
